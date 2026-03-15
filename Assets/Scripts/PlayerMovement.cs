@@ -37,19 +37,10 @@ public class PlayerMovement : MonoBehaviour
         else
             td = yInput == 0 ? 6 : (yInput == 1 ? 7 : 5);
 
-        if (Mathf.Abs(td - d) <= 3.5f) d += Mathf.Sign(td - d) * Mathf.Min(Time.deltaTime, Mathf.Abs(td - d)) * 20f;
-        else d = ((d - 20f * Mathf.Sign(td - d) * Mathf.Min(Time.deltaTime, 7 - Mathf.Abs(td - d))) + 7) % 7;
+        if (Mathf.Abs(td - d) <= 4f) d += Mathf.Sign(td - d) * Mathf.Min(Time.deltaTime * 20f, Mathf.Abs(td - d));
+        else d = ((d -  Mathf.Sign(td - d) * Mathf.Min(20f * Time.deltaTime, 8 - Mathf.Abs(td - d))) + 8f) % 8f;
 
-        playerSr.sprite = dirSprites[Mathf.RoundToInt(d)];
-
-        /*if (xInput == 0)
-            playerSr.sprite = yInput == 1 ? dirSprites[0] : ((yInput == -1) ? dirSprites[2] : playerSr.sprite);
-        else if (xInput == 1)
-            playerSr.sprite = (yInput == 1) ? dirSprites[4] : (yInput == -1 ? dirSprites[5] : dirSprites[1]);
-        else
-            playerSr.sprite = (yInput == 1) ? dirSprites[7] : (yInput == -1 ? dirSprites[6] : dirSprites[3]);*/
-
-        //Obj
+        playerSr.sprite = dirSprites[Mathf.RoundToInt(d) % 8];
 
         int q = Mathf.RoundToInt(d);
 
@@ -58,6 +49,5 @@ public class PlayerMovement : MonoBehaviour
 
         objHeld.transform.localPosition = new Vector2(x, y).normalized;
         objHeld.sprite = q % 4 == 0 ? log4dir[1] : (q % 2 == 0 ? log4dir[0] : (q == 1 || q == 5 ? log4dir[3] : log4dir[2]));
-       
     }
 }
