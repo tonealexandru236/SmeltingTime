@@ -42,7 +42,7 @@ public class PlayerMovement : MonoBehaviour
 
         playerSr.sprite = dirSprites[Mathf.RoundToInt(d) % 8];
 
-        int q = Mathf.RoundToInt(d);
+        int q = Mathf.RoundToInt(d)%8;
 
         float x = (q > 0 && q < 4) ? 1 : (q > 4 ? -1 : 0);
         float y = (q < 2 || q > 6) ? 1 : (q > 2 && q < 6 ? -1 : 0);
