@@ -376,12 +376,12 @@ MonoBehaviour:
   playerSr: {fileID: 1247856102}
   dirSprites:
   - {fileID: 3643708647854563003, guid: 57ded7e5d63659f439fc2724be6baa73, type: 3}
-  - {fileID: -673034718, guid: 57ded7e5d63659f439fc2724be6baa73, type: 3}
-  - {fileID: -2126071201, guid: 57ded7e5d63659f439fc2724be6baa73, type: 3}
-  - {fileID: -923082318, guid: 57ded7e5d63659f439fc2724be6baa73, type: 3}
   - {fileID: -159155352, guid: 57ded7e5d63659f439fc2724be6baa73, type: 3}
+  - {fileID: -673034718, guid: 57ded7e5d63659f439fc2724be6baa73, type: 3}
   - {fileID: 464669391, guid: 57ded7e5d63659f439fc2724be6baa73, type: 3}
+  - {fileID: -2126071201, guid: 57ded7e5d63659f439fc2724be6baa73, type: 3}
   - {fileID: -1391426117, guid: 57ded7e5d63659f439fc2724be6baa73, type: 3}
+  - {fileID: -923082318, guid: 57ded7e5d63659f439fc2724be6baa73, type: 3}
   - {fileID: -763380458, guid: 57ded7e5d63659f439fc2724be6baa73, type: 3}
   objHeld: {fileID: 1287700316}
   log4dir:
@@ -775,7 +775,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!50 &1855323793
 Rigidbody2D:
   serializedVersion: 5
