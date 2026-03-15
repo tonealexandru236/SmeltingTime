@@ -37,8 +37,8 @@ public class PlayerMovement : MonoBehaviour
         else
             td = yInput == 0 ? 6 : (yInput == 1 ? 7 : 5);
 
-        if (Mathf.Abs(td - d) <= 4f) d += Mathf.Sign(td - d) * Mathf.Min(Time.deltaTime * 20f, Mathf.Abs(td - d));
-        else d = ((d -  Mathf.Sign(td - d) * Mathf.Min(20f * Time.deltaTime, 8 - Mathf.Abs(td - d))) + 8f) % 8f;
+        if (Mathf.Abs(td - d) <= 4f) d += Mathf.Sign(td - d) * Mathf.Min(Time.deltaTime * 25f, Mathf.Abs(td - d));
+        else d = ((d -  Mathf.Sign(td - d) * Mathf.Min(25f * Time.deltaTime, 8 - Mathf.Abs(td - d))) + 8f) % 8f;
 
         playerSr.sprite = dirSprites[Mathf.RoundToInt(d) % 8];
 
