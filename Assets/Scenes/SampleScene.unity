@@ -543,6 +543,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1466369153440372891, guid: dbdf1fefae653444591f60e24709f3b1, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6398439972558335049, guid: dbdf1fefae653444591f60e24709f3b1, type: 3}
       propertyPath: upButton
       value: 273
@@ -1656,6 +1660,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 267109656095947339, guid: dbdf1fefae653444591f60e24709f3b1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1466369153440372891, guid: dbdf1fefae653444591f60e24709f3b1, type: 3}
+      propertyPath: m_Constraints
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6398439972558335049, guid: dbdf1fefae653444591f60e24709f3b1, type: 3}

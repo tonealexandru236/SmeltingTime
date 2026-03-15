@@ -47,7 +47,7 @@ public class PlayerMovement : MonoBehaviour
         float x = (q > 0 && q < 4) ? 1 : (q > 4 ? -1 : 0);
         float y = (q < 2 || q > 6) ? 1 : (q > 2 && q < 6 ? -1 : 0);
 
-        objHeld.transform.localPosition = new Vector2(x, y).normalized;
+        objHeld.transform.localPosition = new Vector2(x, y).normalized * 0.5f;
         objHeld.sprite = q % 4 == 0 ? log4dir[1] : (q % 2 == 0 ? log4dir[0] : (q == 1 || q == 5 ? log4dir[3] : log4dir[2]));
     }
 }
