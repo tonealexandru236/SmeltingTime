@@ -545,7 +545,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1466369153440372891, guid: dbdf1fefae653444591f60e24709f3b1, type: 3}
       propertyPath: m_Constraints
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6398439972558335049, guid: dbdf1fefae653444591f60e24709f3b1, type: 3}
       propertyPath: upButton
@@ -1935,7 +1935,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1466369153440372891, guid: dbdf1fefae653444591f60e24709f3b1, type: 3}
       propertyPath: m_Constraints
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6398439972558335049, guid: dbdf1fefae653444591f60e24709f3b1, type: 3}
       propertyPath: dirObj
