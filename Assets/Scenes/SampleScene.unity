@@ -436,7 +436,7 @@ Transform:
   m_GameObject: {fileID: 293837432}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.15, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -601,6 +601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   stationTag: trash
+  throwable_item: {fileID: 920793971}
   arrowVisual: {fileID: 671898656}
 --- !u!114 &303369046
 MonoBehaviour:
@@ -1547,6 +1548,10 @@ PrefabInstance:
       propertyPath: throwable_item
       value: 
       objectReference: {fileID: 920793971}
+    - target: {fileID: 2786890457157938535, guid: dbdf1fefae653444591f60e24709f3b1, type: 3}
+      propertyPath: m_Size.x
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 6398439972558335049, guid: dbdf1fefae653444591f60e24709f3b1, type: 3}
       propertyPath: upButton
       value: 273
@@ -1652,7 +1657,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 5b655ccfc1ca345ae9b245e3d2269830, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -2523,8 +2528,8 @@ GameObject:
   - component: {fileID: 1438687522}
   - component: {fileID: 1438687521}
   - component: {fileID: 1438687520}
-  - component: {fileID: 1438687524}
   - component: {fileID: 1438687523}
+  - component: {fileID: 1438687524}
   m_Layer: 0
   m_Name: CraftingTable
   m_TagString: Untagged
@@ -2545,6 +2550,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::StationScript
   stationTag: crafting
+  throwable_item: {fileID: 0}
   arrowVisual: {fileID: 293837432}
 --- !u!212 &1438687521
 SpriteRenderer:
@@ -2635,17 +2641,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   recipes:
-  - stick-log,log
+  - stick-log
   - log-stick,stick
+  - ironore-log,stick
   itemName:
   - log
   - stick
+  - ironore
   itemSprite:
   - {fileID: 6172511831347889061, guid: c75539ef8536b134b92bfb2a613d8f1e, type: 3}
   - {fileID: 21300000, guid: 0997de56f31d548eebe365db947d0cb4, type: 3}
+  - {fileID: -8601977518263204293, guid: 42c8708798a249c4186e6ce83df46b3b, type: 3}
   itemsAsObj:
   - {fileID: 138871636675381304, guid: 9334f1693492349bc927fbb411d32787, type: 3}
   - {fileID: 920541454321307148, guid: 6e75d3b6bef3941a1880b1bfb7ad9a62, type: 3}
+  - {fileID: 6757882594673250028, guid: fbbf2c6e9a9fb6047a2c2e7d606e12e7, type: 3}
   recipeItemsVisual:
   - {fileID: 369851568}
   - {fileID: 62126364}
@@ -4361,10 +4371,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1466369153440372891, guid: dbdf1fefae653444591f60e24709f3b1, type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2779984909128012041, guid: dbdf1fefae653444591f60e24709f3b1, type: 3}
       propertyPath: throwable_item
       value: 
       objectReference: {fileID: 920793971}
+    - target: {fileID: 2786890457157938535, guid: dbdf1fefae653444591f60e24709f3b1, type: 3}
+      propertyPath: m_Size.x
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 7544344432684544233, guid: dbdf1fefae653444591f60e24709f3b1, type: 3}
       propertyPath: m_Name
       value: Player1
