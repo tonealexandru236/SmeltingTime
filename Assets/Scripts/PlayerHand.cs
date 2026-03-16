@@ -1,8 +1,10 @@
+using System.Collections;
 using UnityEngine;
 
 public class PlayerHand : MonoBehaviour
 {
     Sprite[] itemInHandSprites = new Sprite[0];
+    public GameObject throwable_item;
 
     public string itemInHandID;
     void Start() {
@@ -50,22 +52,60 @@ public class PlayerHand : MonoBehaviour
             }
         }
 
-        if(closestStation != null) {
+        if(closestStation != null) { /// DACA ESTE O STATIE IN RANGE
             if(Input.GetKeyDown(KeyCode.F))
+            {
+                if (closestStation.gameObject.name == "TrashCan")
+                    StartCoroutine(Item_fly_animation(closestStation.transform.position));
                 closestStation.UseStation(this);
+            }
 
             closestStation.ActivateStation(true, this);
         }
+    }
+
+    private float item_fly_speed = 1f;
+
+    public IEnumerator Item_fly_animation(Vector3 to_pos)
+    {
+        throwable_item.GetComponent<SpriteRenderer>().sprite = itemInHandSprites[2];
+        throwable_item.transform.position = gameObject.transform.position;
+        throwable_item.SetActive(true);
+
+        //to_pos.y += 3;
+        float init_delta_x = Mathf.Abs(to_pos.x - throwable_item.transform.position.x);
+        float go_to_y = Mathf.Max((throwable_item.transform.position.y + to_pos.y) / 2, gameObject.transform.position.y + 1);
+
+        while (Vector3.Distance(to_pos, throwable_item.transform.position) > 0.05f)
+        {
+            if (Mathf.Abs(to_pos.x - throwable_item.transform.position.x) > init_delta_x * 3 / 4)
+            {
+                Vector3 pos = throwable_item.transform.position;
+                pos.y += Mathf.Abs(go_to_y - pos.y) / 30;
+                throwable_item.transform.position = pos;
+
+                throwable_item.transform.position = Vector3.MoveTowards(throwable_item.transform.position, new Vector3(to_pos.x, throwable_item.transform.position.y, throwable_item.transform.position.z), item_fly_speed * Time.deltaTime / 5);
+            }
+            else
+                throwable_item.transform.position = Vector3.MoveTowards(throwable_item.transform.position, to_pos, item_fly_speed * Time.deltaTime * Mathf.Max(Mathf.Abs(go_to_y - throwable_item.transform.position.y), 1.2f));
+
+
+            yield return null;
+        }
+
+        throwable_item.SetActive(false);
     }
     public void SetOrientationForItemInHand(int q)
     {
         if (itemInHandID == "") return;
         GetComponent<SpriteRenderer>().sprite = itemInHandSprites[q];
     }
+
     public void RemoveItemInHand() {
         itemInHandID = "";
         GetComponent<SpriteRenderer>().sprite = null;
     }
+
     public void PickUpItemInHand(Sprite[] spr, string itemId) {
         itemInHandID = itemId;
         itemInHandSprites = spr;
