@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class ItemScript : MonoBehaviour
 {
+    [SerializeField] string itemId;
+
     public Sprite[] itemSprites;
 
     [Header("Visual")]
@@ -9,12 +11,17 @@ public class ItemScript : MonoBehaviour
     [SerializeField] Sprite normalSprite;
     [SerializeField] Sprite pickUpSprite;
 
+    void Update() {
+        if(transform.position.magnitude > 100)
+            Destroy(gameObject);
+    }
     public void SetInPickUpRange(bool canBePickedUp)
     {
         sr.sprite = canBePickedUp ? pickUpSprite : normalSprite;
     }
-    public void PickUpItem()
+    public string PickUpItem()
     {
         Destroy(gameObject);
+        return itemId;
     }
 }

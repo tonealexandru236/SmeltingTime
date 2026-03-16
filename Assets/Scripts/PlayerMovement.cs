@@ -40,7 +40,19 @@ public class PlayerMovement : MonoBehaviour
         if (Mathf.Abs(td - d) <= 4f) d += Mathf.Sign(td - d) * Mathf.Min(Time.deltaTime * 25f, Mathf.Abs(td - d));
         else d = ((d -  Mathf.Sign(td - d) * Mathf.Min(25f * Time.deltaTime, 8 - Mathf.Abs(td - d))) + 8f) % 8f;
 
-        playerSr.sprite = dirSprites[Mathf.RoundToInt(d) % 8];
+
+        //Change Sprite For Player
+        int indx = Mathf.RoundToInt(d) % 8;
+        if(indx < 5) {
+            playerSr.sprite = dirSprites[indx];
+            playerSr.transform.localScale = new Vector2(1, 1);
+        }
+        else {
+            playerSr.sprite = dirSprites[8 - indx];
+            playerSr.transform.localScale = new Vector2(-1, 1);
+        }
+
+
 
         int q = Mathf.RoundToInt(d)%8;
 

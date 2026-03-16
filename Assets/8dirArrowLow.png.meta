@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 57ded7e5d63659f439fc2724be6baa73
+guid: ba67f80373fa4485abc86d8ac59c855f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3643708647854563003
-    second: PlayerDirectionsPlaceholder_0
+      213: -7851751644823310689
+    second: 8dirArrowLow_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,7 +97,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WindowsStoreApps
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -113,11 +113,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: PlayerDirectionsPlaceholder_0
+      name: 8dirArrowLow_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
+        y: 0
         width: 16
         height: 16
       alignment: 0
@@ -128,102 +128,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bbed364c5bd019230800000000000000
-      internalID: 3643708647854563003
+      spriteID: f9ea7b9ba79f80390800000000000000
+      internalID: -7851751644823310689
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerDirectionsPlaceholder_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 578d5dacf1a1c204ea4b2564afdef613
-      internalID: -673034718
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerDirectionsPlaceholder_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ab11f1117455f7649bc38b6e7bab06db
-      internalID: -2126071201
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerDirectionsPlaceholder_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 16
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bfb88af4a244c10478399445ca8029a1
-      internalID: -923082318
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerDirectionsPlaceholder_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3f2342ee9f280c942958f697c92f223a
-      internalID: -159155352
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: PlayerDirectionsPlaceholder_5
+      name: 8dirArrowLow_1
       rect:
         serializedVersion: 2
         x: 16
@@ -238,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: da97c20f9d02b694fb189a61c614f258
-      internalID: 464669391
+      spriteID: f496471756c334621886c9f3ba567fcd
+      internalID: 1815157320
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerDirectionsPlaceholder_6
+      name: 8dirArrowLow_2
       rect:
         serializedVersion: 2
         x: 32
@@ -260,14 +172,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 64bad9bf3455ef04da101441fc6fde77
-      internalID: -1391426117
+      spriteID: 310419b1108564c4ba8f254d9e71d69f
+      internalID: 1031754040
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: PlayerDirectionsPlaceholder_7
+      name: 8dirArrowLow_3
       rect:
         serializedVersion: 2
         x: 48
@@ -282,8 +194,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39b48aa481c1dab4ea031131f311ac2e
-      internalID: -763380458
+      spriteID: df02f5453581a4ef69b433bc98a2e913
+      internalID: 150989197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8dirArrowLow_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38f5f825b85fe4b30a0ebb0863ee1fda
+      internalID: -1517052326
       vertices: []
       indices: 
       edges: []
@@ -292,7 +226,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 984604af8ca5bfa44ab080a10adf46e0
+    spriteID: b1b732fc5daf542739c72c671130689f
     internalID: 0
     vertices: []
     indices: 
@@ -304,14 +238,11 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":16.0,"y":16.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      PlayerDirectionsPlaceholder_0: 3643708647854563003
-      PlayerDirectionsPlaceholder_1: -673034718
-      PlayerDirectionsPlaceholder_2: -2126071201
-      PlayerDirectionsPlaceholder_3: -923082318
-      PlayerDirectionsPlaceholder_4: -159155352
-      PlayerDirectionsPlaceholder_5: 464669391
-      PlayerDirectionsPlaceholder_6: -1391426117
-      PlayerDirectionsPlaceholder_7: -763380458
+      8dirArrowLow_0: -7851751644823310689
+      8dirArrowLow_1: 1815157320
+      8dirArrowLow_2: 1031754040
+      8dirArrowLow_3: 150989197
+      8dirArrowLow_4: -1517052326
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

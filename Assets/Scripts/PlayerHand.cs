@@ -2,34 +2,72 @@ using UnityEngine;
 
 public class PlayerHand : MonoBehaviour
 {
-    Sprite[] itemInHandSprites;
+    Sprite[] itemInHandSprites = new Sprite[0];
 
+    public string itemInHandID;
+    void Start() {
+        itemInHandID = "";
+    }
     private void Update()
     {
-        float dis = -1;
-        ItemScript closestItem = null;
-        foreach(ItemScript itm in FindObjectsByType<ItemScript>(FindObjectsSortMode.None)) {
-            itm.SetInPickUpRange(false);
+        if(itemInHandID == "") {
+            //Doesn't have item
+            float disItem = -1;
+            ItemScript closestItem = null;
+            foreach(ItemScript itm in FindObjectsByType<ItemScript>(FindObjectsSortMode.None)) {
+                itm.SetInPickUpRange(false);
 
-            if(Vector2.Distance(transform.position, itm.transform.position) < 1f && (dis == -1 || Vector2.Distance(transform.position, itm.transform.position) < dis))
-            {
-                dis = Vector2.Distance(transform.position, itm.transform.position);
-                closestItem = itm;
+                float dis_to_item = Vector2.Distance(transform.position, itm.transform.position);
+
+                if(dis_to_item < 1f && (disItem == -1 || dis_to_item < disItem))
+                {
+                    disItem = dis_to_item;
+                    closestItem = itm;
+                }
+            }
+            if (closestItem != null) closestItem.SetInPickUpRange(true);
+
+            if(Input.GetKeyDown(KeyCode.F)) {
+                if (closestItem != null && itemInHandID == "") {
+                    itemInHandSprites = closestItem.itemSprites;
+                    itemInHandID = closestItem.PickUpItem();
+
+                    return;
+                }
             }
         }
-        if (closestItem != null) closestItem.SetInPickUpRange(true);
+        float disStation = -1;
+        StationScript closestStation = null;
+        foreach(StationScript station in FindObjectsByType<StationScript>(FindObjectsSortMode.None)) {
+            float d = Vector2.Distance(transform.position, station.transform.position);
 
-        if(Input.GetKeyDown(KeyCode.F)) {
-            if (closestItem == null) return;
+            station.ActivateStation(false, this);
 
-            itemInHandSprites = closestItem.itemSprites;
+            if(d < 1.25f && (disStation == -1 || d < disStation))
+            {
+                disStation = d;
+                closestStation = station;
+            }
+        }
 
-            closestItem.PickUpItem();
+        if(closestStation != null) {
+            if(Input.GetKeyDown(KeyCode.F))
+                closestStation.UseStation(this);
+
+            closestStation.ActivateStation(true, this);
         }
     }
     public void SetOrientationForItemInHand(int q)
     {
-        if (itemInHandSprites.Length < 4) return;
+        if (itemInHandID == "") return;
         GetComponent<SpriteRenderer>().sprite = itemInHandSprites[q];
+    }
+    public void RemoveItemInHand() {
+        itemInHandID = "";
+        GetComponent<SpriteRenderer>().sprite = null;
+    }
+    public void PickUpItemInHand(Sprite[] spr, string itemId) {
+        itemInHandID = itemId;
+        itemInHandSprites = spr;
     }
 }
