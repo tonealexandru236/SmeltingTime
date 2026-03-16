@@ -1,11 +1,15 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class ConveyorBelt : MonoBehaviour
 {
     [SerializeField] Transform conveyorVisual;
 
+    [Header("Items")]
+    [SerializeField] GameObject[] itemsToSpawn;
+
+
     [Header("Spawn Logic")]
-    [SerializeField] GameObject itemToSpawn;
     [SerializeField] Transform spawnPoint;
     [SerializeField] Transform itemsParent;
     [SerializeField] float spawnRate; // seconds between spawn
@@ -22,8 +26,15 @@ public class ConveyorBelt : MonoBehaviour
         if(t >= spawnRate) {
             t %= spawnRate;
 
-            GameObject newItem = Instantiate(itemToSpawn, spawnPoint.transform.position, Quaternion.identity);
+            GameObject newItem = Instantiate(random_item(), spawnPoint.transform.position, Quaternion.identity);
+            newItem.transform.position = new Vector3(newItem.transform.position.x, newItem.transform.position.y, -1); /// layering bug fix
             newItem.transform.parent = itemsParent;
         }
+    }
+
+    public GameObject random_item()
+    {
+        int chance = Random.Range(0, itemsToSpawn.Length);
+        return itemsToSpawn[chance];
     }
 }

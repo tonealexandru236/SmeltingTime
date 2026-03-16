@@ -3180,7 +3180,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConveyorBelt
   conveyorVisual: {fileID: 1483632664}
-  itemToSpawn: {fileID: 8899958639640477454, guid: 9334f1693492349bc927fbb411d32787, type: 3}
+  itemsToSpawn:
+  - {fileID: 1676569562148675751, guid: fbbf2c6e9a9fb6047a2c2e7d606e12e7, type: 3}
+  - {fileID: 8899958639640477454, guid: 9334f1693492349bc927fbb411d32787, type: 3}
   spawnPoint: {fileID: 1283177817}
   itemsParent: {fileID: 1056728023}
   spawnRate: 2
@@ -4372,6 +4374,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbdf1fefae653444591f60e24709f3b1, type: 3}
+--- !u!1001 &8823873831885492045
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1594842378055724319, guid: fbbf2c6e9a9fb6047a2c2e7d606e12e7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1594842378055724319, guid: fbbf2c6e9a9fb6047a2c2e7d606e12e7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1594842378055724319, guid: fbbf2c6e9a9fb6047a2c2e7d606e12e7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1594842378055724319, guid: fbbf2c6e9a9fb6047a2c2e7d606e12e7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1594842378055724319, guid: fbbf2c6e9a9fb6047a2c2e7d606e12e7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1594842378055724319, guid: fbbf2c6e9a9fb6047a2c2e7d606e12e7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1594842378055724319, guid: fbbf2c6e9a9fb6047a2c2e7d606e12e7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1594842378055724319, guid: fbbf2c6e9a9fb6047a2c2e7d606e12e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1594842378055724319, guid: fbbf2c6e9a9fb6047a2c2e7d606e12e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1594842378055724319, guid: fbbf2c6e9a9fb6047a2c2e7d606e12e7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676569562148675751, guid: fbbf2c6e9a9fb6047a2c2e7d606e12e7, type: 3}
+      propertyPath: m_Name
+      value: Item-IronOre
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fbbf2c6e9a9fb6047a2c2e7d606e12e7, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -4390,3 +4449,4 @@ SceneRoots:
   - {fileID: 2077636560}
   - {fileID: 1570009363}
   - {fileID: 920793972}
+  - {fileID: 8823873831885492045}

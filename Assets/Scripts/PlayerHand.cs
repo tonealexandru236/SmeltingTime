@@ -57,8 +57,8 @@ public class PlayerHand : MonoBehaviour
             {
                 if (closestStation.gameObject.name == "TrashCan")
                     StartCoroutine(Item_fly_animation(closestStation.transform.position, 0.8f, 1.6f));
-                else if (closestStation.gameObject.name == "CraftingTable")
-                    StartCoroutine(Item_fly_animation(closestStation.transform.position, 0.5f, 1f));
+                //else if (closestStation.gameObject.name == "CraftingTable")
+                //    StartCoroutine(Item_fly_animation(closestStation.transform.position, 0.5f, 1f));
                 closestStation.UseStation(this);
             }
 
