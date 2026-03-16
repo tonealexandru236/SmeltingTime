@@ -56,7 +56,9 @@ public class PlayerHand : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.F))
             {
                 if (closestStation.gameObject.name == "TrashCan")
-                    StartCoroutine(Item_fly_animation(closestStation.transform.position));
+                    StartCoroutine(Item_fly_animation(closestStation.transform.position, 0.8f, 1.6f));
+                else if (closestStation.gameObject.name == "CraftingTable")
+                    StartCoroutine(Item_fly_animation(closestStation.transform.position, 0.5f, 1f));
                 closestStation.UseStation(this);
             }
 
@@ -66,29 +68,28 @@ public class PlayerHand : MonoBehaviour
 
     private float item_fly_speed = 1f;
 
-    public IEnumerator Item_fly_animation(Vector3 to_pos)
+    public IEnumerator Item_fly_animation(Vector3 to_pos, float duration, float arc_height)
     {
         throwable_item.GetComponent<SpriteRenderer>().sprite = itemInHandSprites[2];
         throwable_item.transform.position = gameObject.transform.position;
         throwable_item.SetActive(true);
 
-        //to_pos.y += 3;
-        float init_delta_x = Mathf.Abs(to_pos.x - throwable_item.transform.position.x);
-        float go_to_y = Mathf.Max((throwable_item.transform.position.y + to_pos.y) / 2, gameObject.transform.position.y + 1);
+        Vector3 start_pos = transform.position;
 
-        while (Vector3.Distance(to_pos, throwable_item.transform.position) > 0.05f)
+        float elapsed = 0;
+
+        while (elapsed < duration)
         {
-            if (Mathf.Abs(to_pos.x - throwable_item.transform.position.x) > init_delta_x * 3 / 4)
-            {
-                Vector3 pos = throwable_item.transform.position;
-                pos.y += Mathf.Abs(go_to_y - pos.y) / 30;
-                throwable_item.transform.position = pos;
+            elapsed += Time.deltaTime;
 
-                throwable_item.transform.position = Vector3.MoveTowards(throwable_item.transform.position, new Vector3(to_pos.x, throwable_item.transform.position.y, throwable_item.transform.position.z), item_fly_speed * Time.deltaTime / 5);
-            }
-            else
-                throwable_item.transform.position = Vector3.MoveTowards(throwable_item.transform.position, to_pos, item_fly_speed * Time.deltaTime * Mathf.Max(Mathf.Abs(go_to_y - throwable_item.transform.position.y), 1.2f));
+            float t = elapsed / duration;
 
+            Vector3 cur_pos = Vector3.Lerp(start_pos, to_pos, t);
+
+            cur_pos.y += arc_height * t * (1 - t) * 4;
+            cur_pos.z = -1;
+
+            throwable_item.transform.position = cur_pos;
 
             yield return null;
         }
