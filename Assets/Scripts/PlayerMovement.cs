@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public bool canPlayerMove;
+
     [SerializeField] KeyCode upButton;
     [SerializeField] KeyCode downButton;
     [SerializeField] KeyCode rightButton;
@@ -20,9 +22,12 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        canPlayerMove = true;
     }
     private void Update()
     {
+        if (!canPlayerMove) return;
+
         float yInput = (Input.GetKey(upButton) ? 1 : 0) + (Input.GetKey(downButton) ? -1 : 0);
         float xInput = (Input.GetKey(rightButton) ? 1 : 0) + (Input.GetKey(leftButton) ? -1 : 0);
 

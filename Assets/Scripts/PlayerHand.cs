@@ -8,6 +8,7 @@ public class PlayerHand : MonoBehaviour
     public string itemInHandID;
     public GameObject player;
     public int playerPriority;
+    public PlayerMovement pm;
 
     void Start() {
         player = transform.parent.gameObject;
@@ -42,28 +43,25 @@ public class PlayerHand : MonoBehaviour
                 }
             }
         }
-        float disStation = -1;
-        StationScript closestStation = null;
-        foreach(StationScript station in FindObjectsByType<StationScript>(FindObjectsSortMode.None)) {
-            float d = Vector2.Distance(transform.position, station.transform.position);
 
+        #region Finds And Uses Closest Station
+
+        //Deactivate All Stations
+        foreach (StationScript station in FindObjectsByType<StationScript>(FindObjectsSortMode.None))
             station.ActivateStation(false, this);
 
-            if(d < 1.3f && (disStation == -1 || d < disStation))
-            {
-                disStation = d;
-                closestStation = station;
-            }
+        RaycastHit2D hit = Physics2D.Raycast(pm.transform.position, (transform.position - pm.transform.position), 1.3f, LayerMask.GetMask("Station"));
+        if (hit.collider != null) /// DACA ESTE O STATIE IN RANGE
+        {
+            if (Input.GetKeyDown(playerActionKey))
+                hit.collider.GetComponent<StationScript>().UseStation(this);
+
+            hit.collider.GetComponent<StationScript>().ActivateStation(true, this);
         }
 
-        if(closestStation != null) { /// DACA ESTE O STATIE IN RANGE
-            if(Input.GetKeyDown(playerActionKey))
-                closestStation.UseStation(this);
-
-            closestStation.ActivateStation(true, this);
-        }
+        #endregion
     }
-    
+
 
     public void SetOrientationForItemInHand(int q)
     {
