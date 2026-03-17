@@ -16,17 +16,13 @@ public class PlayerHand : MonoBehaviour
     }
     public void ManualUpdate()
     {
-        if(itemInHandID == "") {
+        if (itemInHandID == "") {
             //Doesn't have item
-
-            foreach (ItemScript itm in FindObjectsByType<ItemScript>(FindObjectsSortMode.None))
-                itm.SetInPickUpRange(false, this);
-
             RaycastHit2D itemHit = Physics2D.BoxCast(pm.transform.position, new Vector2(.5f, .5f), 0, (transform.position - pm.transform.position), 1.3f, LayerMask.GetMask("Item"));
             if (itemHit.collider != null) /// DACA ESTE O STATIE IN RANGE
             {
                 ItemScript itm = itemHit.collider.GetComponent<ItemScript>();
-                itm.SetInPickUpRange(true, this);
+                itm.SetInPickUpRange(true);
                 if (Input.GetKeyDown(playerActionKey))
                 {
                     itemInHandSprites = itm.itemSprites;

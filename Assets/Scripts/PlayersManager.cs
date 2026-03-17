@@ -7,6 +7,9 @@ public class PlayersManager : MonoBehaviour
 
     private void Update()
     {
+        foreach (ItemScript itm in FindObjectsByType<ItemScript>(FindObjectsSortMode.None))
+            itm.SetInPickUpRange(false);
+
         player_hand_1.ManualUpdate();
         player_hand_2.ManualUpdate();
     }
