@@ -34,7 +34,7 @@ public class CraftingTable : MonoBehaviour
     void Update() {
         if(t >= 0) {
             t += Time.deltaTime;
-            if(t >= 0.1f) {
+            if(t >= 0.2f) {
                 holdToCraftImage.fillAmount = t;
             }
             if(t >= 1f && craftedItem != null) {
@@ -46,7 +46,7 @@ public class CraftingTable : MonoBehaviour
 
             if (Input.GetKeyUp(useKey)) {
                 
-                if(t <= 0.1f) {
+                if(t <= 0.2f) {
                     //Remove Last Item
                     string n = itemsInCraft[itemsInCraft.Count - 1];
                     ItemScript isForLast = null;
