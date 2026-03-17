@@ -14,6 +14,8 @@ Fiicode Game Jam
 8. Trash Can - A script that its just happy to be included 
 9. Pause - Pauses the game if you press "esc"
 10. PlayersManager - Script that manages both players (responsible of action order)
+11. ItemDatabase - Script responsible to match items ID with prefab (used in Crafting/Smelting)
+12. FurnaceScript - Resplonsible with interactions with Furnace + smelting
 
 # Scenes
 1. primu scene or wtv

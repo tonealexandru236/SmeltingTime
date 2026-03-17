@@ -9,10 +9,6 @@ public class CraftingTable : MonoBehaviour
 {
     [SerializeField] string[] recipes;
 
-    [Header("Item Identifier")]
-    [SerializeField] string[] itemName;
-    [SerializeField] ItemScript[] itemsAsObj;
-
     [Header("Visual")]
     [SerializeField] GameObject[] recipeItemsVisual; //Max 4
     [SerializeField] Transform leftEnd;
@@ -24,11 +20,12 @@ public class CraftingTable : MonoBehaviour
 
     [SerializeField] List<string> itemsInCraft = new List<string>();
 
-    KeyCode useKey; PlayerHand lastPh;
+    KeyCode useKey; PlayerHand lastPh; ItemDatabase itemDb;
     ItemScript craftedItem; string craftedString;
     float t;
     void Start() {
         t = -1;
+        itemDb = FindFirstObjectByType<ItemDatabase>();
     }
     void Update() {
         if(t >= 0) {
@@ -50,12 +47,8 @@ public class CraftingTable : MonoBehaviour
                     //Remove Last Item
                     string n = itemsInCraft[itemsInCraft.Count - 1];
                     ItemScript isForLast = null;
-                    for(int i = 0; i < itemName.Length; i++) {
-                        if(itemName[i] == n) {
-                            isForLast = itemsAsObj[i];
-                            break;
-                        }
-                    }
+
+                    isForLast = itemDb.GetObjById(n);
 
                     lastPh.PickUpItemInHand(isForLast.itemSprites, n);
                     itemsInCraft.RemoveAt(itemsInCraft.Count - 1);
@@ -97,12 +90,8 @@ public class CraftingTable : MonoBehaviour
         
         float startX = (itemsInCraft.Count - 1) * -0.25f;
         for(int i = 0; i < itemsInCraft.Count; i++) {
-            for(int j = 0; j < itemName.Length; j++) {
-                if(itemsInCraft[i] == itemName[j]) {
-                    recipeItemsVisual[i].GetComponent<SpriteRenderer>().sprite = itemsAsObj[j].itemSprites[0];
-                    break;
-                }
-            }
+
+            recipeItemsVisual[i].GetComponent<SpriteRenderer>().sprite = itemDb.GetObjById(itemsInCraft[i]).itemSprites[0];
             
             recipeItemsVisual[i].transform.localPosition = new Vector2(startX, 0);
             recipeItemsVisual[i].SetActive(true);
@@ -136,13 +125,12 @@ public class CraftingTable : MonoBehaviour
 
             if(recipeString == craftString) {
                 //Craft Match
-                for(int j = 0; j < itemName.Length; j++) {
-                    if(itemName[j] == craftName) {
-                        itemToCraftSpriteRenderer.sprite = itemsAsObj[j].itemSprites[0];
-                        craftedItem = itemsAsObj[j];
-                        craftedString = itemName[j];
-                    }
-                }
+                ItemScript itm = itemDb.GetObjById(craftName);
+
+                itemToCraftSpriteRenderer.sprite = itm.itemSprites[0];
+                craftedItem = itm;
+                craftedString = craftName;
+
                 resultParent.SetActive(true);
                 break;
             }
