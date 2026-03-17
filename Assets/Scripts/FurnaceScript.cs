@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class FurnaceScript : MonoBehaviour
 {
-    [SerializeField] string furnaceRecipes;
+    [SerializeField] string[] furnaceRecipes;
 
     [Header("Visual")]
     [SerializeField] SpriteRenderer fuelBg;
@@ -40,25 +40,40 @@ public class FurnaceScript : MonoBehaviour
     {
         if (t > 0) return;
 
-        if(result != "")
+
+        if (ph.itemInHandID == "")
         {
-            if (ph.itemInHandID == "")
+            if (result != "")
             {
                 ph.PickUpItemInHand(itemDb.GetObjById(result).itemSprites, result);
                 result = "";
                 resultImg.sprite = null;
             }
-            else return;
+            else
+            {
+                if(whatToBurn != "")
+                {
+                    ph.PickUpItemInHand(itemDb.GetObjById(whatToBurn).itemSprites, whatToBurn);
+                    whatToBurn = "";
+                    toBurnImg.sprite = null;
+                }
+                else if(fuelUsed != "")
+                {
+                    ph.PickUpItemInHand(itemDb.GetObjById(fuelUsed).itemSprites, fuelUsed);
+                    fuelUsed = "";
+                    fuelImg.sprite = null;
+                }
+            }
         }
 
         if (itemId != "")
         {
             #region Puts Player Item In The Furnace
             //Tries To Fill Fuel
-            if (fuelUsed == "" && itemId == "log")
+            if (fuelUsed == "" && (itemId == "log" || itemId == "charcoal"))
             {
-                fuelUsed = "log";
-                fuelImg.sprite = itemDb.GetObjById("log").itemSprites[1];
+                fuelUsed = itemId;
+                fuelImg.sprite = itemDb.GetObjById(itemId).itemSprites[1];
             }
             //Fill To_Burn
             else
@@ -83,6 +98,33 @@ public class FurnaceScript : MonoBehaviour
                 fuelBg.sprite = fireBg;
 
                 t = 3;
+            }
+            if(fuelUsed == "charcoal" && whatToBurn != "")
+            {
+                for(int i = 0; i < furnaceRecipes.Length; i++)
+                {
+                    bool addToRaw = true;
+                    string raw = "", prod = "";
+                    for(int j = 0; j < furnaceRecipes[i].Length; j++)
+                    {
+                        if (furnaceRecipes[i][j] == '-') addToRaw = false;
+                        else if (addToRaw) raw += furnaceRecipes[i][j].ToString();
+                        else prod += furnaceRecipes[i][j].ToString();
+                    }
+
+                    if(raw == whatToBurn)
+                    {
+                        result = prod;
+
+                        //Clear Furnace
+                        fuelUsed = "";
+                        whatToBurn = "";
+                        fuelImg.sprite = null;
+                        fuelBg.sprite = fireBg;
+
+                        t = 3;
+                    }
+                }
             }
         }
     }

@@ -3951,11 +3951,13 @@ MonoBehaviour:
   - log
   - stick
   - charcoal
+  - ironore
   - ironingot
   itemAsObj:
   - {fileID: 138871636675381304, guid: 9334f1693492349bc927fbb411d32787, type: 3}
   - {fileID: 920541454321307148, guid: 6e75d3b6bef3941a1880b1bfb7ad9a62, type: 3}
   - {fileID: 920541454321307148, guid: 7597979b0a64c194a85cae4b71ff95d6, type: 3}
+  - {fileID: 6757882594673250028, guid: fbbf2c6e9a9fb6047a2c2e7d606e12e7, type: 3}
   - {fileID: 7119628228846839293, guid: 173d8bde5692c8b45a413ab863dc5b33, type: 3}
 --- !u!4 &1392774622
 Transform:
@@ -4224,16 +4226,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   recipes:
   - stick-log
-  itemName:
-  - log
-  - stick
-  - ironore
-  - ironingot
-  itemsAsObj:
-  - {fileID: 138871636675381304, guid: 9334f1693492349bc927fbb411d32787, type: 3}
-  - {fileID: 920541454321307148, guid: 6e75d3b6bef3941a1880b1bfb7ad9a62, type: 3}
-  - {fileID: 6757882594673250028, guid: fbbf2c6e9a9fb6047a2c2e7d606e12e7, type: 3}
-  - {fileID: 7119628228846839293, guid: 173d8bde5692c8b45a413ab863dc5b33, type: 3}
   recipeItemsVisual:
   - {fileID: 369851568}
   - {fileID: 62126364}
@@ -5295,7 +5287,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68571031a7cdb3449bd4622a39441c08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  furnaceRecipes: 
+  furnaceRecipes:
+  - ironore-ironingot
   fuelBg: {fileID: 938107957}
   fuelImg: {fileID: 704813344}
   toBurnImg: {fileID: 1012348864}
