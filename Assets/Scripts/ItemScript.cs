@@ -12,7 +12,7 @@ public class ItemScript : MonoBehaviour
     [SerializeField] Sprite pickUpSprite;
 
     void Update() {
-        if(transform.position.magnitude > 100)
+        if(transform.position.y < -16) ///Despawn
             Destroy(gameObject);
     }
     public void SetInPickUpRange(bool canBePickedUp)
