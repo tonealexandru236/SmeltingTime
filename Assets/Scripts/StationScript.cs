@@ -51,6 +51,10 @@ public class StationScript : MonoBehaviour
         arc_height = (transform.position.y - from_pos.y) + arc_height;
 
         Vector3 start_pos = from_pos;
+        Vector3 end_pos = gameObject.transform.position;
+
+        end_pos.y += Random.Range(-0.1f, 0.1f);
+        end_pos.x += Random.Range(-0.2f, 0.2f);
 
         float elapsed = 0;
 
@@ -60,7 +64,7 @@ public class StationScript : MonoBehaviour
 
             float t = elapsed / duration;
 
-            Vector3 cur_pos = Vector3.Lerp(start_pos, gameObject.transform.position, t);
+            Vector3 cur_pos = Vector3.Lerp(start_pos, end_pos, t);
 
             cur_pos.y += arc_height * t * (1 - t) * 4;
             cur_pos.z = -1;

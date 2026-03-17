@@ -42,10 +42,6 @@ public class CraftingTable : MonoBehaviour
                 lastPh.PickUpItemInHand(craftedItem.itemSprites, craftedString);
                 itemsInCraft.Clear();
                 RefreshRecipePart();
-
-
-                foreach (ItemSplashes splash in FindObjectsByType<ItemSplashes>(FindObjectsSortMode.None))
-                    splash.pick_up_animation(player.name, craftedString, null); /// TO DO
             }
 
             if (Input.GetKeyUp(useKey)) {
@@ -86,9 +82,6 @@ public class CraftingTable : MonoBehaviour
             useKey = kc;
             lastPh = ph;
             t = 0;
-
-            foreach (ItemSplashes splash in FindObjectsByType<ItemSplashes>(FindObjectsSortMode.None))
-                splash.pick_up_animation(player.name, itemId, null); /// TO DO
         }
     }
 
