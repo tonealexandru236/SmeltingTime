@@ -48,13 +48,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
   itemId: ironore
   itemSprites:
-  - {fileID: -3730300019221377472, guid: 42c8708798a249c4186e6ce83df46b3b, type: 3}
-  - {fileID: -8601977518263204293, guid: 42c8708798a249c4186e6ce83df46b3b, type: 3}
-  - {fileID: 5697898353776938728, guid: 42c8708798a249c4186e6ce83df46b3b, type: 3}
-  - {fileID: -6528803402586090280, guid: 42c8708798a249c4186e6ce83df46b3b, type: 3}
+  - {fileID: -8588497628625531682, guid: 3d136ae42e6da884282a6e2ab925aa4d, type: 3}
+  - {fileID: 4093134242401066221, guid: 3d136ae42e6da884282a6e2ab925aa4d, type: 3}
+  - {fileID: -1750545567290295971, guid: 3d136ae42e6da884282a6e2ab925aa4d, type: 3}
+  - {fileID: 7248602246711439676, guid: 3d136ae42e6da884282a6e2ab925aa4d, type: 3}
   sr: {fileID: 5173173589944019147}
-  normalSprite: {fileID: -8601977518263204293, guid: 42c8708798a249c4186e6ce83df46b3b, type: 3}
-  pickUpSprite: {fileID: -8601977518263204293, guid: 42c8708798a249c4186e6ce83df46b3b, type: 3}
+  normalSprite: {fileID: -8588497628625531682, guid: 3d136ae42e6da884282a6e2ab925aa4d, type: 3}
+  pickUpSprite: {fileID: -1901212566794642169, guid: 3d136ae42e6da884282a6e2ab925aa4d, type: 3}
 --- !u!212 &5173173589944019147
 SpriteRenderer:
   serializedVersion: 2
@@ -112,7 +112,7 @@ SpriteRenderer:
   m_Size: {x: 0.14, y: 0.14}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!61 &8309642651620892273
 BoxCollider2D:
