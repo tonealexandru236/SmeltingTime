@@ -43,9 +43,12 @@ public class CraftingTable : MonoBehaviour
                 itemsInCraft.Clear();
                 RefreshRecipePart();
 
+
+                foreach (ItemSplashes splash in FindObjectsByType<ItemSplashes>(FindObjectsSortMode.None))
+                    splash.pick_up_animation(player.name, craftedString, null); /// TO DO
             }
 
-            if(Input.GetKeyUp(useKey)) {
+            if (Input.GetKeyUp(useKey)) {
                 
                 if(t <= 0.1f) {
                     //Remove Last Item
@@ -61,9 +64,6 @@ public class CraftingTable : MonoBehaviour
                     lastPh.PickUpItemInHand(isForLast.itemSprites, n);
                     itemsInCraft.RemoveAt(itemsInCraft.Count - 1);
                     RefreshRecipePart();
-
-                    foreach (ItemSplashes splash in FindObjectsByType<ItemSplashes>(FindObjectsSortMode.None))
-                        splash.pick_up_animation(player.name, n, null); /// TO DO
                 }
                 t = -1;
             }
