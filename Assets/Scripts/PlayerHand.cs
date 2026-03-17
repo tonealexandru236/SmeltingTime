@@ -4,10 +4,11 @@ using UnityEngine;
 public class PlayerHand : MonoBehaviour
 {
     public Sprite[] itemInHandSprites = new Sprite[0];
-    public GameObject throwable_item;
-
     public string itemInHandID;
+    public GameObject player;
+
     void Start() {
+        player = transform.parent.gameObject;
         itemInHandID = "";
     }
     private void Update()
@@ -35,6 +36,10 @@ public class PlayerHand : MonoBehaviour
                     itemInHandID = closestItem.PickUpItem();
                     Debug.Log(itemInHandID);
 
+                    foreach (ItemSplashes splash in FindObjectsByType<ItemSplashes>(FindObjectsSortMode.None))
+                        if(transform.parent != null)
+                            splash.pick_up_animation(player, closestItem.gameObject.name, closestItem.itemSprites[1]);
+
                     return;
                 }
             }
@@ -60,9 +65,6 @@ public class PlayerHand : MonoBehaviour
             closestStation.ActivateStation(true, this);
         }
     }
-
-    private float item_fly_speed = 1f;
-
     
 
     public void SetOrientationForItemInHand(int q)
