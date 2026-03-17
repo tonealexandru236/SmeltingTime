@@ -45,8 +45,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 457e61a25d791044390949eca1366c6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  throwable_item: {fileID: 0}
+  itemInHandSprites: []
   itemInHandID: 
+  player: {fileID: 0}
 --- !u!212 &1129287483579195472
 SpriteRenderer:
   serializedVersion: 2
@@ -333,5 +334,5 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.8, y: 1}
+  m_Size: {x: 0.6, y: 0.75}
   m_EdgeRadius: 0

@@ -32,9 +32,6 @@ public class StationScript : MonoBehaviour
         {
             GetComponent<CraftingTable>().UseCrafting(ph.itemInHandID, ph, KeyCode.F);
         }
-        
-
-
     }
     public void ActivateStation(bool actv, PlayerHand ph) {
         closeInRange = false;

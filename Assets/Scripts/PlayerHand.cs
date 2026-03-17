@@ -36,10 +36,6 @@ public class PlayerHand : MonoBehaviour
                     itemInHandID = closestItem.PickUpItem();
                     Debug.Log(itemInHandID);
 
-                    foreach (ItemSplashes splash in FindObjectsByType<ItemSplashes>(FindObjectsSortMode.None))
-                        if(transform.parent != null)
-                            splash.pick_up_animation(player, closestItem.gameObject.name, closestItem.itemSprites[1]);
-
                     return;
                 }
             }

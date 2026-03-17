@@ -21,6 +21,9 @@ public class ItemScript : MonoBehaviour
     }
     public string PickUpItem()
     {
+        foreach (ItemSplashes splash in FindObjectsByType<ItemSplashes>(FindObjectsSortMode.None))
+                splash.pick_up_animation("Player1", itemId, pickUpSprite);
+
         Destroy(gameObject);
         return itemId;
     }

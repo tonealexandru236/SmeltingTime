@@ -72,6 +72,10 @@ public class CraftingTable : MonoBehaviour
             itemsInCraft.Add(itemId);
             RefreshRecipePart();
 
+            foreach (ItemSplashes splash in FindObjectsByType<ItemSplashes>(FindObjectsSortMode.None))
+                if (ph.player != null)
+                    splash.pick_down_animation(ph.player, ph.itemInHandID, ph.itemInHandSprites[1]);
+
             ph.RemoveItemInHand();
         }
         else if (itemsInCraft.Count != 0){
