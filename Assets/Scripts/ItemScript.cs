@@ -19,10 +19,10 @@ public class ItemScript : MonoBehaviour
     {
         sr.sprite = canBePickedUp ? pickUpSprite : normalSprite;
     }
-    public string PickUpItem()
+    public string PickUpItem(GameObject player)
     {
         foreach (ItemSplashes splash in FindObjectsByType<ItemSplashes>(FindObjectsSortMode.None))
-                splash.pick_up_animation("Player1", itemId, pickUpSprite);
+                splash.pick_up_animation(player.name, itemId, pickUpSprite);
 
         Destroy(gameObject);
         return itemId;

@@ -22,15 +22,14 @@ public class ItemSplashes : MonoBehaviour
         }
     }
 
-    public void pick_down_animation(GameObject player, string item_name, Sprite item_sprite)
+    public void pick_down_animation(string player, string item_name, Sprite item_sprite)
     {
-        Debug.Log(player.name);
-        if (player.name == "Player1" && gameObject.name == "P1-item")
+        if (player == "Player1" && gameObject.name == "P1-item")
         {
             Debug.Log("OK");
             gameObject.GetComponent<Animator>().Play("p1-item-splash-l", 0, 0);
         }
-        else if (player.name == "Player2" && gameObject.name == "P2-item")
+        else if (player == "Player2" && gameObject.name == "P2-item")
             gameObject.GetComponent<Animator>().Play("p1-item-splash-r", 0, 0);
     }
 

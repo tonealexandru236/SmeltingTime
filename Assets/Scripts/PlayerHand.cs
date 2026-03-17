@@ -33,7 +33,7 @@ public class PlayerHand : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.F)) {
                 if (closestItem != null && itemInHandID == "") {
                     itemInHandSprites = closestItem.itemSprites;
-                    itemInHandID = closestItem.PickUpItem();
+                    itemInHandID = closestItem.PickUpItem(player);
                     Debug.Log(itemInHandID);
 
                     return;
@@ -70,6 +70,9 @@ public class PlayerHand : MonoBehaviour
     }
 
     public void RemoveItemInHand() {
+        foreach (ItemSplashes splash in FindObjectsByType<ItemSplashes>(FindObjectsSortMode.None))
+            splash.pick_down_animation(player.name, itemInHandID, GetComponent<SpriteRenderer>().sprite);
+
         itemInHandID = "";
         GetComponent<SpriteRenderer>().sprite = null;
     }

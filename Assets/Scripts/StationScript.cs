@@ -20,7 +20,7 @@ public class StationScript : MonoBehaviour
         {
             foreach (ItemSplashes splash in FindObjectsByType<ItemSplashes>(FindObjectsSortMode.None))
                 if (ph.player != null)
-                    splash.pick_down_animation(ph.player, ph.itemInHandID, ph.itemInHandSprites[1]);
+                    splash.pick_down_animation(ph.player.name, ph.itemInHandID, ph.itemInHandSprites[1]);
         }
 
         if (stationTag == "trash" && ph.itemInHandID != "")

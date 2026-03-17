@@ -1,7 +1,9 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections.Generic;
+using static UnityEditor.Experimental.GraphView.GraphView;
+using static UnityEditor.Progress;
 
 public class CraftingTable : MonoBehaviour
 {
@@ -59,6 +61,9 @@ public class CraftingTable : MonoBehaviour
                     lastPh.PickUpItemInHand(isForLast.itemSprites, n);
                     itemsInCraft.RemoveAt(itemsInCraft.Count - 1);
                     RefreshRecipePart();
+
+                    foreach (ItemSplashes splash in FindObjectsByType<ItemSplashes>(FindObjectsSortMode.None))
+                        splash.pick_up_animation(player.name, n, null); /// TO DO
                 }
                 t = -1;
             }
@@ -67,21 +72,23 @@ public class CraftingTable : MonoBehaviour
             holdToCraftImage.fillAmount = 0;
         }
     }
+
+    private GameObject player;
+
     public void UseCrafting(string itemId, PlayerHand ph, KeyCode kc) {
-        if(itemId != "") {
+        player = ph.player;
+        if (itemId != "") {
             itemsInCraft.Add(itemId);
             RefreshRecipePart();
-
-            foreach (ItemSplashes splash in FindObjectsByType<ItemSplashes>(FindObjectsSortMode.None))
-                if (ph.player != null)
-                    splash.pick_down_animation(ph.player, ph.itemInHandID, ph.itemInHandSprites[1]);
-
             ph.RemoveItemInHand();
         }
         else if (itemsInCraft.Count != 0){
             useKey = kc;
             lastPh = ph;
             t = 0;
+
+            foreach (ItemSplashes splash in FindObjectsByType<ItemSplashes>(FindObjectsSortMode.None))
+                splash.pick_up_animation(player.name, itemId, null); /// TO DO
         }
     }
 
