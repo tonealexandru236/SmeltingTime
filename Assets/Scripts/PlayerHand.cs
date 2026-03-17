@@ -3,9 +3,11 @@ using UnityEngine;
 
 public class PlayerHand : MonoBehaviour
 {
+    public KeyCode playerActionKey;
     public Sprite[] itemInHandSprites = new Sprite[0];
     public string itemInHandID;
     public GameObject player;
+    public int playerPriority;
 
     void Start() {
         player = transform.parent.gameObject;
@@ -30,7 +32,7 @@ public class PlayerHand : MonoBehaviour
             }
             if (closestItem != null) closestItem.SetInPickUpRange(true);
 
-            if(Input.GetKeyDown(KeyCode.F)) {
+            if(Input.GetKeyDown(playerActionKey)) {
                 if (closestItem != null && itemInHandID == "") {
                     itemInHandSprites = closestItem.itemSprites;
                     itemInHandID = closestItem.PickUpItem(player);
@@ -55,7 +57,7 @@ public class PlayerHand : MonoBehaviour
         }
 
         if(closestStation != null) { /// DACA ESTE O STATIE IN RANGE
-            if(Input.GetKeyDown(KeyCode.F))
+            if(Input.GetKeyDown(playerActionKey))
                 closestStation.UseStation(this);
 
             closestStation.ActivateStation(true, this);

@@ -30,12 +30,13 @@ public class StationScript : MonoBehaviour
         }
         else if (stationTag == "crafting")
         {
-            GetComponent<CraftingTable>().UseCrafting(ph.itemInHandID, ph, KeyCode.F);
+            GetComponent<CraftingTable>().UseCrafting(ph.itemInHandID, ph, ph.playerActionKey);
         }
     }
     public void ActivateStation(bool actv, PlayerHand ph) {
-        closeInRange = false;
-        if(actv)
+        if(ph.playerPriority == 0 && actv == false)
+            closeInRange = false;
+        else if(actv)
             closeInRange = actv;
     }
 
