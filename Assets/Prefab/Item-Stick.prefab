@@ -48,13 +48,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   itemId: stick
   itemSprites:
-  - {fileID: 21300000, guid: 0997de56f31d548eebe365db947d0cb4, type: 3}
-  - {fileID: 21300000, guid: 0997de56f31d548eebe365db947d0cb4, type: 3}
-  - {fileID: 21300000, guid: 0997de56f31d548eebe365db947d0cb4, type: 3}
-  - {fileID: 21300000, guid: 0997de56f31d548eebe365db947d0cb4, type: 3}
+  - {fileID: -4561015766075171351, guid: 9aa6f68f3e67e904683733f3c0f44736, type: 3}
+  - {fileID: 4243549632733805229, guid: 9aa6f68f3e67e904683733f3c0f44736, type: 3}
+  - {fileID: 482455046010046713, guid: 9aa6f68f3e67e904683733f3c0f44736, type: 3}
+  - {fileID: 3166902555279573811, guid: 9aa6f68f3e67e904683733f3c0f44736, type: 3}
   sr: {fileID: 12395795574226783}
-  normalSprite: {fileID: 21300000, guid: 0997de56f31d548eebe365db947d0cb4, type: 3}
-  pickUpSprite: {fileID: 21300000, guid: 0997de56f31d548eebe365db947d0cb4, type: 3}
+  normalSprite: {fileID: -4561015766075171351, guid: 9aa6f68f3e67e904683733f3c0f44736, type: 3}
+  pickUpSprite: {fileID: 9107382018973493097, guid: 9aa6f68f3e67e904683733f3c0f44736, type: 3}
 --- !u!212 &12395795574226783
 SpriteRenderer:
   serializedVersion: 2
@@ -104,7 +104,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 5
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: 0997de56f31d548eebe365db947d0cb4, type: 3}
+  m_Sprite: {fileID: 482455046010046713, guid: 9aa6f68f3e67e904683733f3c0f44736, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -152,7 +152,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.5625, y: 0.5625}
     newSize: {x: 0.5625, y: 0.5625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
