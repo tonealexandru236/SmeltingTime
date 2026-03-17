@@ -48,13 +48,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
   itemId: ironingot
   itemSprites:
-  - {fileID: -4285704637475842466, guid: 1d617f7760ff25d41a83d7e2bd6f8d74, type: 3}
-  - {fileID: -3565055659284460333, guid: 1d617f7760ff25d41a83d7e2bd6f8d74, type: 3}
-  - {fileID: -4347715241077519233, guid: 1d617f7760ff25d41a83d7e2bd6f8d74, type: 3}
-  - {fileID: 6979295641071249580, guid: 1d617f7760ff25d41a83d7e2bd6f8d74, type: 3}
+  - {fileID: 5971516484024807416, guid: ac404a8348f48144194776984ceee904, type: 3}
+  - {fileID: 2264545113893455140, guid: ac404a8348f48144194776984ceee904, type: 3}
+  - {fileID: 3109562133276284134, guid: ac404a8348f48144194776984ceee904, type: 3}
+  - {fileID: -5246957145969962740, guid: ac404a8348f48144194776984ceee904, type: 3}
   sr: {fileID: 3609851717696260702}
-  normalSprite: {fileID: -4285704637475842466, guid: 1d617f7760ff25d41a83d7e2bd6f8d74, type: 3}
-  pickUpSprite: {fileID: -4285704637475842466, guid: 1d617f7760ff25d41a83d7e2bd6f8d74, type: 3}
+  normalSprite: {fileID: 5971516484024807416, guid: ac404a8348f48144194776984ceee904, type: 3}
+  pickUpSprite: {fileID: -7106105131473924859, guid: ac404a8348f48144194776984ceee904, type: 3}
 --- !u!212 &3609851717696260702
 SpriteRenderer:
   serializedVersion: 2
@@ -104,7 +104,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -4347715241077519233, guid: 1d617f7760ff25d41a83d7e2bd6f8d74, type: 3}
+  m_Sprite: {fileID: 5971516484024807416, guid: ac404a8348f48144194776984ceee904, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -152,7 +152,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.40625}
+    oldSize: {x: 0.5625, y: 0.5625}
     newSize: {x: 0.16, y: 0.13}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

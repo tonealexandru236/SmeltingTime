@@ -89,7 +89,7 @@ public class CraftingTable : MonoBehaviour
         //Set Ui
         leftEnd.localPosition = new Vector2(-.125f - 0.25f * (Mathf.Max(0, itemsInCraft.Count - 1)), leftEnd.localPosition.y);
         rightEnd.localPosition = new Vector2(.125f + 0.25f * (Mathf.Max(0, itemsInCraft.Count - 1)), leftEnd.localPosition.y);
-        midTube.transform.localScale = new Vector2(itemsInCraft.Count - 1, 1);
+        midTube.transform.localScale = new Vector2(Mathf.Max(0, itemsInCraft.Count - 1), 1);
 
         //Set Items
         for(int i = 0; i < 5; i++)
