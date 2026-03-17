@@ -14,29 +14,23 @@ public class PlayerHand : MonoBehaviour
         player = transform.parent.gameObject;
         itemInHandID = "";
     }
-    private void Update()
+    public void ManualUpdate()
     {
         if(itemInHandID == "") {
             //Doesn't have item
-            float disItem = -1;
-            ItemScript closestItem = null;
-            foreach(ItemScript itm in FindObjectsByType<ItemScript>(FindObjectsSortMode.None)) {
-                itm.SetInPickUpRange(false);
 
-                float dis_to_item = Vector2.Distance(transform.position, itm.transform.position);
+            foreach (ItemScript itm in FindObjectsByType<ItemScript>(FindObjectsSortMode.None))
+                itm.SetInPickUpRange(false, this);
 
-                if(dis_to_item < 1f && (disItem == -1 || dis_to_item < disItem))
+            RaycastHit2D itemHit = Physics2D.BoxCast(pm.transform.position, new Vector2(.5f, .5f), 0, (transform.position - pm.transform.position), 1.3f, LayerMask.GetMask("Item"));
+            if (itemHit.collider != null) /// DACA ESTE O STATIE IN RANGE
+            {
+                ItemScript itm = itemHit.collider.GetComponent<ItemScript>();
+                itm.SetInPickUpRange(true, this);
+                if (Input.GetKeyDown(playerActionKey))
                 {
-                    disItem = dis_to_item;
-                    closestItem = itm;
-                }
-            }
-            if (closestItem != null) closestItem.SetInPickUpRange(true);
-
-            if(Input.GetKeyDown(playerActionKey)) {
-                if (closestItem != null && itemInHandID == "") {
-                    itemInHandSprites = closestItem.itemSprites;
-                    itemInHandID = closestItem.PickUpItem(player);
+                    itemInHandSprites = itm.itemSprites;
+                    itemInHandID = itm.PickUpItem(player);
                     Debug.Log(itemInHandID);
 
                     return;
@@ -44,8 +38,7 @@ public class PlayerHand : MonoBehaviour
             }
         }
 
-        #region Finds And Uses Closest Station
-
+        #region Find And Use Closest Station
         //Deactivate All Stations
         foreach (StationScript station in FindObjectsByType<StationScript>(FindObjectsSortMode.None))
             station.ActivateStation(false, this);
@@ -58,7 +51,6 @@ public class PlayerHand : MonoBehaviour
 
             hit.collider.GetComponent<StationScript>().ActivateStation(true, this);
         }
-
         #endregion
     }
 

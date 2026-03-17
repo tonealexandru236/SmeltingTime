@@ -11,7 +11,6 @@ public class CraftingTable : MonoBehaviour
 
     [Header("Item Identifier")]
     [SerializeField] string[] itemName;
-    [SerializeField] Sprite[] itemSprite;
     [SerializeField] ItemScript[] itemsAsObj;
 
     [Header("Visual")]
@@ -79,7 +78,7 @@ public class CraftingTable : MonoBehaviour
             RefreshRecipePart();
             ph.RemoveItemInHand();
         }
-        else if (itemsInCraft.Count != 0){
+        else if (itemsInCraft.Count != 0 && t < 0){
             useKey = kc;
             lastPh = ph;
             t = 0;
@@ -100,7 +99,7 @@ public class CraftingTable : MonoBehaviour
         for(int i = 0; i < itemsInCraft.Count; i++) {
             for(int j = 0; j < itemName.Length; j++) {
                 if(itemsInCraft[i] == itemName[j]) {
-                    recipeItemsVisual[i].GetComponent<SpriteRenderer>().sprite = itemSprite[j];
+                    recipeItemsVisual[i].GetComponent<SpriteRenderer>().sprite = itemsAsObj[j].itemSprites[0];
                     break;
                 }
             }
@@ -139,7 +138,7 @@ public class CraftingTable : MonoBehaviour
                 //Craft Match
                 for(int j = 0; j < itemName.Length; j++) {
                     if(itemName[j] == craftName) {
-                        itemToCraftSpriteRenderer.sprite = itemSprite[j];
+                        itemToCraftSpriteRenderer.sprite = itemsAsObj[j].itemSprites[0];
                         craftedItem = itemsAsObj[j];
                         craftedString = itemName[j];
                     }

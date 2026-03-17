@@ -13,6 +13,7 @@ Fiicode Game Jam
 7. Conveyor Belt - Conveyor animation + instantiating / moving items on the conveyor
 8. Trash Can - A script that its just happy to be included 
 9. Pause - Pauses the game if you press "esc"
+10. PlayersManager - Script that manages both players (responsible of action order)
 
 # Scenes
 1. primu scene or wtv

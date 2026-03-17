@@ -15,9 +15,12 @@ public class ItemScript : MonoBehaviour
         if(transform.position.y < -16) ///Despawn
             Destroy(gameObject);
     }
-    public void SetInPickUpRange(bool canBePickedUp)
+    public void SetInPickUpRange(bool canBePickedUp, PlayerHand ph)
     {
-        sr.sprite = canBePickedUp ? pickUpSprite : normalSprite;
+        if(ph.playerPriority == 0)
+            sr.sprite = canBePickedUp ? pickUpSprite : normalSprite;
+        else if(canBePickedUp)
+            sr.sprite = pickUpSprite;
     }
     public string PickUpItem(GameObject player)
     {
