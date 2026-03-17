@@ -29,11 +29,11 @@ public class StationScript : MonoBehaviour
             ph.RemoveItemInHand();
         }
         else if (stationTag == "crafting")
-        {
             GetComponent<CraftingTable>().UseCrafting(ph.itemInHandID, ph, ph.playerActionKey);
-        }
         else if (stationTag == "furnace")
             GetComponent<FurnaceScript>().UseFurnace(ph.itemInHandID, ph);
+        else if (stationTag == "table")
+            GetComponent<TableScript>().UseTable(ph.itemInHandID, ph);
     }
     public void ActivateStation(bool actv, PlayerHand ph) {
         if(ph.playerPriority == 0 && actv == false)

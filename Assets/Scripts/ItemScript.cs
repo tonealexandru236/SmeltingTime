@@ -9,7 +9,7 @@ public class ItemScript : MonoBehaviour
     [Header("Visual")]
     [SerializeField] SpriteRenderer sr;
     [SerializeField] Sprite normalSprite;
-    [SerializeField] Sprite pickUpSprite;
+    public Sprite pickUpSprite;
 
     void Update() {
         if(transform.position.y < -16) ///Despawn
