@@ -2330,9 +2330,17 @@ PrefabInstance:
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2779984909128012041, guid: dbdf1fefae653444591f60e24709f3b1, type: 3}
+      propertyPath: playerPriority
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2779984909128012041, guid: dbdf1fefae653444591f60e24709f3b1, type: 3}
       propertyPath: throwable_item
       value: 
       objectReference: {fileID: 920793971}
+    - target: {fileID: 2779984909128012041, guid: dbdf1fefae653444591f60e24709f3b1, type: 3}
+      propertyPath: playerActionKey
+      value: 303
+      objectReference: {fileID: 0}
     - target: {fileID: 2786890457157938535, guid: dbdf1fefae653444591f60e24709f3b1, type: 3}
       propertyPath: m_Size.x
       value: 0.6
@@ -6650,6 +6658,10 @@ PrefabInstance:
       propertyPath: throwable_item
       value: 
       objectReference: {fileID: 920793971}
+    - target: {fileID: 2779984909128012041, guid: dbdf1fefae653444591f60e24709f3b1, type: 3}
+      propertyPath: playerActionKey
+      value: 102
+      objectReference: {fileID: 0}
     - target: {fileID: 2786890457157938535, guid: dbdf1fefae653444591f60e24709f3b1, type: 3}
       propertyPath: m_Size.x
       value: 0.6
