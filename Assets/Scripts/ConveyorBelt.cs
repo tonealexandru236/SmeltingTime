@@ -1,3 +1,4 @@
+using System.Runtime.InteropServices.WindowsRuntime;
 using Unity.VisualScripting;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ public class ConveyorBelt : MonoBehaviour
 
     [Header("Items")]
     [SerializeField] GameObject[] itemsToSpawn;
+    [SerializeField] int[] itemsChance;
 
 
     [Header("Spawn Logic")]
@@ -32,9 +34,20 @@ public class ConveyorBelt : MonoBehaviour
         }
     }
 
+    private int cumulative_chance;
     public GameObject random_item()
     {
-        int chance = Random.Range(0, itemsToSpawn.Length);
-        return itemsToSpawn[chance];
+        int chance = Random.Range(1, 101);
+        cumulative_chance = 0;
+        Debug.Log(chance);
+        for (int i=0; i<itemsToSpawn.Length; i++)
+        {
+            //Debug.Log(" " + cumulative_chance);
+            cumulative_chance += itemsChance[i];
+            if (chance <= cumulative_chance)
+                return itemsToSpawn[i]; 
+        }
+        return null;
     }
+
 }

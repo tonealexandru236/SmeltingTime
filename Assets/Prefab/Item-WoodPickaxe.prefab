@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3609851717696260702}
   - component: {fileID: -386685197371434947}
   m_Layer: 6
-  m_Name: Item-CopperPickaxe
+  m_Name: Item-WoodPickaxe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,13 +48,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
   itemId: copperpickaxe
   itemSprites:
-  - {fileID: -520143105089116236, guid: 21f759678629cfc4d8fadee26e98a060, type: 3}
-  - {fileID: 5898928373146056613, guid: 21f759678629cfc4d8fadee26e98a060, type: 3}
-  - {fileID: -8290455656970018825, guid: 21f759678629cfc4d8fadee26e98a060, type: 3}
-  - {fileID: 1032904447007923852, guid: 21f759678629cfc4d8fadee26e98a060, type: 3}
+  - {fileID: -7291042066672102207, guid: 8ea35bfc4f4c66a449934a605f98bc32, type: 3}
+  - {fileID: 6752868714490256620, guid: 8ea35bfc4f4c66a449934a605f98bc32, type: 3}
+  - {fileID: -5840949627991244385, guid: 8ea35bfc4f4c66a449934a605f98bc32, type: 3}
+  - {fileID: -1479858134827805658, guid: 8ea35bfc4f4c66a449934a605f98bc32, type: 3}
   sr: {fileID: 3609851717696260702}
-  normalSprite: {fileID: 1032904447007923852, guid: 21f759678629cfc4d8fadee26e98a060, type: 3}
-  pickUpSprite: {fileID: 7115062874591463549, guid: 21f759678629cfc4d8fadee26e98a060, type: 3}
+  normalSprite: {fileID: -7291042066672102207, guid: 8ea35bfc4f4c66a449934a605f98bc32, type: 3}
+  pickUpSprite: {fileID: -8029923129666344500, guid: 8ea35bfc4f4c66a449934a605f98bc32, type: 3}
 --- !u!212 &3609851717696260702
 SpriteRenderer:
   serializedVersion: 2
@@ -104,7 +104,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -520143105089116236, guid: 21f759678629cfc4d8fadee26e98a060, type: 3}
+  m_Sprite: {fileID: -7291042066672102207, guid: 8ea35bfc4f4c66a449934a605f98bc32, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

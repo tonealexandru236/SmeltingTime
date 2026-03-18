@@ -1,22 +1,22 @@
 fileFormatVersion: 2
-guid: 6d0460001b23cb443bd112430d1c16c3
+guid: 3f74a604d9118db40aaba6f7e0e41412
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4965647857886519301
-    second: CopperIngot4dir_0
+      213: -3016800794143080991
+    second: CopperOre4dir-export_0
   - first:
-      213: -8690027782753940138
-    second: CopperIngot4dir_1
+      213: -3688477582629209567
+    second: CopperOre4dir-export_1
   - first:
-      213: -4468546862756214279
-    second: CopperIngot4dir_2
+      213: 8708158331781916924
+    second: CopperOre4dir-export_2
   - first:
-      213: 7155917022548498210
-    second: CopperIngot4dir_3
+      213: -5228299192652746830
+    second: CopperOre4dir-export_3
   - first:
-      213: 104748852199857212
-    second: CopperIngot4dir_4
+      213: 4009913119770769101
+    second: CopperOre4dir-export_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -112,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: CopperIngot4dir_0
+      name: CopperOre4dir-export_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 1
-        width: 10
-        height: 16
+        x: 2
+        y: 3
+        width: 13
+        height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,20 +127,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5006109ea6689e440800000000000000
-      internalID: 4965647857886519301
+      spriteID: 1ed3cf259ab2226d0800000000000000
+      internalID: -3016800794143080991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CopperIngot4dir_1
+      name: CopperOre4dir-export_1
       rect:
         serializedVersion: 2
-        x: 19
-        y: 4
-        width: 16
-        height: 10
+        x: 20
+        y: 2
+        width: 14
+        height: 14
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,19 +149,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 65d0da8f5c1d66780800000000000000
-      internalID: -8690027782753940138
+      spriteID: 12af4655e25efccc0800000000000000
+      internalID: -3688477582629209567
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CopperIngot4dir_2
+      name: CopperOre4dir-export_2
       rect:
         serializedVersion: 2
         x: 37
         y: 3
-        width: 16
+        width: 15
         height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -171,19 +171,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9f9ca3fbd488cf1c0800000000000000
-      internalID: -4468546862756214279
+      spriteID: cf828bd6dd799d870800000000000000
+      internalID: 8708158331781916924
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CopperIngot4dir_3
+      name: CopperOre4dir-export_3
       rect:
         serializedVersion: 2
         x: 55
         y: 3
-        width: 16
+        width: 15
         height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -193,20 +193,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2279c2b4e9cee4360800000000000000
-      internalID: 7155917022548498210
+      spriteID: 2bfa872c5995177b0800000000000000
+      internalID: -5228299192652746830
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: CopperIngot4dir_4
+      name: CopperOre4dir-export_4
       rect:
         serializedVersion: 2
-        x: 75
-        y: 0
-        width: 12
-        height: 18
+        x: 73
+        y: 2
+        width: 15
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,8 +215,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c3c900ea684247100800000000000000
-      internalID: 104748852199857212
+      spriteID: dc67d1cacb216a730800000000000000
+      internalID: 4009913119770769101
       vertices: []
       indices: 
       edges: []
@@ -235,11 +235,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      CopperIngot4dir_0: 4965647857886519301
-      CopperIngot4dir_1: -8690027782753940138
-      CopperIngot4dir_2: -4468546862756214279
-      CopperIngot4dir_3: 7155917022548498210
-      CopperIngot4dir_4: 104748852199857212
+      CopperOre4dir-export_0: -3016800794143080991
+      CopperOre4dir-export_1: -3688477582629209567
+      CopperOre4dir-export_2: 8708158331781916924
+      CopperOre4dir-export_3: -5228299192652746830
+      CopperOre4dir-export_4: 4009913119770769101
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

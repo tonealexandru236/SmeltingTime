@@ -4590,16 +4590,18 @@ MonoBehaviour:
   - copperingot
   - ironpickaxe
   - copperpickaxe
+  - woodpickaxe
   itemAsObj:
   - {fileID: 138871636675381304, guid: 9334f1693492349bc927fbb411d32787, type: 3}
   - {fileID: 920541454321307148, guid: 6e75d3b6bef3941a1880b1bfb7ad9a62, type: 3}
   - {fileID: 920541454321307148, guid: 7597979b0a64c194a85cae4b71ff95d6, type: 3}
   - {fileID: 6757882594673250028, guid: fbbf2c6e9a9fb6047a2c2e7d606e12e7, type: 3}
   - {fileID: 7119628228846839293, guid: 173d8bde5692c8b45a413ab863dc5b33, type: 3}
-  - {fileID: 7119628228846839293, guid: 173d8bde5692c8b45a413ab863dc5b33, type: 3}
-  - {fileID: 7119628228846839293, guid: 173d8bde5692c8b45a413ab863dc5b33, type: 3}
+  - {fileID: 6757882594673250028, guid: 1bb5ec3dd5e960e41b6004186562a83b, type: 3}
+  - {fileID: 7119628228846839293, guid: f01df480591d2c94e9abf2e12a195fe1, type: 3}
   - {fileID: 7119628228846839293, guid: 93f076f62b3b6d94c936a9920bb62e96, type: 3}
   - {fileID: 7119628228846839293, guid: 09243887a12e6964fa0b2539eb9e066f, type: 3}
+  - {fileID: 7119628228846839293, guid: b467614ebfa58ab4884325e97a43d415, type: 3}
 --- !u!4 &1392774622
 Transform:
   m_ObjectHideFlags: 0
@@ -5036,6 +5038,8 @@ MonoBehaviour:
   - stick-log
   - log-ironore,stick
   - ironpickaxe-ironingot,ironingot,ironingot,stick
+  - copperpickaxe-copperingot,copperingot,copperingot,stick
+  - woodpickaxe-log,log,log,stick
   recipeItemsVisual:
   - {fileID: 369851568}
   - {fileID: 62126364}
@@ -5560,11 +5564,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ConveyorBelt
   conveyorVisual: {fileID: 1483632664}
   itemsToSpawn:
-  - {fileID: 1676569562148675751, guid: fbbf2c6e9a9fb6047a2c2e7d606e12e7, type: 3}
   - {fileID: 8899958639640477454, guid: 9334f1693492349bc927fbb411d32787, type: 3}
+  - {fileID: 1676569562148675751, guid: fbbf2c6e9a9fb6047a2c2e7d606e12e7, type: 3}
+  - {fileID: 1676569562148675751, guid: 1bb5ec3dd5e960e41b6004186562a83b, type: 3}
+  itemsChance: 3c0000001400000014000000
   spawnPoint: {fileID: 1283177817}
   itemsParent: {fileID: 1056728023}
-  spawnRate: 2
+  spawnRate: 1.6
 --- !u!4 &1661670194
 Transform:
   m_ObjectHideFlags: 0
@@ -6304,6 +6310,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   furnaceRecipes:
   - ironore-ironingot
+  - copperore-copperingot
   fuelBg: {fileID: 938107957}
   fuelImg: {fileID: 704813344}
   toBurnImg: {fileID: 1012348864}
