@@ -39,7 +39,7 @@ public class ConveyorBelt : MonoBehaviour
     {
         int chance = Random.Range(1, 101);
         cumulative_chance = 0;
-        Debug.Log(chance);
+        //Debug.Log(chance);
         for (int i=0; i<itemsToSpawn.Length; i++)
         {
             //Debug.Log(" " + cumulative_chance);

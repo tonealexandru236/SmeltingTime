@@ -156,7 +156,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 50, y: 30}
+  m_AnchoredPosition: {x: 70, y: 30}
   m_SizeDelta: {x: 100, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &14139020
@@ -1913,7 +1913,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -50, y: 30}
+  m_AnchoredPosition: {x: -70, y: 30}
   m_SizeDelta: {x: 100, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &555525677
@@ -4856,6 +4856,8 @@ MonoBehaviour:
   - copperpickaxe
   - woodpickaxe
   - coppersword
+  - ironsword
+  - woodsword
   itemAsObj:
   - {fileID: 138871636675381304, guid: 9334f1693492349bc927fbb411d32787, type: 3}
   - {fileID: 920541454321307148, guid: 6e75d3b6bef3941a1880b1bfb7ad9a62, type: 3}
@@ -4868,6 +4870,8 @@ MonoBehaviour:
   - {fileID: 7119628228846839293, guid: 09243887a12e6964fa0b2539eb9e066f, type: 3}
   - {fileID: 7119628228846839293, guid: b467614ebfa58ab4884325e97a43d415, type: 3}
   - {fileID: 7119628228846839293, guid: 853cc6b5ed4fa774f92f4f4aa8683dc7, type: 3}
+  - {fileID: 7119628228846839293, guid: c18191ff0a2e5244ebdd9e241db97216, type: 3}
+  - {fileID: 7119628228846839293, guid: 9c5528acc8838ad459e83c8f2ae33a87, type: 3}
 --- !u!4 &1392774622
 Transform:
   m_ObjectHideFlags: 0
@@ -5307,6 +5311,8 @@ MonoBehaviour:
   - copperpickaxe-copperingot,copperingot,stick,stick
   - woodpickaxe-log,log,stick,stick
   - coppersword-copperingot,copperingot,stick
+  - ironsword-ironingot,ironingot,stick
+  - woodsword-log,log,stick
   recipeItemsVisual:
   - {fileID: 369851568}
   - {fileID: 62126364}
