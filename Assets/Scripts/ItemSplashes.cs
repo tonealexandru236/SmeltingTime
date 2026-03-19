@@ -3,6 +3,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
+using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class ItemSplashes : MonoBehaviour
 {
@@ -26,15 +27,27 @@ public class ItemSplashes : MonoBehaviour
     {
         if (player == "Player1" && gameObject.name == "P1-item")
         {
-            Debug.Log("OK");
             gameObject.GetComponent<Animator>().Play("p1-item-splash-l", 0, 0);
         }
         else if (player == "Player2" && gameObject.name == "P2-item")
+        {
             gameObject.GetComponent<Animator>().Play("p1-item-splash-r", 0, 0);
+        }
+    }
+
+    void update_width(string name)
+    {
+        RectTransform rect_t = gameObject.GetComponent<RectTransform>();
+        rect_t.sizeDelta = new Vector2(Mathf.Max(100, 100 * name.Length / 12.75f), rect_t.sizeDelta.y);
+
+        transform.GetChild(0).GetComponent<TMP_Text>().fontSize = 20 - name.Length/1.4f;
+
+        Debug.Log(name.Length);
     }
 
     void update_info(string name, Sprite sprite)
     {
+        update_width(name);
         transform.GetChild(0).GetComponent<TMP_Text>().SetText(name);
         transform.GetChild(0).GetChild(0).GetComponent<Image>().sprite = sprite;
     }
