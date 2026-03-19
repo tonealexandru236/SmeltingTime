@@ -3142,6 +3142,63 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1001 &983476139
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1594842378055724319, guid: 8bd0a101c89c2fb459b60b7cccc5fe2a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 1594842378055724319, guid: 8bd0a101c89c2fb459b60b7cccc5fe2a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 1594842378055724319, guid: 8bd0a101c89c2fb459b60b7cccc5fe2a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1594842378055724319, guid: 8bd0a101c89c2fb459b60b7cccc5fe2a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1594842378055724319, guid: 8bd0a101c89c2fb459b60b7cccc5fe2a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1594842378055724319, guid: 8bd0a101c89c2fb459b60b7cccc5fe2a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1594842378055724319, guid: 8bd0a101c89c2fb459b60b7cccc5fe2a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1594842378055724319, guid: 8bd0a101c89c2fb459b60b7cccc5fe2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1594842378055724319, guid: 8bd0a101c89c2fb459b60b7cccc5fe2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1594842378055724319, guid: 8bd0a101c89c2fb459b60b7cccc5fe2a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1676569562148675751, guid: 8bd0a101c89c2fb459b60b7cccc5fe2a, type: 3}
+      propertyPath: m_Name
+      value: Item - Ironpick
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8bd0a101c89c2fb459b60b7cccc5fe2a, type: 3}
 --- !u!1 &997329892
 GameObject:
   m_ObjectHideFlags: 0
@@ -4586,12 +4643,14 @@ MonoBehaviour:
   - charcoal
   - ironore
   - ironingot
+  - ironpick
   itemAsObj:
   - {fileID: 138871636675381304, guid: 9334f1693492349bc927fbb411d32787, type: 3}
   - {fileID: 920541454321307148, guid: 6e75d3b6bef3941a1880b1bfb7ad9a62, type: 3}
   - {fileID: 920541454321307148, guid: 7597979b0a64c194a85cae4b71ff95d6, type: 3}
   - {fileID: 6757882594673250028, guid: fbbf2c6e9a9fb6047a2c2e7d606e12e7, type: 3}
   - {fileID: 7119628228846839293, guid: 173d8bde5692c8b45a413ab863dc5b33, type: 3}
+  - {fileID: 6757882594673250028, guid: 8bd0a101c89c2fb459b60b7cccc5fe2a, type: 3}
 --- !u!4 &1392774622
 Transform:
   m_ObjectHideFlags: 0
@@ -5027,6 +5086,7 @@ MonoBehaviour:
   recipes:
   - stick-log
   - log-ironore,stick
+  - ironpick-ironingot,ironingot,stick
   recipeItemsVisual:
   - {fileID: 369851568}
   - {fileID: 62126364}
@@ -7599,3 +7659,4 @@ SceneRoots:
   - {fileID: 8823873831885492045}
   - {fileID: 5887952965877710496}
   - {fileID: 374292412}
+  - {fileID: 983476139}
