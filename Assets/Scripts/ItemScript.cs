@@ -11,6 +11,8 @@ public class ItemScript : MonoBehaviour
     [SerializeField] Sprite normalSprite;
     public Sprite pickUpSprite;
 
+    public bool is8dir;
+
     void Update() {
         if(transform.position.y < -16) ///Despawn
             Destroy(gameObject);

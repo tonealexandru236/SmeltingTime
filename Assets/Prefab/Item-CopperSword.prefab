@@ -55,6 +55,7 @@ MonoBehaviour:
   sr: {fileID: 3609851717696260702}
   normalSprite: {fileID: -8540608472029642943, guid: 7562544d790e80441a54724aae787061, type: 3}
   pickUpSprite: {fileID: 768657011832982167, guid: 7562544d790e80441a54724aae787061, type: 3}
+  is8dir: 1
 --- !u!212 &3609851717696260702
 SpriteRenderer:
   serializedVersion: 2
@@ -152,7 +153,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.18, y: 0.1}
+    oldSize: {x: 0.5625, y: 0.3125}
     newSize: {x: 0.16, y: 0.13}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

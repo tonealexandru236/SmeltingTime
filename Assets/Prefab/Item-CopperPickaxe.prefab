@@ -55,6 +55,7 @@ MonoBehaviour:
   sr: {fileID: 3609851717696260702}
   normalSprite: {fileID: 1032904447007923852, guid: 21f759678629cfc4d8fadee26e98a060, type: 3}
   pickUpSprite: {fileID: 7115062874591463549, guid: 21f759678629cfc4d8fadee26e98a060, type: 3}
+  is8dir: 1
 --- !u!212 &3609851717696260702
 SpriteRenderer:
   serializedVersion: 2

@@ -65,6 +65,6 @@ public class PlayerMovement : MonoBehaviour
         float y = (q < 2 || q > 6) ? 1 : (q > 2 && q < 6 ? -1 : 0);
 
         playerHand.localPosition = new Vector2(x, y).normalized * 0.5f;
-        playerHand.GetComponent<PlayerHand>().SetOrientationForItemInHand(q % 4 == 0 ? 1 : (q % 2 == 0 ? 0 : (q == 1 || q == 5 ? 3 : 2)));
+        playerHand.GetComponent<PlayerHand>().SetOrientationForItemInHand(q);
     }
 }

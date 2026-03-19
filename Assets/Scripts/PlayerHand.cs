@@ -10,7 +10,10 @@ public class PlayerHand : MonoBehaviour
     public int playerPriority;
     public PlayerMovement pm;
 
+    [SerializeField] bool showIn8Dir;
+    ItemDatabase itemDb;
     void Start() {
+        itemDb = FindFirstObjectByType<ItemDatabase>();
         player = transform.parent.gameObject;
         itemInHandID = "";
     }
@@ -27,7 +30,8 @@ public class PlayerHand : MonoBehaviour
                 {
                     itemInHandSprites = itm.itemSprites;
                     itemInHandID = itm.PickUpItem(player);
-                    Debug.Log(itemInHandID);
+                    showIn8Dir = itm.is8dir;
+                    //Debug.Log(itemInHandID);
 
                     return;
                 }
@@ -54,7 +58,14 @@ public class PlayerHand : MonoBehaviour
     public void SetOrientationForItemInHand(int q)
     {
         if (itemInHandID == "") return;
-        GetComponent<SpriteRenderer>().sprite = itemInHandSprites[q];
+
+        int indx = q % 4 == 0 ? 1 : (q % 2 == 0 ? 0 : (q == 1 || q == 5 ? 3 : 2));
+        GetComponent<SpriteRenderer>().sprite = itemInHandSprites[indx];
+
+        if(showIn8Dir)
+            transform.localScale = new Vector2(q > 3 ? -1 : 1, q > 3 ? -1 : 1);
+        else
+            transform.localScale = new Vector2(1, 1);
     }
 
     public void RemoveItemInHand() {
@@ -71,5 +82,7 @@ public class PlayerHand : MonoBehaviour
 
         itemInHandID = itemId;
         itemInHandSprites = spr;
+
+        showIn8Dir = itemDb.GetObjById(itemId).is8dir;
     }
 }

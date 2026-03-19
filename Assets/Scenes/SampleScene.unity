@@ -5613,6 +5613,7 @@ MonoBehaviour:
   itemsToSpawn:
   - {fileID: 1676569562148675751, guid: fbbf2c6e9a9fb6047a2c2e7d606e12e7, type: 3}
   - {fileID: 8899958639640477454, guid: 9334f1693492349bc927fbb411d32787, type: 3}
+  itemsChance: 0200000002000000
   spawnPoint: {fileID: 1283177817}
   itemsParent: {fileID: 1056728023}
   spawnRate: 2
