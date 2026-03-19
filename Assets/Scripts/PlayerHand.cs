@@ -32,11 +32,27 @@ public class PlayerHand : MonoBehaviour
                     itemInHandID = itm.PickUpItem(player);
                     showIn8Dir = itm.is8dir;
                     //Debug.Log(itemInHandID);
-
-                    return;
                 }
+
+                return;
             }
         }
+
+        #region Check if its looking at a customer
+        //Deactivate all lines
+        foreach (CustomersOrderLine customer in FindObjectsByType<CustomersOrderLine>(FindObjectsSortMode.None))
+            customer.ActivateCustomer(null, this);
+
+        RaycastHit2D customerHit = Physics2D.Raycast(pm.transform.position, (transform.position - pm.transform.position), 1.3f, LayerMask.GetMask("Customer"));
+        if (customerHit.collider != null) /// DACA ESTE O STATIE IN RANGE
+        {
+            customerHit.collider.GetComponent<CustomersOrderLine>().ActivateCustomer(itemDb.GetObjById(itemInHandID), this);
+
+            if(Input.GetKeyDown(playerActionKey))
+                customerHit.collider.GetComponent<CustomersOrderLine>().GiveItemtoCustomer(itemDb.GetObjById(itemInHandID), this);
+            return;
+        }
+        #endregion
 
         #region Find And Use Closest Station
         //Deactivate All Stations
