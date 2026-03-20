@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class CustomersOrderLine : MonoBehaviour
@@ -26,8 +27,8 @@ public class CustomersOrderLine : MonoBehaviour
     private void Update()
     {
         //TO DELETE
-        if (Input.GetKeyDown(KeyCode.Space))
-            StartCoroutine(MakeCustomerLeave());
+        //if (Input.GetKeyDown(KeyCode.Space))
+        //    StartCoroutine(MakeCustomerLeave());
 
 
         if (customerLine.Count > 0 && itemOrder == null && customerLine[0].transform.position == transform.position && !checkMark.activeSelf)
@@ -122,10 +123,21 @@ public class CustomersOrderLine : MonoBehaviour
         if(itm != null && itm == itemOrder)
             itemVisual.sprite = itemOrder.pickUpSprite;
     }
+
+    private float add;
+    public TMP_Text score_text;
+
     public void GiveItemtoCustomer(ItemScript itm, PlayerHand ph)
     {
         if (itemOrder == null || itm == null || itm != itemOrder)
             return;
+
+        add = 1;
+        float score = PlayerPrefs.GetFloat("Score");
+        score += add;
+        PlayerPrefs.SetFloat("Score", score);
+
+        score_text.SetText("score " + score.ToString());
 
         targetSpriteAlpha = 0;
         itemOrder = null;
