@@ -1650,8 +1650,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 108
+  m_fontSizeBase: 108
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2230,9 +2230,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 449264576}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0f40db64476b89441a6cce31c8de4419, type: 3}
+  m_Script: {fileID: 11500000, guid: 26f5b210fd99b76458ba7d2bfbeebf49, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Exit
+  m_EditorClassIdentifier: Assembly-CSharp::OpenScene
+  scene_name: TitleScene
 --- !u!1 &490101496
 GameObject:
   m_ObjectHideFlags: 0
@@ -5278,7 +5279,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 2560, y: 1600}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -8336,8 +8337,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -115, y: 32}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchoredPosition: {x: -215, y: 40}
+  m_SizeDelta: {x: 400, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1901390334
 MonoBehaviour:
@@ -8359,7 +8360,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exit
+  m_text: Exit to Title
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -8386,8 +8387,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 64
+  m_fontSizeBase: 64
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -8484,8 +8485,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 449264578}
-        m_TargetAssemblyTypeName: Exit, Assembly-CSharp
-        m_MethodName: ExitGame
+        m_TargetAssemblyTypeName: OpenScene, Assembly-CSharp
+        m_MethodName: on_click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9219,8 +9220,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 12
-  m_fontSizeBase: 12
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -10526,7 +10527,6 @@ SceneRoots:
   - {fileID: 781961704}
   - {fileID: 1090422644}
   - {fileID: 1551660202}
-  - {fileID: 449264577}
   - {fileID: 1435766972}
   - {fileID: 2079316064477499523}
   - {fileID: 350564548}
@@ -10546,3 +10546,4 @@ SceneRoots:
   - {fileID: 1280819708}
   - {fileID: 1446764468}
   - {fileID: 795352191}
+  - {fileID: 449264577}
