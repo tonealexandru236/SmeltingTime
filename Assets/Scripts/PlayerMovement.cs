@@ -13,9 +13,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] SpriteRenderer playerSr;
     [SerializeField] Sprite[] dirSprites;
 
-    [Header("Object")] // TO REMOVE
+    [Header("Object")] 
     [SerializeField] Transform playerHand;
-    [SerializeField] Sprite[] log4dir;
 
     Rigidbody2D rb;
     float d, td;
@@ -33,7 +32,25 @@ public class PlayerMovement : MonoBehaviour
 
         Vector2 dir = new Vector2(xInput, yInput).normalized;
 
-        transform.position += (Vector3)dir * Time.deltaTime * 4f;
+        //Move Player
+        float disPlayerMoves = Time.deltaTime * 4f;
+        Vector2 nextPlayerPos = transform.position + (Vector3)dir * disPlayerMoves;
+
+        LayerMask blockerMasks = LayerMask.GetMask("Station", "Wall");
+
+        RaycastHit2D hit = Physics2D.CircleCast(transform.position, 0.35f, (nextPlayerPos - (Vector2)transform.position).normalized, disPlayerMoves, blockerMasks);
+
+        if (hit.collider != null)
+        {
+            Vector2 hitPoint = hit.point;
+            transform.position = (hitPoint + ((Vector2)transform.position - hitPoint).normalized * 0.35f);
+        }
+        else
+        {
+            transform.position = nextPlayerPos;
+        }
+
+        //transform.position += (Vector3)dir * Time.deltaTime * 4f;
 
         if (xInput == 0)
             td = yInput == 0 ? td : (yInput == 1 ? 0 : 4);
