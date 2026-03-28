@@ -5,12 +5,13 @@ public class FurnaceScript : MonoBehaviour
     [SerializeField] string[] furnaceRecipes;
 
     [Header("Visual")]
-    [SerializeField] SpriteRenderer fuelBg;
     [SerializeField] SpriteRenderer fuelImg;
     [SerializeField] SpriteRenderer toBurnImg;
     [SerializeField] SpriteRenderer resultImg;
     [SerializeField] Sprite normalBg;
     [SerializeField] Sprite fireBg;
+    [SerializeField] Sprite[] woodBurningAnim;
+    [SerializeField] Sprite[] charcoalBurningAnim;
 
     PlayerHand lastPh;
     ItemDatabase itemDb;
@@ -30,9 +31,16 @@ public class FurnaceScript : MonoBehaviour
             if(t <= 0)
             {
                 toBurnImg.sprite = null;
-                fuelBg.sprite = normalBg;
+                fuelImg.sprite = normalBg;
 
                 resultImg.sprite = itemDb.GetObjById(result).itemSprites[1];
+            }
+            else
+            {
+                if (result == "charcoal")
+                    fuelImg.sprite = woodBurningAnim[Mathf.FloorToInt(((3 - t) / 3f) * woodBurningAnim.Length)];
+                else
+                    fuelImg.sprite = charcoalBurningAnim[Mathf.FloorToInt(((3 - t) / 3f) * charcoalBurningAnim.Length)];
             }
         }
     }
@@ -61,7 +69,7 @@ public class FurnaceScript : MonoBehaviour
                 {
                     ph.PickUpItemInHand(itemDb.GetObjById(fuelUsed).itemSprites, fuelUsed);
                     fuelUsed = "";
-                    fuelImg.sprite = null;
+                    fuelImg.sprite = normalBg;
                 }
             }
         }
@@ -94,8 +102,7 @@ public class FurnaceScript : MonoBehaviour
                 //Clear Furnace
                 fuelUsed = "";
                 whatToBurn = "";
-                fuelImg.sprite = null;
-                fuelBg.sprite = fireBg;
+                fuelImg.sprite = fireBg;
 
                 t = 3;
             }
@@ -119,8 +126,7 @@ public class FurnaceScript : MonoBehaviour
                         //Clear Furnace
                         fuelUsed = "";
                         whatToBurn = "";
-                        fuelImg.sprite = null;
-                        fuelBg.sprite = fireBg;
+                        fuelImg.sprite = fireBg;
 
                         t = 3;
                     }
