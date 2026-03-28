@@ -5,6 +5,7 @@ public class FurnaceScript : MonoBehaviour
     [SerializeField] string[] furnaceRecipes;
 
     [Header("Visual")]
+    [SerializeField] ParticleSystem smokeParticles;
     [SerializeField] SpriteRenderer fuelImg;
     [SerializeField] SpriteRenderer toBurnImg;
     [SerializeField] SpriteRenderer resultImg;
@@ -26,12 +27,15 @@ public class FurnaceScript : MonoBehaviour
     {
         if(t > 0)
         {
+            if(!smokeParticles.isPlaying)
+                smokeParticles.Play();
             t -= Time.deltaTime;
 
             if(t <= 0)
             {
                 toBurnImg.sprite = null;
                 fuelImg.sprite = normalBg;
+                smokeParticles.Stop();
 
                 resultImg.sprite = itemDb.GetObjById(result).itemSprites[1];
             }
