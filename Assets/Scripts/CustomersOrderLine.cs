@@ -16,7 +16,7 @@ public class CustomersOrderLine : MonoBehaviour
     [SerializeField] Transform menuParent;
 
     [Header("Customer Visual")]
-    [SerializeField] Sprite leftSprite;
+    [SerializeField] Sprite rightSprite;
     [SerializeField] Sprite downSprite;
 
     List<GameObject> customerLine = new List<GameObject>();
@@ -26,11 +26,6 @@ public class CustomersOrderLine : MonoBehaviour
     float delayBetween, yState, targetSpriteAlpha;
     private void Update()
     {
-        //TO DELETE
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //    StartCoroutine(MakeCustomerLeave());
-
-
         if (customerLine.Count > 0 && itemOrder == null && customerLine[0].transform.position == transform.position && !checkMark.activeSelf)
         {
             itemOrder = itemsItCanOrder[Random.Range(0, itemsItCanOrder.Length)];
@@ -59,7 +54,7 @@ public class CustomersOrderLine : MonoBehaviour
     }
     private void AddNewCustomerInLine()
     {
-        GameObject newCustomer = Instantiate(customerPref, transform.position - new Vector3(0, spaceBetweenThem * numberOfCustomers, 0), Quaternion.identity);
+        GameObject newCustomer = Instantiate(customerPref, transform.position + new Vector3(spaceBetweenThem * numberOfCustomers, 0, 0), Quaternion.identity);
         customerLine.Add(newCustomer);
         newCustomer.transform.parent = transform;
     }
@@ -67,7 +62,7 @@ public class CustomersOrderLine : MonoBehaviour
     {
         for (int i = 0; i < customerLine.Count; i++)
         {
-            Vector2 targetPos = transform.position - new Vector3(0, i * spaceBetweenThem, 0);
+            Vector2 targetPos = transform.position + new Vector3(i * spaceBetweenThem, 0, 0);
             customerLine[i].transform.position = Vector2.MoveTowards(customerLine[i].transform.position, targetPos, Time.deltaTime * 3f);
             customerLine[i].GetComponent<SpriteRenderer>().sortingOrder = i + 10;
         }
@@ -96,18 +91,18 @@ public class CustomersOrderLine : MonoBehaviour
 
         customer.GetComponent<SpriteRenderer>().sortingOrder = 5;
 
-        customer.GetComponent<SpriteRenderer>().sprite = leftSprite;
+        customer.GetComponent<SpriteRenderer>().sprite = downSprite;
 
-        Vector2 targetLateralPos = transform.position - new Vector3(spaceBetweenThem, 0, 0);
+        Vector2 targetLateralPos = transform.position - new Vector3(0, spaceBetweenThem, 0);
         while((Vector2)customer.transform.position != targetLateralPos)
         {
             customer.transform.position = Vector2.MoveTowards(customer.transform.position, targetLateralPos, Time.deltaTime * 3f);
             yield return new WaitForEndOfFrame();
         }
 
-        customer.GetComponent<SpriteRenderer>().sprite = downSprite;
+        customer.GetComponent<SpriteRenderer>().sprite = rightSprite;
 
-        Vector2 targetEndPos = transform.position - new Vector3(spaceBetweenThem, spaceBetweenThem * numberOfCustomers, 0);
+        Vector2 targetEndPos = transform.position - new Vector3(-spaceBetweenThem * numberOfCustomers, spaceBetweenThem, 0);
         while ((Vector2)customer.transform.position != targetEndPos)
         {
             customer.transform.position = Vector2.MoveTowards(customer.transform.position, targetEndPos, Time.deltaTime * 3f);
