@@ -13,6 +13,11 @@ public class TitleScreenUI : MonoBehaviour
 
     private GameObject menu_active;
 
+    void Awake()
+    {
+        Time.timeScale = 1;
+    }
+
     public void click_levels()
     {
         StartCoroutine(deactivate_ui(0.75f));
