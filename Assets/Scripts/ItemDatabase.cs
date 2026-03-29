@@ -19,6 +19,7 @@ public class ItemDatabase : MonoBehaviour
                 else if (a && iscr.name[i] != ' ') nm += iscr.name[i];
             }
             itemID.Add(nm.ToLower());
+            print(nm.ToLower());
         }
     }
     public ItemScript GetObjById(string id)
