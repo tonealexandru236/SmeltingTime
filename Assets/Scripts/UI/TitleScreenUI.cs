@@ -8,6 +8,9 @@ public class TitleScreenUI : MonoBehaviour
     public GameObject settings;
     public GameObject level_selector;
 
+    public GameObject custom1;
+    public GameObject custom2;
+
     private GameObject menu_active;
 
     public void click_levels()
@@ -47,6 +50,45 @@ public class TitleScreenUI : MonoBehaviour
             anim.SetFloat("Speed", -1);
             anim.Play("settings", 0, 1);
             menu_active = null;
+        }
+    }
+
+    public void click_c1()
+    {
+        StartCoroutine(deactivate_ui(0.25f));
+
+        Animator anim = custom1.GetComponent<Animator>();
+
+        Debug.Log(custom1.GetComponent<Image>().color.a);
+
+        if (custom1.GetComponent<Image>().color.a <= 0.99)
+        {
+            anim.SetFloat("Speed", 1);
+            anim.Play("customize", 0, 0);
+        }
+        else
+        {
+            Debug.Log("!");
+            anim.SetFloat("Speed", -1);
+            anim.Play("customize", 0, 1);
+        }
+    }
+
+    public void click_c2()
+    {
+        StartCoroutine(deactivate_ui(0.25f));
+
+        Animator anim = custom2.GetComponent<Animator>();
+
+        if (custom2.GetComponent<Image>().color.a <= 0.99)
+        {
+            anim.SetFloat("Speed", 1);
+            anim.Play("customize", 0, 0);
+        }
+        else
+        {
+            anim.SetFloat("Speed", -1);
+            anim.Play("customize", 0, 1);
         }
     }
 
