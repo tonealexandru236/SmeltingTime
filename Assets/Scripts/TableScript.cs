@@ -19,7 +19,8 @@ public class TableScript : MonoBehaviour
         {
             itemStored = itemID;
             mainSr.sprite = itemDb.GetObjById(itemID).itemSprites[0];
-            bgSr.sprite = itemDb.GetObjById(itemID).pickUpSprite;
+            bgSr.sprite = null;
+            //mainSr.sprite = itemDb.GetObjById(itemID).pickUpSprite;
 
             ph.RemoveItemInHand();
         }

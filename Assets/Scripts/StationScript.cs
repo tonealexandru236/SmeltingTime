@@ -25,7 +25,7 @@ public class StationScript : MonoBehaviour
 
         if (stationTag == "trash" && ph.itemInHandID != "")
         {
-            StartCoroutine(Item_fly_animation(ph.transform.position, 0.75f, 1.1f, ph.itemInHandSprites[1]));
+            StartCoroutine(Item_fly_animation(ph.transform.position, 0.75f, 1.2f, ph.itemInHandSprites[1]));
             ph.RemoveItemInHand();
         }
         else if (stationTag == "crafting")
