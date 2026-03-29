@@ -41,8 +41,6 @@ public class StationScript : MonoBehaviour
         else if(actv)
             closeInRange = actv;
     }
-
-
     public IEnumerator Item_fly_animation(Vector3 from_pos, float duration, float arc_height, Sprite sprite)
     {
         GameObject ist = Instantiate(throwable_item);
