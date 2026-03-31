@@ -437,6 +437,7 @@ GameObject:
   m_Component:
   - component: {fileID: 50057473}
   - component: {fileID: 50057472}
+  - component: {fileID: 50057474}
   m_Layer: 0
   m_Name: Placeholder
   m_TagString: Untagged
@@ -518,6 +519,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2061375067}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &50057474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 50057471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b1d485f780cdb3459272868cf1bc589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CustomerVariation
 --- !u!1001 &53201669
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4112,7 +4125,7 @@ GameObject:
   - component: {fileID: 743109024}
   - component: {fileID: 743109023}
   m_Layer: 7
-  m_Name: CustomerLine1 (3)
+  m_Name: CustomerLine4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5959,6 +5972,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1018614240}
   - component: {fileID: 1018614239}
+  - component: {fileID: 1018614241}
   m_Layer: 0
   m_Name: Placeholder
   m_TagString: Untagged
@@ -6040,6 +6054,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 743109025}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1018614241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1018614238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b1d485f780cdb3459272868cf1bc589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CustomerVariation
 --- !u!1001 &1022241362
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10914,6 +10940,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1695567830}
   - component: {fileID: 1695567829}
+  - component: {fileID: 1695567831}
   m_Layer: 0
   m_Name: Placeholder
   m_TagString: Untagged
@@ -10995,6 +11022,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1528812925}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1695567831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1695567828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b1d485f780cdb3459272868cf1bc589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CustomerVariation
 --- !u!1 &1707077246
 GameObject:
   m_ObjectHideFlags: 0
@@ -17249,6 +17288,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1983008110}
   - component: {fileID: 1983008109}
+  - component: {fileID: 1983008111}
   m_Layer: 0
   m_Name: Placeholder
   m_TagString: Untagged
@@ -17330,6 +17370,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 795809878}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1983008111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983008108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b1d485f780cdb3459272868cf1bc589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CustomerVariation
 --- !u!1 &1984192894
 GameObject:
   m_ObjectHideFlags: 0
@@ -17931,7 +17983,7 @@ GameObject:
   - component: {fileID: 2061375066}
   - component: {fileID: 2061375065}
   m_Layer: 7
-  m_Name: CustomerLine1 (2)
+  m_Name: CustomerLine3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

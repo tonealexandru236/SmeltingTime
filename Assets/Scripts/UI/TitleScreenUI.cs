@@ -60,7 +60,7 @@ public class TitleScreenUI : MonoBehaviour
 
     public void click_c1()
     {
-        StartCoroutine(deactivate_ui(0.25f));
+        //StartCoroutine(deactivate_ui(0.25f));
 
         Animator anim = custom1.GetComponent<Animator>();
 
@@ -81,7 +81,7 @@ public class TitleScreenUI : MonoBehaviour
 
     public void click_c2()
     {
-        StartCoroutine(deactivate_ui(0.25f));
+        //StartCoroutine(deactivate_ui(0.25f));
 
         Animator anim = custom2.GetComponent<Animator>();
 
