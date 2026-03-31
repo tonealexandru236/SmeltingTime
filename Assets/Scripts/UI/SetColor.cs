@@ -28,11 +28,17 @@ public class SetColor : MonoBehaviour
 
     public void Update()
     {
-        Debug.Log(GetComponent<Image>().color.a);
-        if(GetComponent<Image>().color.a < 1)
+        //Debug.Log(GetComponent<Image>().color.a);
+        if (GetComponent<Image>().color.a < 1)
+        {
             GetComponent<Button>().interactable = false;
+            GetComponent<Image>().raycastTarget = false;
+        }
         else
+        {
             GetComponent<Button>().interactable = true;
+            GetComponent<Image>().raycastTarget = true;
+        }
 
     }
 }
