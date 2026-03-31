@@ -25,4 +25,14 @@ public class SetColor : MonoBehaviour
                 PlayerPrefs.SetString("p2", color.ToHexString());
         }
     }
+
+    public void Update()
+    {
+        Debug.Log(GetComponent<Image>().color.a);
+        if(GetComponent<Image>().color.a < 1)
+            GetComponent<Button>().interactable = false;
+        else
+            GetComponent<Button>().interactable = true;
+
+    }
 }
