@@ -62,7 +62,7 @@ public class AudioManager : MonoBehaviour
         }
 
         source.clip = clip;
-        source.volume = 0.5f;
+        source.volume = PlayerPrefs.GetFloat("masterVolume", 1);
         source.Play();
     }
 
@@ -83,7 +83,7 @@ public class AudioManager : MonoBehaviour
                 break;
             }
         }
-
+         
         if (track == null)
         {
             Debug.LogError("Track file not found");
@@ -91,7 +91,7 @@ public class AudioManager : MonoBehaviour
         }
 
         source.clip = track;
-        source.volume = 0.5f;
+        source.volume = PlayerPrefs.GetFloat("masterVolume", 1);
         source.loop = true;
         source.Play();
     }

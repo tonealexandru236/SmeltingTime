@@ -13,10 +13,24 @@ public class TitleScreenUI : MonoBehaviour
 
     private GameObject menu_active;
 
+    public Slider masterSlider;
+
     void Awake()
     {
         Time.timeScale = 1;
+    }
+
+    private void Start()
+    {
         AudioManager.instance.PlayTrack("Elevator");
+
+        masterSlider.value = Mathf.Pow(10f, PlayerPrefs.GetFloat("masterVolume", 1) / 20);
+    }
+
+    void Update()
+    {
+        float value = Mathf.Log10(masterSlider.value) * 20;
+        PlayerPrefs.SetFloat("masterVolume", value);
     }
 
     public void click_levels()
