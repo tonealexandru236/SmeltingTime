@@ -92,6 +92,7 @@ public class AudioManager : MonoBehaviour
 
         source.clip = track;
         source.volume = 0.5f;
+        source.loop = true;
         source.Play();
     }
 }
