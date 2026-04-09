@@ -5053,6 +5053,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   audioClips:
   - {fileID: 8300000, guid: 3bc326360436efc47b45d68fc0f18568, type: 3}
+  - {fileID: 8300000, guid: 0a172fd25111f8a47b87098551403140, type: 3}
   audioTemplate: {fileID: 2012389699}
 --- !u!4 &1799406647
 Transform:
@@ -5742,8 +5743,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 5
-      minScalar: 2.5
+      scalar: 6
+      minScalar: 2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -6496,7 +6497,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 4
+      scalar: 4.8
       minScalar: 10
       maxCurve:
         serializedVersion: 2

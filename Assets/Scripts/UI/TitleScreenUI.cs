@@ -25,7 +25,7 @@ public class TitleScreenUI : MonoBehaviour
 
     private void Start()
     {
-        AudioManager.instance.PlayTrack("Elevator");
+        AudioManager.instance.PlayTrack("MainBass");
 
         float value = PlayerPrefs.GetFloat("masterVolume", 1);
 
