@@ -40,7 +40,7 @@ public class CustomersOrderLine : MonoBehaviour
             checkMark.GetComponent<SpriteRenderer>().sprite = xSprite;
             StartCoroutine(MakeCustomerLeave());
         }
-        else if(s < 1000)
+        else
         {
             emojiSr.sprite = emojiSprites[(int)(Mathf.Min(s / secondsBeforeMad, .999f) * emojiSprites.Length)];
         }
@@ -163,9 +163,8 @@ public class CustomersOrderLine : MonoBehaviour
 
         #endregion
 
-        FindFirstObjectByType<GameManager>().ServedOneCustomer();
-
-
+        
+        
         ph.RemoveItemInHand();
 
         checkMark.GetComponent<SpriteRenderer>().sprite = checkSprite;
