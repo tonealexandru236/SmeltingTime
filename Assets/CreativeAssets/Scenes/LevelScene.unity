@@ -9317,13 +9317,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   recipes:
   - stick-log
-  - log-iron ore,stick
-  - iron pickaxe-iron ingot,iron ingot,stick,stick
-  - copper pickaxe-copper ingot,copper ingot,stick,stick
-  - iron sword-iron ingot,iron ingot,stick
-  - copper sword-copper ingot,copper ingot,stick
-  - wooden sword-log,log,stick
-  - wooden pickaxe-log,log,stick,stick
+  - log-ironore,stick
+  - ironpickaxe-ironingot,ironingot,stick,stick
+  - copperpickaxe-copperingot,copperingot,stick,stick
+  - ironsword-ironingot,ironingot,stick
+  - coppersword-copperingot,copperingot,stick
+  - woodensword-log,log,stick
+  - woodenpickaxe-log,log,stick,stick
   recipeItemsVisual:
   - {fileID: 369851568}
   - {fileID: 62126364}
@@ -16181,7 +16181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   furnaceRecipes:
   - iron ore-iron ingot
-  - copper ore-copper ingot
+  - copperore-copperingot
   smokeParticles: {fileID: 1923350271}
   fuelImg: {fileID: 704813344}
   toBurnImg: {fileID: 1012348864}
