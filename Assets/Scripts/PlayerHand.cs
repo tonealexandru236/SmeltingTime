@@ -94,7 +94,7 @@ public class PlayerHand : MonoBehaviour
 
     public void PickUpItemInHand(Sprite[] spr, string itemId) {
         foreach (ItemSplashes splash in FindObjectsByType<ItemSplashes>(FindObjectsSortMode.None))
-            splash.pick_up_animation(player.name, itemId, spr[1]); /// TO DO
+            splash.pick_up_animation(player.name, FindFirstObjectByType<ItemDatabase>().GetObjById(itemId).name.Substring(4), spr[1]); /// TO DO
 
         itemInHandID = itemId;
         itemInHandSprites = spr;

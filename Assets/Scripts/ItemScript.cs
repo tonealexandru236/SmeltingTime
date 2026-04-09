@@ -24,7 +24,7 @@ public class ItemScript : MonoBehaviour
     public string PickUpItem(GameObject player)
     {
         foreach (ItemSplashes splash in FindObjectsByType<ItemSplashes>(FindObjectsSortMode.None))
-                splash.pick_up_animation(player.name, itemId, pickUpSprite);
+                splash.pick_up_animation(player.name, FindFirstObjectByType<ItemDatabase>().GetObjById(itemId).name.Substring(5), pickUpSprite);
 
         Destroy(gameObject);
         return itemId;
