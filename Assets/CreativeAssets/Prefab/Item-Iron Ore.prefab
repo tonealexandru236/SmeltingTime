@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5173173589944019147}
   - component: {fileID: 8309642651620892273}
   m_Layer: 6
-  m_Name: Item-CopperOre
+  m_Name: Item-Iron Ore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -46,15 +46,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f5dc6211e09af541bef0de81d83f298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
-  itemId: copperore
+  itemId: ironore
   itemSprites:
-  - {fileID: -3016800794143080991, guid: 3f74a604d9118db40aaba6f7e0e41412, type: 3}
-  - {fileID: -3688477582629209567, guid: 3f74a604d9118db40aaba6f7e0e41412, type: 3}
-  - {fileID: 8708158331781916924, guid: 3f74a604d9118db40aaba6f7e0e41412, type: 3}
-  - {fileID: -5228299192652746830, guid: 3f74a604d9118db40aaba6f7e0e41412, type: 3}
+  - {fileID: -8588497628625531682, guid: 3d136ae42e6da884282a6e2ab925aa4d, type: 3}
+  - {fileID: 4093134242401066221, guid: 3d136ae42e6da884282a6e2ab925aa4d, type: 3}
+  - {fileID: -1750545567290295971, guid: 3d136ae42e6da884282a6e2ab925aa4d, type: 3}
+  - {fileID: 7248602246711439676, guid: 3d136ae42e6da884282a6e2ab925aa4d, type: 3}
   sr: {fileID: 5173173589944019147}
-  normalSprite: {fileID: -3016800794143080991, guid: 3f74a604d9118db40aaba6f7e0e41412, type: 3}
-  pickUpSprite: {fileID: 4009913119770769101, guid: 3f74a604d9118db40aaba6f7e0e41412, type: 3}
+  normalSprite: {fileID: -8588497628625531682, guid: 3d136ae42e6da884282a6e2ab925aa4d, type: 3}
+  pickUpSprite: {fileID: -1901212566794642169, guid: 3d136ae42e6da884282a6e2ab925aa4d, type: 3}
 --- !u!212 &5173173589944019147
 SpriteRenderer:
   serializedVersion: 2
@@ -104,7 +104,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3016800794143080991, guid: 3f74a604d9118db40aaba6f7e0e41412, type: 3}
+  m_Sprite: {fileID: -8588497628625531682, guid: 3d136ae42e6da884282a6e2ab925aa4d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -152,7 +152,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.40625, y: 0.40625}
+    oldSize: {x: 0.5625, y: 0.5625}
     newSize: {x: 0.5625, y: 0.5625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
