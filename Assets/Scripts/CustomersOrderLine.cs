@@ -163,7 +163,7 @@ public class CustomersOrderLine : MonoBehaviour
 
         #endregion
 
-        
+        FindFirstObjectByType<GameManager>().ServedOneCustomer();
         
         ph.RemoveItemInHand();
 

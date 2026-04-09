@@ -18,6 +18,12 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
+        if(t <= 0)
+        {
+            Time.timeScale = 0;
+            return;
+        }
+
         t -= Time.deltaTime;
 
         timerTxt.text = FloatToTime(t);
@@ -43,5 +49,10 @@ public class GameManager : MonoBehaviour
     public void ServedOneCustomer()
     {
         numOfCustomersServed += 1;
+
+        if (numOfCustomersServed == numOfCustomersToServe)
+        {
+            Time.timeScale = 0;
+        }
     }
 }
