@@ -6,9 +6,13 @@ using UnityEngine;
 public class FPS : MonoBehaviour
 {
     private TMP_Text FPSDisplay;
+    private int MaxRefreshRate;
 
     private void Start()
     {
+        double hz = Screen.currentResolution.refreshRateRatio.value;
+        MaxRefreshRate = (int)Math.Round(hz);
+
         FPSDisplay = GetComponent<TMP_Text>();
         StartCoroutine(Track_FPS());
     }
@@ -22,7 +26,7 @@ public class FPS : MonoBehaviour
         while (true)
         {
             count = 1f / Time.unscaledDeltaTime;
-            FPSDisplay.SetText(Mathf.RoundToInt(count) + " FPS");
+            FPSDisplay.SetText(Mathf.Min(MaxRefreshRate, Mathf.RoundToInt(count)) + " FPS");
 
             yield return time;
         }

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,6 +16,8 @@ public class TitleScreenUI : MonoBehaviour
 
     public Slider masterSlider;
 
+    public TMP_Text sliderPercentage;
+
     void Awake()
     {
         Time.timeScale = 1;
@@ -24,12 +27,16 @@ public class TitleScreenUI : MonoBehaviour
     {
         AudioManager.instance.PlayTrack("Elevator");
 
-        masterSlider.value = PlayerPrefs.GetFloat("masterVolume", 1);
+        float value = PlayerPrefs.GetFloat("masterVolume", 1);
+
+        masterSlider.value = value;
+        sliderPercentage.text = (Mathf.Round(value * 100)).ToString() + "%";
     }
 
     void Update()
     {
         PlayerPrefs.SetFloat("masterVolume", masterSlider.value);
+        sliderPercentage.text = (Mathf.Round(masterSlider.value * 100)).ToString() + "%";
     }
 
     public void click_levels()
