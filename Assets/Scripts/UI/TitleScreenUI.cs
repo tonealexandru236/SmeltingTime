@@ -16,6 +16,7 @@ public class TitleScreenUI : MonoBehaviour
     void Awake()
     {
         Time.timeScale = 1;
+        AudioManager.instance.PlayTrack("Elevator");
     }
 
     public void click_levels()
