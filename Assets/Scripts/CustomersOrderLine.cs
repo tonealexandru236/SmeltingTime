@@ -5,15 +5,23 @@ using UnityEngine;
 
 public class CustomersOrderLine : MonoBehaviour
 {
+    [SerializeField] float secondsBeforeMad;
+
     [SerializeField] GameObject customerPref;
     [SerializeField] int numberOfCustomers;
     [SerializeField] float spaceBetweenThem;
 
     [Header("UI")]
+    [SerializeField] Sprite checkSprite;
+    [SerializeField] Sprite xSprite;
     [SerializeField] ItemScript[] itemsItCanOrder;
     [SerializeField] SpriteRenderer itemVisual;
     [SerializeField] GameObject checkMark;
     [SerializeField] Transform menuParent;
+
+    [Header("Emoji")]
+    [SerializeField] SpriteRenderer emojiSr;
+    [SerializeField] Sprite[] emojiSprites;
 
     [Header("Customer Visual")]
     [SerializeField] Sprite rightSprite;
@@ -23,15 +31,28 @@ public class CustomersOrderLine : MonoBehaviour
 
     ItemScript itemOrder;
 
-    float delayBetween, yState, targetSpriteAlpha;
+    float delayBetween, yState, targetSpriteAlpha, s = 0;
     private void Update()
     {
+        s += Time.deltaTime;
+        if(s > secondsBeforeMad && s < 1000)
+        {
+            checkMark.GetComponent<SpriteRenderer>().sprite = xSprite;
+            StartCoroutine(MakeCustomerLeave());
+        }
+        else
+        {
+            emojiSr.sprite = emojiSprites[(int)(Mathf.Min(s / secondsBeforeMad, .999f) * emojiSprites.Length)];
+        }
+
+
         if (customerLine.Count > 0 && itemOrder == null && customerLine[0].transform.position == transform.position && !checkMark.activeSelf)
         {
             itemOrder = itemsItCanOrder[Random.Range(0, itemsItCanOrder.Length)];
             itemVisual.sprite = itemOrder.itemSprites[0];
             targetSpriteAlpha = 1;
             yState = 1;
+            s = 0;
         }
 
         if (customerLine.Count < numberOfCustomers)
@@ -64,11 +85,17 @@ public class CustomersOrderLine : MonoBehaviour
         {
             Vector2 targetPos = transform.position + new Vector3(i * spaceBetweenThem, 0, 0);
             customerLine[i].transform.position = Vector2.MoveTowards(customerLine[i].transform.position, targetPos, Time.deltaTime * 3f);
-            customerLine[i].GetComponent<SpriteRenderer>().sortingOrder = i + 10;
+            //customerLine[i].GetComponent<SpriteRenderer>().sortingOrder = i + 10;
         }
     }
     IEnumerator MakeCustomerLeave()
     {
+        s = 2000;
+
+        checkMark.SetActive(true);
+        targetSpriteAlpha = 0;
+        itemOrder = null;
+
         yield return new WaitForSeconds(0.07f);
         checkMark.GetComponent<SpriteRenderer>().enabled = false;
         yield return new WaitForSeconds(0.07f);
@@ -89,8 +116,6 @@ public class CustomersOrderLine : MonoBehaviour
         GameObject customer = customerLine[0];
         customerLine.RemoveAt(0);
 
-        customer.GetComponent<SpriteRenderer>().sortingOrder = 5;
-
         customer.GetComponent<SpriteRenderer>().sprite = downSprite;
 
         Vector2 targetLateralPos = transform.position - new Vector3(0, spaceBetweenThem, 0);
@@ -101,6 +126,7 @@ public class CustomersOrderLine : MonoBehaviour
         }
 
         customer.GetComponent<SpriteRenderer>().sprite = rightSprite;
+        customer.GetComponent<SpriteRenderer>().sortingOrder += 1;
 
         Vector2 targetEndPos = transform.position - new Vector3(-spaceBetweenThem * numberOfCustomers, spaceBetweenThem, 0);
         while ((Vector2)customer.transform.position != targetEndPos)
@@ -127,6 +153,7 @@ public class CustomersOrderLine : MonoBehaviour
         if (itemOrder == null || itm == null || itm != itemOrder)
             return;
 
+        #region Score Stuff
         add = 1;
         float score = PlayerPrefs.GetFloat("Score");
         score += add;
@@ -134,11 +161,13 @@ public class CustomersOrderLine : MonoBehaviour
 
         score_text.SetText("score " + score.ToString());
 
-        targetSpriteAlpha = 0;
-        itemOrder = null;
-        checkMark.SetActive(true);
+        #endregion
+
+        
+        
         ph.RemoveItemInHand();
 
+        checkMark.GetComponent<SpriteRenderer>().sprite = checkSprite;
         StartCoroutine(MakeCustomerLeave());
     }
 }
