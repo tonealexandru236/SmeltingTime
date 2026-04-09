@@ -4112,7 +4112,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7189f9ed8b9ffcb448905daea8752417, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  secondsBeforeMad: 10
+  secondsBeforeMad: 30
   customerPref: {fileID: 1983008108}
   numberOfCustomers: 10
   spaceBetweenThem: 0.4
