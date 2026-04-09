@@ -24,13 +24,12 @@ public class TitleScreenUI : MonoBehaviour
     {
         AudioManager.instance.PlayTrack("Elevator");
 
-        masterSlider.value = Mathf.Pow(10f, PlayerPrefs.GetFloat("masterVolume", 1) / 20);
+        masterSlider.value = PlayerPrefs.GetFloat("masterVolume", 1);
     }
 
     void Update()
     {
-        float value = Mathf.Log10(masterSlider.value) * 20;
-        PlayerPrefs.SetFloat("masterVolume", value);
+        PlayerPrefs.SetFloat("masterVolume", masterSlider.value);
     }
 
     public void click_levels()

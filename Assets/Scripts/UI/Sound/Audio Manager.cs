@@ -11,6 +11,10 @@ public class AudioManager : MonoBehaviour
     private AudioSource[] audioSources = new AudioSource[12]; /// 0 -> 10 = SFX     ;    11/12 = Music Tracks
 
 
+    public void Update()
+    {
+        audioSources[11].volume = PlayerPrefs.GetFloat("masterVolume", 1);
+    }
 
     void Awake()
     {
