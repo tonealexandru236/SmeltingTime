@@ -40,7 +40,7 @@ public class CustomersOrderLine : MonoBehaviour
             checkMark.GetComponent<SpriteRenderer>().sprite = xSprite;
             StartCoroutine(MakeCustomerLeave());
         }
-        else
+        else if (s < 1000)
         {
             emojiSr.sprite = emojiSprites[(int)(Mathf.Min(s / secondsBeforeMad, .999f) * emojiSprites.Length)];
         }
