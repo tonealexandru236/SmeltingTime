@@ -9925,7 +9925,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7189f9ed8b9ffcb448905daea8752417, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  secondsBeforeMad: 45
+  secondsBeforeMad: 50
   customerPref: {fileID: 1983008108}
   numberOfCustomers: 10
   spaceBetweenThem: 0.7
@@ -9945,6 +9945,7 @@ MonoBehaviour:
   - {fileID: 7119628228846839293, guid: c7757b0c616d14f458241ba5da00107b, type: 3}
   - {fileID: 7119628228846839293, guid: 0bc9c611130c10142854193de8d09119, type: 3}
   - {fileID: 7119628228846839293, guid: e9408f6c60cdc404aae9424aa7b97b0e, type: 3}
+  - {fileID: 7119628228846839293, guid: 98b5a49c9fc1be444880a5998ab5969c, type: 3}
   itemVisual: {fileID: 628532058}
   checkMark: {fileID: 1144781428}
   menuParent: {fileID: 1316616250}
@@ -19262,6 +19263,7 @@ MonoBehaviour:
   - {fileID: 7119628228846839293, guid: e9408f6c60cdc404aae9424aa7b97b0e, type: 3}
   - {fileID: 7119628228846839293, guid: c7757b0c616d14f458241ba5da00107b, type: 3}
   - {fileID: 6757882594673250028, guid: b10088d82c0e47f43bb196f15b75d924, type: 3}
+  - {fileID: 7119628228846839293, guid: 98b5a49c9fc1be444880a5998ab5969c, type: 3}
 --- !u!4 &1392774622
 Transform:
   m_ObjectHideFlags: 0
@@ -20868,7 +20870,7 @@ MonoBehaviour:
   - {fileID: 1676569562148675751, guid: fbbf2c6e9a9fb6047a2c2e7d606e12e7, type: 3}
   - {fileID: 1676569562148675751, guid: 1bb5ec3dd5e960e41b6004186562a83b, type: 3}
   - {fileID: 1676569562148675751, guid: b10088d82c0e47f43bb196f15b75d924, type: 3}
-  - {fileID: 7205566309072863359, guid: 7597979b0a64c194a85cae4b71ff95d6, type: 3}
+  - {fileID: 2691727493601388173, guid: 98b5a49c9fc1be444880a5998ab5969c, type: 3}
   itemsChance: 2400000014000000140000001400000004000000
   spawnPoint: {fileID: 1283177817}
   itemsParent: {fileID: 1056728023}
