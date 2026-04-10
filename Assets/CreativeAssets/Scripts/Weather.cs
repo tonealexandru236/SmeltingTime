@@ -20,7 +20,7 @@ public class Weather : MonoBehaviour
         {
             int rain_chance = Random.Range(1, 11);
 
-            if(rain_chance < 11)
+            if(rain_chance <= 2)
             {
                 float rain_time = Random.Range(14f, 36f);
                 float intensity = Random.Range(80f, 100f);
