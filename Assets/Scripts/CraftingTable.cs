@@ -38,8 +38,11 @@ public class CraftingTable : MonoBehaviour
             if(t >= 1f && craftedItem != null) {
                 //Craft
 
-                particles.gameObject.SetActive(true);
-                particles.Play();
+                if (particles != null)
+                {
+                    particles.gameObject.SetActive(true);
+                    particles.Play();
+                }
 
                 lastPh.PickUpItemInHand(craftedItem.itemSprites, craftedString);
                 itemsInCraft.Clear();
