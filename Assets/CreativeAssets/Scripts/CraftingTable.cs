@@ -31,11 +31,14 @@ public class CraftingTable : MonoBehaviour
     void Update() {
         if(t >= 0) {
             lastPh.pm.canPlayerMove = false;
-            t += Time.deltaTime;
-            if(t >= 0.2f) {
+            
+            if(t >= 0.1f) {
                 holdToCraftImage.fillAmount = t;
+                t += Time.deltaTime / (itemsInCraft.Count / 2f);
             }
-            if(t >= 1f && craftedItem != null) {
+            else t += Time.deltaTime;
+
+            if (t >= 1f && craftedItem != null) {
                 //Craft
 
                 if (particles != null)
@@ -51,7 +54,7 @@ public class CraftingTable : MonoBehaviour
 
             if (Input.GetKeyUp(useKey)) {
                 lastPh.pm.canPlayerMove = true;
-                if (t <= 0.2f) {
+                if (t <= 0.1f) {
                     //Remove Last Item
                     string n = itemsInCraft[itemsInCraft.Count - 1];
                     ItemScript isForLast = null;

@@ -1,0 +1,1378 @@
+fileFormatVersion: 2
+guid: 3f7599fb19c0bc94c80554ef7a78cd25
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -696773019790298143
+    second: SmolRecipeBook_0
+  - first:
+      213: -1735638266466462721
+    second: SmolRecipeBook_1
+  - first:
+      213: -317947348904352248
+    second: SmolRecipeBook_2
+  - first:
+      213: 4675375928223980742
+    second: SmolRecipeBook_3
+  - first:
+      213: -8337603661663547728
+    second: SmolRecipeBook_4
+  - first:
+      213: -258435819223161381
+    second: SmolRecipeBook_5
+  - first:
+      213: -15268339735604361
+    second: SmolRecipeBook_6
+  - first:
+      213: 3412154515663933765
+    second: SmolRecipeBook_7
+  - first:
+      213: -391325417305189817
+    second: SmolRecipeBook_8
+  - first:
+      213: 7916017327209274821
+    second: SmolRecipeBook_9
+  - first:
+      213: 6796577473773864425
+    second: SmolRecipeBook_10
+  - first:
+      213: -4139590665893656274
+    second: SmolRecipeBook_11
+  - first:
+      213: 336119814876214652
+    second: SmolRecipeBook_12
+  - first:
+      213: 5139333392472109756
+    second: SmolRecipeBook_13
+  - first:
+      213: -841517731469748850
+    second: SmolRecipeBook_14
+  - first:
+      213: -4460949793192738920
+    second: SmolRecipeBook_15
+  - first:
+      213: -8899329492350337805
+    second: SmolRecipeBook_16
+  - first:
+      213: 844101907543708187
+    second: SmolRecipeBook_17
+  - first:
+      213: 8363387035557919876
+    second: SmolRecipeBook_18
+  - first:
+      213: 5910348339482801930
+    second: SmolRecipeBook_19
+  - first:
+      213: -1374004678197101866
+    second: SmolRecipeBook_20
+  - first:
+      213: -7007634580844196115
+    second: SmolRecipeBook_21
+  - first:
+      213: -1815471860378188457
+    second: SmolRecipeBook_22
+  - first:
+      213: -6286890071269681444
+    second: SmolRecipeBook_23
+  - first:
+      213: -5871342015805313203
+    second: SmolRecipeBook_24
+  - first:
+      213: 3627630190695313742
+    second: SmolRecipeBook_25
+  - first:
+      213: -3867101424129029412
+    second: SmolRecipeBook_26
+  - first:
+      213: -4558250212217687629
+    second: SmolRecipeBook_27
+  - first:
+      213: 6541493224492838407
+    second: SmolRecipeBook_28
+  - first:
+      213: 799321277443159848
+    second: SmolRecipeBook_29
+  - first:
+      213: -5145354588280533798
+    second: SmolRecipeBook_30
+  - first:
+      213: -5632133706831341774
+    second: SmolRecipeBook_31
+  - first:
+      213: 8480718295337712963
+    second: SmolRecipeBook_32
+  - first:
+      213: 8157629973846890540
+    second: SmolRecipeBook_33
+  - first:
+      213: 6379531114617508298
+    second: SmolRecipeBook_34
+  - first:
+      213: 1153897394869000774
+    second: SmolRecipeBook_35
+  - first:
+      213: 5256512360959013711
+    second: SmolRecipeBook_36
+  - first:
+      213: -8744004282606597424
+    second: SmolRecipeBook_37
+  - first:
+      213: 249999718228083405
+    second: SmolRecipeBook_38
+  - first:
+      213: 3926716509520099024
+    second: SmolRecipeBook_39
+  - first:
+      213: -5972742130768549219
+    second: SmolRecipeBook_40
+  - first:
+      213: -7107962478547591504
+    second: SmolRecipeBook_41
+  - first:
+      213: 2884691985261304213
+    second: SmolRecipeBook_42
+  - first:
+      213: -8371096609607284118
+    second: SmolRecipeBook_43
+  - first:
+      213: 3165314480692812967
+    second: SmolRecipeBook_44
+  - first:
+      213: -6445404352758407774
+    second: SmolRecipeBook_45
+  - first:
+      213: 9146701487250708108
+    second: SmolRecipeBook_46
+  - first:
+      213: -8802461426926242981
+    second: SmolRecipeBook_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SmolRecipeBook_0
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 383
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e3b25251a09456f0800000000000000
+      internalID: -696773019790298143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_1
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 360
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff311b44136c9e7e0800000000000000
+      internalID: -1735638266466462721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_2
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 367
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 806674b129c669bf0800000000000000
+      internalID: -317947348904352248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_3
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 360
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ccd331b2a542e040800000000000000
+      internalID: 4675375928223980742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_4
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 335
+        width: 74
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0be4c8ce4a1ea4c80800000000000000
+      internalID: -8337603661663547728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_5
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 342
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd567fdddf9d96cf0800000000000000
+      internalID: -258435819223161381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 335
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 773dfb1a681c9cff0800000000000000
+      internalID: -15268339735604361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_7
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 314
+        width: 74
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 541d4e024786a5f20800000000000000
+      internalID: 3412154515663933765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_8
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 321
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74251f53b9bb19af0800000000000000
+      internalID: -391325417305189817
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_9
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 314
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cd552871d75bdd60800000000000000
+      internalID: 7916017327209274821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_10
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 293
+        width: 74
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e586bcd33b425e50800000000000000
+      internalID: 6796577473773864425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_11
+      rect:
+        serializedVersion: 2
+        x: 84
+        y: 300
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e29c2ebc8383d86c0800000000000000
+      internalID: -4139590665893656274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_12
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 293
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c75baa7d0332aa400800000000000000
+      internalID: 336119814876214652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_13
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 268
+        width: 61
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb27a98bd74925740800000000000000
+      internalID: 5139333392472109756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_14
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 275
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e859d8fe4145254f0800000000000000
+      internalID: -841517731469748850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_15
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 268
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89ff4e75cc58712c0800000000000000
+      internalID: -4460949793192738920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_16
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 247
+        width: 61
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fcfc453afa3f7480800000000000000
+      internalID: -8899329492350337805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_17
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 254
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b125f51763ad6bb00800000000000000
+      internalID: 844101907543708187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_18
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 247
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48c798d9238b01470800000000000000
+      internalID: 8363387035557919876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_19
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 226
+        width: 61
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a0731b91086c50250800000000000000
+      internalID: 5910348339482801930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_20
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 233
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6da3654660e8eece0800000000000000
+      internalID: -1374004678197101866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_21
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 226
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deec90d0a71efbe90800000000000000
+      internalID: -7007634580844196115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_22
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 201
+        width: 87
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 755c07636f52ec6e0800000000000000
+      internalID: -1815471860378188457
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_23
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 208
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cd65a002aca70c8a0800000000000000
+      internalID: -6286890071269681444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_24
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 201
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4f29195b8dc48ea0800000000000000
+      internalID: -5871342015805313203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_25
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 180
+        width: 87
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4170ec307ee75230800000000000000
+      internalID: 3627630190695313742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_26
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 187
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cdac1685ebb455ac0800000000000000
+      internalID: -3867101424129029412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_27
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 180
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b17a672597ddb0c0800000000000000
+      internalID: -4558250212217687629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_28
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 159
+        width: 87
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70e258aed6d08ca50800000000000000
+      internalID: 6541493224492838407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_29
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 166
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82739638772c71b00800000000000000
+      internalID: 799321277443159848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_30
+      rect:
+        serializedVersion: 2
+        x: 103
+        y: 159
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adccc1263470898b0800000000000000
+      internalID: -5145354588280533798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_31
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 111
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23750d4eb34a6d1b0800000000000000
+      internalID: -5632133706831341774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_32
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 87
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34db2c95b5091b570800000000000000
+      internalID: 8480718295337712963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_33
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 87
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2819308d39b53170800000000000000
+      internalID: 8157629973846890540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_34
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 94
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac11450afb5a88850800000000000000
+      internalID: 6379531114617508298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_35
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 87
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64a5a682197730010800000000000000
+      internalID: 1153897394869000774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_36
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 57
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4379606422e2f840800000000000000
+      internalID: 5256512360959013711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_37
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 57
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0da4db4ce6e07a680800000000000000
+      internalID: -8744004282606597424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_38
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 64
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc2ceee4b6d287300800000000000000
+      internalID: 249999718228083405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_39
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 57
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d67b9b5cdf7e7630800000000000000
+      internalID: 3926716509520099024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_40
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 36
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9ae7805dae8c1da0800000000000000
+      internalID: -5972742130768549219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_41
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 36
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0be9d5d09c17b5d90800000000000000
+      internalID: -7107962478547591504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_42
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 43
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5999aeba31c780820800000000000000
+      internalID: 2884691985261304213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_43
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 36
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6a81eb4cf3e3db80800000000000000
+      internalID: -8371096609607284118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_44
+      rect:
+        serializedVersion: 2
+        x: 26
+        y: 15
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ac5818efb47deb20800000000000000
+      internalID: 3165314480692812967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_45
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 15
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ad1410f3e25d86a0800000000000000
+      internalID: -6445404352758407774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_46
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 22
+        width: 12
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c869d169a8c9fee70800000000000000
+      internalID: 9146701487250708108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SmolRecipeBook_47
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 15
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b53bbfa38ff57d580800000000000000
+      internalID: -8802461426926242981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SmolRecipeBook_0: -696773019790298143
+      SmolRecipeBook_1: -1735638266466462721
+      SmolRecipeBook_10: 6796577473773864425
+      SmolRecipeBook_11: -4139590665893656274
+      SmolRecipeBook_12: 336119814876214652
+      SmolRecipeBook_13: 5139333392472109756
+      SmolRecipeBook_14: -841517731469748850
+      SmolRecipeBook_15: -4460949793192738920
+      SmolRecipeBook_16: -8899329492350337805
+      SmolRecipeBook_17: 844101907543708187
+      SmolRecipeBook_18: 8363387035557919876
+      SmolRecipeBook_19: 5910348339482801930
+      SmolRecipeBook_2: -317947348904352248
+      SmolRecipeBook_20: -1374004678197101866
+      SmolRecipeBook_21: -7007634580844196115
+      SmolRecipeBook_22: -1815471860378188457
+      SmolRecipeBook_23: -6286890071269681444
+      SmolRecipeBook_24: -5871342015805313203
+      SmolRecipeBook_25: 3627630190695313742
+      SmolRecipeBook_26: -3867101424129029412
+      SmolRecipeBook_27: -4558250212217687629
+      SmolRecipeBook_28: 6541493224492838407
+      SmolRecipeBook_29: 799321277443159848
+      SmolRecipeBook_3: 4675375928223980742
+      SmolRecipeBook_30: -5145354588280533798
+      SmolRecipeBook_31: -5632133706831341774
+      SmolRecipeBook_32: 8480718295337712963
+      SmolRecipeBook_33: 8157629973846890540
+      SmolRecipeBook_34: 6379531114617508298
+      SmolRecipeBook_35: 1153897394869000774
+      SmolRecipeBook_36: 5256512360959013711
+      SmolRecipeBook_37: -8744004282606597424
+      SmolRecipeBook_38: 249999718228083405
+      SmolRecipeBook_39: 3926716509520099024
+      SmolRecipeBook_4: -8337603661663547728
+      SmolRecipeBook_40: -5972742130768549219
+      SmolRecipeBook_41: -7107962478547591504
+      SmolRecipeBook_42: 2884691985261304213
+      SmolRecipeBook_43: -8371096609607284118
+      SmolRecipeBook_44: 3165314480692812967
+      SmolRecipeBook_45: -6445404352758407774
+      SmolRecipeBook_46: 9146701487250708108
+      SmolRecipeBook_47: -8802461426926242981
+      SmolRecipeBook_5: -258435819223161381
+      SmolRecipeBook_6: -15268339735604361
+      SmolRecipeBook_7: 3412154515663933765
+      SmolRecipeBook_8: -391325417305189817
+      SmolRecipeBook_9: 7916017327209274821
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
