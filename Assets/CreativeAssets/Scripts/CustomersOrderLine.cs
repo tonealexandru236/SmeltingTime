@@ -49,6 +49,7 @@ public class CustomersOrderLine : MonoBehaviour
         if (customerLine.Count > 0 && itemOrder == null && customerLine[0].transform.position == transform.position && !checkMark.activeSelf)
         {
             itemOrder = itemsItCanOrder[Random.Range(0, itemsItCanOrder.Length)];
+            secondsBeforeMad = Mathf.Max(itemOrder.getMadTime, 20f);
             itemVisual.sprite = itemOrder.itemSprites[0];
             targetSpriteAlpha = 1;
             yState = 1;

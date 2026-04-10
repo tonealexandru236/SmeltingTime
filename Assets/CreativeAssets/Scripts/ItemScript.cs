@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class ItemScript : MonoBehaviour
 {
+    public float getMadTime;
+
     [SerializeField] string itemId;
 
     public Sprite[] itemSprites;

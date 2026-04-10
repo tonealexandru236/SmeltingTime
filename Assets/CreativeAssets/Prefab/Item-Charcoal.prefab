@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f5dc6211e09af541bef0de81d83f298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  getMadTime: 25
   itemId: charcoal
   itemSprites:
   - {fileID: -1784879067520637592, guid: 347fdab99e9115844893905dcdcff402, type: 3}
@@ -55,6 +56,7 @@ MonoBehaviour:
   sr: {fileID: 12395795574226783}
   normalSprite: {fileID: -1784879067520637592, guid: 347fdab99e9115844893905dcdcff402, type: 3}
   pickUpSprite: {fileID: -7284191316405495285, guid: 347fdab99e9115844893905dcdcff402, type: 3}
+  is8dir: 0
 --- !u!212 &12395795574226783
 SpriteRenderer:
   serializedVersion: 2
