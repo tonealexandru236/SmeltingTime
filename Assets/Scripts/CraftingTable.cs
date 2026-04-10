@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using static UnityEngine.ParticleSystem;
 
 public class CraftingTable : MonoBehaviour
 {
@@ -17,6 +18,8 @@ public class CraftingTable : MonoBehaviour
     [SerializeField] Image holdToCraftImage;
 
     [SerializeField] List<string> itemsInCraft = new List<string>();
+
+    public ParticleSystem particles;
 
     KeyCode useKey; PlayerHand lastPh; ItemDatabase itemDb;
     ItemScript craftedItem; string craftedString;
@@ -34,6 +37,10 @@ public class CraftingTable : MonoBehaviour
             }
             if(t >= 1f && craftedItem != null) {
                 //Craft
+
+                particles.gameObject.SetActive(true);
+                particles.Play();
+
                 lastPh.PickUpItemInHand(craftedItem.itemSprites, craftedString);
                 itemsInCraft.Clear();
                 RefreshRecipePart();

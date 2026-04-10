@@ -46,7 +46,7 @@ public class Weather : MonoBehaviour
                 yield return new WaitForSeconds(rain_time/4);
             }
 
-            float wait_time = Random.Range(5f, 6.2f);
+            float wait_time = Random.Range(7f, 8.2f);
             yield return new WaitForSeconds(wait_time);
         }
     }
