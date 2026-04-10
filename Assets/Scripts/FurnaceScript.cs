@@ -27,7 +27,7 @@ public class FurnaceScript : MonoBehaviour
     {
         if(t > 0)
         {
-            if(!smokeParticles.isPlaying)
+            if(smokeParticles != null && !smokeParticles.isPlaying)
                 smokeParticles.Play();
             t -= Time.deltaTime;
 
@@ -35,7 +35,9 @@ public class FurnaceScript : MonoBehaviour
             {
                 toBurnImg.sprite = null;
                 fuelImg.sprite = normalBg;
-                smokeParticles.Stop();
+
+                if (smokeParticles != null)
+                    smokeParticles.Stop();
 
                 resultImg.sprite = itemDb.GetObjById(result).itemSprites[1];
             }
