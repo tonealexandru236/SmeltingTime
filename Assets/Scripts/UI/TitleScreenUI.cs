@@ -18,9 +18,39 @@ public class TitleScreenUI : MonoBehaviour
 
     public TMP_Text sliderPercentage;
 
+    public Toggle fps;
+    public Toggle weather;
+    public Toggle particles;
+    public Toggle buttons;
+
     void Awake()
     {
         Time.timeScale = 1;
+
+        fps.isOn = PlayerPrefs.GetInt("s_fps", 0) == 1;
+        weather.isOn = PlayerPrefs.GetInt("s_weather", 1) == 1;
+        particles.isOn = PlayerPrefs.GetInt("s_particles", 1) == 1;
+        buttons.isOn = PlayerPrefs.GetInt("s_buttons", 1) == 1;
+    }
+
+    public void change_fps()
+    {
+        PlayerPrefs.SetInt("s_fps", fps.isOn ? 1 : 0);
+    }
+
+    public void change_weather()
+    {
+        PlayerPrefs.SetInt("s_weather", weather.isOn ? 1 : 0);
+    }
+
+    public void change_parts()
+    {
+        PlayerPrefs.SetInt("s_particles", particles.isOn ? 1 : 0);
+    }
+
+    public void change_butts()
+    {
+        PlayerPrefs.SetInt("s_buttons", buttons.isOn ? 1 : 0);
     }
 
     private void Start()

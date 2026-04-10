@@ -13,6 +13,8 @@ public class ButtonBehaviour : MonoBehaviour, IPointerEnterHandler, IPointerExit
     private float deactivate_multiplier;
     public float Time;
 
+    private int state;
+
     public void Start()
     {
         InitSize = gameObject.transform.localScale.x;
@@ -21,16 +23,22 @@ public class ButtonBehaviour : MonoBehaviour, IPointerEnterHandler, IPointerExit
     {
         //if(GetComponent<TMP_Text>()) GetComponent<TMP_Text>().fontStyle = FontStyles.Bold;
 
-        transform.DOScaleX(InitSize * multiplier, Time).SetUpdate(true);
-        transform.DOScaleY(InitSize * multiplier, Time).SetUpdate(true);
+        if (PlayerPrefs.GetInt("s_buttons", 1) == 1)
+        {
+            transform.DOScaleX(InitSize * multiplier, Time).SetUpdate(true);
+            transform.DOScaleY(InitSize * multiplier, Time).SetUpdate(true);
+        }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         //if (GetComponent<TMP_Text>()) GetComponent<TMP_Text>().fontStyle = FontStyles.Normal;
 
-        transform.DOScaleX(InitSize, Time).SetUpdate(true);
-        transform.DOScaleY(InitSize, Time).SetUpdate(true);
+        if (PlayerPrefs.GetInt("s_buttons", 1) == 1)
+        {
+            transform.DOScaleX(InitSize, Time).SetUpdate(true);
+            transform.DOScaleY(InitSize, Time).SetUpdate(true);
+        }
     }
 
     /*public void OnPointerClick(PointerEventData eventData)
