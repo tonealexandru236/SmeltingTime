@@ -1,0 +1,57 @@
+using System.Collections;
+using UnityEngine;
+
+public class Weather : MonoBehaviour
+{
+    public ParticleSystem rain;
+    public GameObject rain_overlay;
+    void Start()
+    {
+        rain.Stop();
+        StartCoroutine(wait_for_weather());
+    }
+
+    IEnumerator wait_for_weather()
+    {
+        float start_time = Random.Range(1f, 2f);
+        yield return new WaitForSeconds(start_time);
+
+        while (true)
+        {
+            int rain_chance = Random.Range(1, 11);
+
+            if(rain_chance < 11)
+            {
+                float rain_time = Random.Range(14f, 36f);
+                float intensity = Random.Range(80f, 100f);
+
+                var em = rain.emission;
+                em.rateOverTime = intensity;
+
+                /*var emg = rain.main;
+                var emgg = emg.gravityModifier;
+
+                emgg.constantMax = intensity / 50 + 1;*/
+
+                rain.Play();
+                rain_overlay.GetComponent<Animator>().SetFloat("Speed", 1);
+                rain_overlay.GetComponent<Animator>().Play("weather", 0, 0);
+
+                AudioManager.instance.PlayWeather("Rain", 1);
+
+                yield return new WaitForSeconds(rain_time);
+
+                rain.Stop();
+                rain_overlay.GetComponent<Animator>().SetFloat("Speed", -1);
+                rain_overlay.GetComponent<Animator>().Play("weather", 0, 1);
+
+                AudioManager.instance.PlayWeather("Rain", 0);
+
+                yield return new WaitForSeconds(rain_time/4);
+            }
+
+            float wait_time = Random.Range(7f, 8.2f);
+            yield return new WaitForSeconds(wait_time);
+        }
+    }
+}
