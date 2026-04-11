@@ -36,26 +36,31 @@ public class TitleScreenUI : MonoBehaviour
 
     public void change_color()
     {
+        AudioManager.instance.PlaySound("buttonSelect");
         PlayerPrefs.SetInt("s_color", color.isOn ? 1 : 0);
     }
 
     public void change_fps()
     {
+        AudioManager.instance.PlaySound("buttonSelect");
         PlayerPrefs.SetInt("s_fps", fps.isOn ? 1 : 0);
     }
 
     public void change_weather()
     {
+        AudioManager.instance.PlaySound("buttonSelect");
         PlayerPrefs.SetInt("s_weather", weather.isOn ? 1 : 0);
     }
 
     public void change_parts()
     {
+        AudioManager.instance.PlaySound("buttonSelect");
         PlayerPrefs.SetInt("s_particles", particles.isOn ? 1 : 0);
     }
 
     public void change_butts()
     {
+        AudioManager.instance.PlaySound("buttonSelect");
         PlayerPrefs.SetInt("s_buttons", buttons.isOn ? 1 : 0);
     }
 
@@ -78,6 +83,7 @@ public class TitleScreenUI : MonoBehaviour
 
     public void click_levels()
     {
+        AudioManager.instance.PlaySound("buttonClick");
         StartCoroutine(deactivate_ui(0.75f));
 
         Animator anim = level_selector.GetComponent<Animator>();
@@ -98,6 +104,7 @@ public class TitleScreenUI : MonoBehaviour
 
     public void click_settings()
     {
+        AudioManager.instance.PlaySound("buttonClick");
         StartCoroutine(deactivate_ui(0.5f));
 
         Animator anim = settings.GetComponent<Animator>();
@@ -118,6 +125,7 @@ public class TitleScreenUI : MonoBehaviour
 
     public void click_c1()
     {
+        AudioManager.instance.PlaySound("buttonClick");
         //StartCoroutine(deactivate_ui(0.25f));
 
         Animator anim = custom1.GetComponent<Animator>();
@@ -139,6 +147,7 @@ public class TitleScreenUI : MonoBehaviour
 
     public void click_c2()
     {
+        AudioManager.instance.PlaySound("buttonClick");
         //StartCoroutine(deactivate_ui(0.25f));
 
         Animator anim = custom2.GetComponent<Animator>();

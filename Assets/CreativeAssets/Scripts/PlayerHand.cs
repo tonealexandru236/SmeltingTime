@@ -12,6 +12,7 @@ public class PlayerHand : MonoBehaviour
 
     [SerializeField] bool showIn8Dir;
     ItemDatabase itemDb;
+
     void Start() {
         itemDb = FindFirstObjectByType<ItemDatabase>();
         player = transform.parent.gameObject;
@@ -87,6 +88,7 @@ public class PlayerHand : MonoBehaviour
     }
 
     public void RemoveItemInHand() {
+        AudioManager.instance.PlaySound("itemPlace");
         foreach (ItemSplashes splash in FindObjectsByType<ItemSplashes>(FindObjectsSortMode.None))
             splash.pick_down_animation(player.name, itemInHandID, GetComponent<SpriteRenderer>().sprite);
 
@@ -95,6 +97,7 @@ public class PlayerHand : MonoBehaviour
     }
 
     public void PickUpItemInHand(Sprite[] spr, string itemId) {
+        AudioManager.instance.PlaySound("itemPick");
         foreach (ItemSplashes splash in FindObjectsByType<ItemSplashes>(FindObjectsSortMode.None))
             splash.pick_up_animation(player.name, FindFirstObjectByType<ItemDatabase>().GetObjById(itemId).name.Substring(4), spr[1]); /// TO DO
 

@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f5dc6211e09af541bef0de81d83f298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
-  getMadTime: 0
+  getMadTime: 90
   itemSprites:
   - {fileID: -3611815200178282550, guid: 1c7bbcdd9aee6b241b4df391412bd488, type: 3}
   - {fileID: -8290125285751563896, guid: 1c7bbcdd9aee6b241b4df391412bd488, type: 3}

@@ -69,6 +69,7 @@ public class AudioManager : MonoBehaviour
 
         source.clip = clip;
         source.volume = PlayerPrefs.GetFloat("masterVolume", 1);
+        source.pitch = Random.Range(0.9f, 1.1f);
         source.Play();
     }
 
@@ -77,7 +78,12 @@ public class AudioManager : MonoBehaviour
         AudioSource source = null;
         AudioClip track = null;
 
+        
+
         source = audioSources[11];
+
+        if (source.isPlaying)
+            return;
 
         foreach (AudioClip clp in audioClips)
         {
