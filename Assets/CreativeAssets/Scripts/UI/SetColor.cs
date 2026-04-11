@@ -12,6 +12,7 @@ public class SetColor : MonoBehaviour
 
         if (player == 1)
         {
+            AudioManager.instance.PlaySound("buttonSelect");
             string other = PlayerPrefs.GetString("p2");
 
             if(other != color.ToHexString())
@@ -19,6 +20,7 @@ public class SetColor : MonoBehaviour
         }
         else if (player == 2)
         {
+            AudioManager.instance.PlaySound("buttonSelect");
             string other = PlayerPrefs.GetString("p1");
 
             if (other != color.ToHexString())
