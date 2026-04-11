@@ -46,15 +46,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f5dc6211e09af541bef0de81d83f298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
-  itemId: goldingot
+  getMadTime: 30
   itemSprites:
   - {fileID: -3019986152035714484, guid: 05ee607fdcaa8214c98e70208630a800, type: 3}
   - {fileID: -6583999026949661139, guid: 05ee607fdcaa8214c98e70208630a800, type: 3}
   - {fileID: 7438744106224521540, guid: 05ee607fdcaa8214c98e70208630a800, type: 3}
   - {fileID: 2497591558204066884, guid: 05ee607fdcaa8214c98e70208630a800, type: 3}
+  itemId: goldingot
+  recipeForThisItem: 
   sr: {fileID: 3609851717696260702}
   normalSprite: {fileID: -3019986152035714484, guid: 05ee607fdcaa8214c98e70208630a800, type: 3}
   pickUpSprite: {fileID: -6325402101630658897, guid: 05ee607fdcaa8214c98e70208630a800, type: 3}
+  is8dir: 0
 --- !u!212 &3609851717696260702
 SpriteRenderer:
   serializedVersion: 2

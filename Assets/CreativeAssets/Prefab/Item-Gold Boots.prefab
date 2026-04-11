@@ -46,13 +46,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f5dc6211e09af541bef0de81d83f298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
-  getMadTime: 0
+  getMadTime: 60
   itemSprites:
   - {fileID: -3433187437025570980, guid: 279e1c34e7d78924db65aa870ffd40fe, type: 3}
   - {fileID: 5432746795636292128, guid: 279e1c34e7d78924db65aa870ffd40fe, type: 3}
   - {fileID: -5760431900484952267, guid: 279e1c34e7d78924db65aa870ffd40fe, type: 3}
   - {fileID: 1785467333962042512, guid: 279e1c34e7d78924db65aa870ffd40fe, type: 3}
-  itemId: ironboots
+  itemId: goldboots
   recipeForThisItem: goldingot,goldingot
   sr: {fileID: 3609851717696260702}
   normalSprite: {fileID: -3433187437025570980, guid: 279e1c34e7d78924db65aa870ffd40fe, type: 3}

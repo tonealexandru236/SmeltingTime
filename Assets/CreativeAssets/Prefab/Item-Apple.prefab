@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f5dc6211e09af541bef0de81d83f298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
-  getMadTime: 0
+  getMadTime: 30
   itemSprites:
   - {fileID: -7832214784768987486, guid: f1a6bcd538351e74faee02cfa0c13830, type: 3}
   - {fileID: -8755805678658342655, guid: f1a6bcd538351e74faee02cfa0c13830, type: 3}
@@ -155,7 +155,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.15, y: 0.17}
+    oldSize: {x: 0.46875, y: 0.53125}
     newSize: {x: 0.5625, y: 0.5625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
