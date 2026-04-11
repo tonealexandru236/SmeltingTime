@@ -13,24 +13,35 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] SpriteRenderer playerSr;
     [SerializeField] Sprite[] dirSprites;
 
+    [Header("Animation")]
+    [SerializeField] Sprite[] walkAnims;
+
     [Header("Object")] 
     [SerializeField] Transform playerHand;
 
     Rigidbody2D rb;
     float d, td;
+    int spriteSheetToUse; float spriteIndex;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         canPlayerMove = true;
+        spriteSheetToUse = 0;
+        spriteIndex = 0;
     }
     private void Update()
     {
+        if (!canPlayerMove) spriteIndex = 0;
+
+        playerSr.sprite = walkAnims[spriteSheetToUse * 4 + (int)spriteIndex];
+
         if (!canPlayerMove) return;
 
         float yInput = (Input.GetKey(upButton) ? 1 : 0) + (Input.GetKey(downButton) ? -1 : 0);
         float xInput = (Input.GetKey(rightButton) ? 1 : 0) + (Input.GetKey(leftButton) ? -1 : 0);
 
         Vector2 dir = new Vector2(xInput, yInput).normalized;
+        if (dir != new Vector2(0, 0)) spriteIndex = (spriteIndex + Time.deltaTime * 10) % 4;
 
         //Move Player
         float disPlayerMoves = Time.deltaTime * 4f;
@@ -66,11 +77,15 @@ public class PlayerMovement : MonoBehaviour
         //Change Sprite For Player
         int indx = Mathf.RoundToInt(d) % 8;
         if(indx < 5) {
-            playerSr.sprite = dirSprites[indx];
+            spriteSheetToUse = indx;
+
+            //playerSr.sprite = dirSprites[indx];
             playerSr.transform.localScale = new Vector2(1, 1);
         }
         else {
-            playerSr.sprite = dirSprites[8 - indx];
+            spriteSheetToUse = 8 - indx;
+
+            //playerSr.sprite = dirSprites[8 - indx];
             playerSr.transform.localScale = new Vector2(-1, 1);
         }
 
