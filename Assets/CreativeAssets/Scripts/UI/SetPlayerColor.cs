@@ -33,7 +33,7 @@ public class SetPlayerColor : MonoBehaviour
         if(player == 1)
             cur_col = PlayerPrefs.GetString("p1", "FF0000");
         else if(player == 2)
-            cur_col = PlayerPrefs.GetString("p2", "0500FF");
+            cur_col = PlayerPrefs.GetString("p2", "00CDFF");
 
         Color color;
         if (GetComponent<Image>() != null)
