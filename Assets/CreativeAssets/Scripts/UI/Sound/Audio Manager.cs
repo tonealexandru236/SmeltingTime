@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Diagnostics.Tracing;
+using System.Net;
 using UnityEngine;
 using static Unity.VisualScripting.Member;
 
@@ -40,6 +41,9 @@ public class AudioManager : MonoBehaviour
     {
         AudioSource source = null;
         AudioClip clip = null;
+
+        if (audioSources == null)
+            return;
 
         foreach(AudioSource sources in audioSources)
             if(!sources.isPlaying)

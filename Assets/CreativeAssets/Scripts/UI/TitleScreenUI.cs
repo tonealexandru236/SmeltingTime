@@ -66,13 +66,20 @@ public class TitleScreenUI : MonoBehaviour
 
     private void Start()
     {
-        AudioManager.instance.PlayTrack("MainBass");
-        AudioManager.instance.PlayWeather("Rain", 0);
+        StartCoroutine(BandaidFix());
+        
 
         float value = PlayerPrefs.GetFloat("masterVolume", 1);
 
         masterSlider.value = value;
         sliderPercentage.text = (Mathf.Round(value * 100)).ToString() + "%";
+    }
+
+    IEnumerator BandaidFix()
+    {
+        yield return new WaitForSeconds(0.1f);
+        AudioManager.instance.PlayTrack("MainBass");
+        AudioManager.instance.PlayWeather("Rain", 0);
     }
 
     void Update()
