@@ -18,7 +18,7 @@ public class Weather : MonoBehaviour
 
         while (true)
         {
-            int rain_chance = Random.Range(1, 11);
+            int rain_chance = Random.Range(1, 13);
 
             if(rain_chance <= 1)
             {
