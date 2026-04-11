@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f5dc6211e09af541bef0de81d83f298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
+  getMadTime: 0
   itemId: copperchestplate
   itemSprites:
   - {fileID: 1850936704412226224, guid: 26687e553a215ac4c981c60d06e215d3, type: 3}
