@@ -3,7 +3,6 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
-using static UnityEngine.RuleTile.TilingRuleOutput;
 
 public class ItemSplashes : MonoBehaviour
 {
@@ -47,6 +46,9 @@ public class ItemSplashes : MonoBehaviour
 
     void update_info(string name, Sprite sprite)
     {
+        if (name.StartsWith("-"))
+            name = name.Substring(1);
+
         update_width(name);
         transform.GetChild(0).GetComponent<TMP_Text>().SetText(name);
         transform.GetChild(0).GetChild(0).GetComponent<Image>().sprite = sprite;
