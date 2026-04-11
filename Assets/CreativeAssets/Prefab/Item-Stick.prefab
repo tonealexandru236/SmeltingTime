@@ -46,15 +46,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f5dc6211e09af541bef0de81d83f298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  itemId: stick
+  getMadTime: 0
   itemSprites:
   - {fileID: -4561015766075171351, guid: 9aa6f68f3e67e904683733f3c0f44736, type: 3}
   - {fileID: 4243549632733805229, guid: 9aa6f68f3e67e904683733f3c0f44736, type: 3}
   - {fileID: 482455046010046713, guid: 9aa6f68f3e67e904683733f3c0f44736, type: 3}
   - {fileID: 3166902555279573811, guid: 9aa6f68f3e67e904683733f3c0f44736, type: 3}
+  itemId: stick
+  recipeForThisItem: log
   sr: {fileID: 12395795574226783}
   normalSprite: {fileID: -4561015766075171351, guid: 9aa6f68f3e67e904683733f3c0f44736, type: 3}
   pickUpSprite: {fileID: 9107382018973493097, guid: 9aa6f68f3e67e904683733f3c0f44736, type: 3}
+  is8dir: 0
 --- !u!212 &12395795574226783
 SpriteRenderer:
   serializedVersion: 2

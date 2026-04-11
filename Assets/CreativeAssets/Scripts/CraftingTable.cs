@@ -6,7 +6,7 @@ using static UnityEngine.ParticleSystem;
 
 public class CraftingTable : MonoBehaviour
 {
-    [SerializeField] string[] recipes;
+    [SerializeField] List<string> recipes = new List<string>();
 
     [Header("Visual")]
     [SerializeField] GameObject[] recipeItemsVisual; //Max 4
@@ -27,6 +27,9 @@ public class CraftingTable : MonoBehaviour
     void Start() {
         t = -1;
         itemDb = FindFirstObjectByType<ItemDatabase>();
+
+        recipes.Clear();
+        SetTheCraftingRecipes();
     }
     void Update() {
         if(t >= 0) {
@@ -70,6 +73,15 @@ public class CraftingTable : MonoBehaviour
         }
         else {
             holdToCraftImage.fillAmount = 0;
+        }
+    }
+    private void SetTheCraftingRecipes()
+    {
+        foreach (ItemScript itms in itemDb.itemAsObj) {
+            if(itms.recipeForThisItem != "")
+            {
+                recipes.Add(itemDb.GetStringByObj(itms) + "-" + itms.recipeForThisItem);
+            }
         }
     }
 
@@ -121,7 +133,7 @@ public class CraftingTable : MonoBehaviour
 
         resultParent.SetActive(false);
         craftedItem = null;
-        for(int i = 0; i < recipes.Length; i++) {
+        for(int i = 0; i < recipes.Count; i++) {
             string craftName = "", recipeString = "";
             bool addToCraftName = true;
             for(int j = 0; j < recipes[i].Length; j++) {

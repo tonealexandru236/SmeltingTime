@@ -46,12 +46,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f5dc6211e09af541bef0de81d83f298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
-  itemId: woodenpickaxe
+  getMadTime: 0
   itemSprites:
   - {fileID: -7291042066672102207, guid: 8ea35bfc4f4c66a449934a605f98bc32, type: 3}
   - {fileID: 6752868714490256620, guid: 8ea35bfc4f4c66a449934a605f98bc32, type: 3}
   - {fileID: -5840949627991244385, guid: 8ea35bfc4f4c66a449934a605f98bc32, type: 3}
   - {fileID: -1479858134827805658, guid: 8ea35bfc4f4c66a449934a605f98bc32, type: 3}
+  itemId: woodenpickaxe
+  recipeForThisItem: log,log,log,stick,stick
   sr: {fileID: 3609851717696260702}
   normalSprite: {fileID: -7291042066672102207, guid: 8ea35bfc4f4c66a449934a605f98bc32, type: 3}
   pickUpSprite: {fileID: -8029923129666344500, guid: 8ea35bfc4f4c66a449934a605f98bc32, type: 3}

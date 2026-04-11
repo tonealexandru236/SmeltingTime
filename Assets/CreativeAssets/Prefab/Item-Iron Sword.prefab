@@ -46,12 +46,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f5dc6211e09af541bef0de81d83f298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
-  itemId: ironsword
+  getMadTime: 0
   itemSprites:
   - {fileID: 9004682613809129431, guid: 2771fc667f6432345bbdfe22602c43d0, type: 3}
   - {fileID: 6864155110592819023, guid: 2771fc667f6432345bbdfe22602c43d0, type: 3}
   - {fileID: 389282898943922283, guid: 2771fc667f6432345bbdfe22602c43d0, type: 3}
   - {fileID: 1370705082135573259, guid: 2771fc667f6432345bbdfe22602c43d0, type: 3}
+  itemId: ironsword
+  recipeForThisItem: ironingot,ironingot,stick
   sr: {fileID: 3609851717696260702}
   normalSprite: {fileID: 9004682613809129431, guid: 2771fc667f6432345bbdfe22602c43d0, type: 3}
   pickUpSprite: {fileID: -3008434065073471230, guid: 2771fc667f6432345bbdfe22602c43d0, type: 3}

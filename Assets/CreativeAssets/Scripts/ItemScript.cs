@@ -4,9 +4,10 @@ public class ItemScript : MonoBehaviour
 {
     public float getMadTime;
 
-    [SerializeField] string itemId;
-
     public Sprite[] itemSprites;
+
+    public string itemId;
+    public string recipeForThisItem;
 
     [Header("Visual")]
     [SerializeField] SpriteRenderer sr;

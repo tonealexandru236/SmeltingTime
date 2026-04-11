@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3609851717696260702}
   - component: {fileID: -386685197371434947}
   m_Layer: 6
-  m_Name: Item-Iron axe
+  m_Name: Item-Gold Boots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,15 +48,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
   getMadTime: 0
   itemSprites:
-  - {fileID: -8736770646778515061, guid: 2841542e4dae55d44a28aa633eadfe70, type: 3}
-  - {fileID: 8155177695610967856, guid: 2841542e4dae55d44a28aa633eadfe70, type: 3}
-  - {fileID: 4039314975882883229, guid: 2841542e4dae55d44a28aa633eadfe70, type: 3}
-  - {fileID: -2094747682460240402, guid: 2841542e4dae55d44a28aa633eadfe70, type: 3}
-  itemId: ironaxe
-  recipeForThisItem: ironingot,ironingot,stick,stick
+  - {fileID: -3433187437025570980, guid: 279e1c34e7d78924db65aa870ffd40fe, type: 3}
+  - {fileID: 5432746795636292128, guid: 279e1c34e7d78924db65aa870ffd40fe, type: 3}
+  - {fileID: -5760431900484952267, guid: 279e1c34e7d78924db65aa870ffd40fe, type: 3}
+  - {fileID: 1785467333962042512, guid: 279e1c34e7d78924db65aa870ffd40fe, type: 3}
+  itemId: ironboots
+  recipeForThisItem: goldingot,goldingot
   sr: {fileID: 3609851717696260702}
-  normalSprite: {fileID: -8736770646778515061, guid: 2841542e4dae55d44a28aa633eadfe70, type: 3}
-  pickUpSprite: {fileID: -2452330451675995509, guid: 2841542e4dae55d44a28aa633eadfe70, type: 3}
+  normalSprite: {fileID: -3433187437025570980, guid: 279e1c34e7d78924db65aa870ffd40fe, type: 3}
+  pickUpSprite: {fileID: 8139320371050704914, guid: 279e1c34e7d78924db65aa870ffd40fe, type: 3}
   is8dir: 1
 --- !u!212 &3609851717696260702
 SpriteRenderer:
@@ -107,7 +107,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 8155177695610967856, guid: 2841542e4dae55d44a28aa633eadfe70, type: 3}
+  m_Sprite: {fileID: -3433187437025570980, guid: 279e1c34e7d78924db65aa870ffd40fe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

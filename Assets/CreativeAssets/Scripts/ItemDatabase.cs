@@ -4,14 +4,16 @@ using UnityEngine;
 public class ItemDatabase : MonoBehaviour
 {
     List<string> itemID = new List<string>();
-    [SerializeField] ItemScript[] itemAsObj;
+    public ItemScript[] itemAsObj;
 
     private void Start()
     {
         itemID.Clear();
         foreach (ItemScript iscr in itemAsObj)
         {
-            bool a = false;
+            itemID.Add(iscr.itemId);
+
+            /*bool a = false;
             string nm = "";
             for(int i = 0; i < iscr.name.Length; i++)
             {
@@ -19,7 +21,7 @@ public class ItemDatabase : MonoBehaviour
                 else if (a && iscr.name[i] != ' ') nm += iscr.name[i];
             }
             itemID.Add(nm.ToLower());
-            print(nm.ToLower());
+            print(nm.ToLower());*/
         }
     }
     public ItemScript GetObjById(string id)
@@ -27,6 +29,13 @@ public class ItemDatabase : MonoBehaviour
         for (int i = 0; i < itemID.Count; i++)
             if (itemID[i] == id)
                 return itemAsObj[i];
+        return null;
+    }
+    public string GetStringByObj(ItemScript itms)
+    {
+        for (int i = 0; i < itemID.Count; i++)
+            if (itemAsObj[i] == itms)
+                return itemID[i];
         return null;
     }
 }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3609851717696260702}
   - component: {fileID: -386685197371434947}
   m_Layer: 6
-  m_Name: Item-Iron axe
+  m_Name: Item-Copper Axe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,15 +48,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
   getMadTime: 0
   itemSprites:
-  - {fileID: -8736770646778515061, guid: 2841542e4dae55d44a28aa633eadfe70, type: 3}
-  - {fileID: 8155177695610967856, guid: 2841542e4dae55d44a28aa633eadfe70, type: 3}
-  - {fileID: 4039314975882883229, guid: 2841542e4dae55d44a28aa633eadfe70, type: 3}
-  - {fileID: -2094747682460240402, guid: 2841542e4dae55d44a28aa633eadfe70, type: 3}
-  itemId: ironaxe
-  recipeForThisItem: ironingot,ironingot,stick,stick
+  - {fileID: 2533721518123874046, guid: f152fd305b91a5c4db9a21fedc2275bd, type: 3}
+  - {fileID: -5758054958687032470, guid: f152fd305b91a5c4db9a21fedc2275bd, type: 3}
+  - {fileID: -1871839956303044934, guid: f152fd305b91a5c4db9a21fedc2275bd, type: 3}
+  - {fileID: 4258513970001160388, guid: f152fd305b91a5c4db9a21fedc2275bd, type: 3}
+  itemId: ironsword
+  recipeForThisItem: copperingot,copperingot,stick,stick
   sr: {fileID: 3609851717696260702}
-  normalSprite: {fileID: -8736770646778515061, guid: 2841542e4dae55d44a28aa633eadfe70, type: 3}
-  pickUpSprite: {fileID: -2452330451675995509, guid: 2841542e4dae55d44a28aa633eadfe70, type: 3}
+  normalSprite: {fileID: 2533721518123874046, guid: f152fd305b91a5c4db9a21fedc2275bd, type: 3}
+  pickUpSprite: {fileID: 4673741429002886337, guid: f152fd305b91a5c4db9a21fedc2275bd, type: 3}
   is8dir: 1
 --- !u!212 &3609851717696260702
 SpriteRenderer:
@@ -107,7 +107,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 8155177695610967856, guid: 2841542e4dae55d44a28aa633eadfe70, type: 3}
+  m_Sprite: {fileID: -5758054958687032470, guid: f152fd305b91a5c4db9a21fedc2275bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

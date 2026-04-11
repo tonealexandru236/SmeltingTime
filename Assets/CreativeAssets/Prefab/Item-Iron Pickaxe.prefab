@@ -46,12 +46,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f5dc6211e09af541bef0de81d83f298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
-  itemId: ironpickaxe
+  getMadTime: 0
   itemSprites:
   - {fileID: -3611815200178282550, guid: 1c7bbcdd9aee6b241b4df391412bd488, type: 3}
   - {fileID: -8290125285751563896, guid: 1c7bbcdd9aee6b241b4df391412bd488, type: 3}
   - {fileID: 1457194351691116871, guid: 1c7bbcdd9aee6b241b4df391412bd488, type: 3}
   - {fileID: -7884223068759011736, guid: 1c7bbcdd9aee6b241b4df391412bd488, type: 3}
+  itemId: ironpickaxe
+  recipeForThisItem: ironingot,ironingot,ironingot,stick,stick
   sr: {fileID: 3609851717696260702}
   normalSprite: {fileID: -3611815200178282550, guid: 1c7bbcdd9aee6b241b4df391412bd488, type: 3}
   pickUpSprite: {fileID: 3714321774655523985, guid: 1c7bbcdd9aee6b241b4df391412bd488, type: 3}

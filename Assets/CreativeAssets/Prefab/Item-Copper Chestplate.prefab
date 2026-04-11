@@ -47,12 +47,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
   getMadTime: 0
-  itemId: copperchestplate
   itemSprites:
   - {fileID: 1850936704412226224, guid: 26687e553a215ac4c981c60d06e215d3, type: 3}
   - {fileID: 7242242134898376859, guid: 26687e553a215ac4c981c60d06e215d3, type: 3}
   - {fileID: 1835935548895099036, guid: 26687e553a215ac4c981c60d06e215d3, type: 3}
   - {fileID: 876104549364001278, guid: 26687e553a215ac4c981c60d06e215d3, type: 3}
+  itemId: copperchestplate
+  recipeForThisItem: copperingot,copperingot,copperingot,copperingot
   sr: {fileID: 3609851717696260702}
   normalSprite: {fileID: 1850936704412226224, guid: 26687e553a215ac4c981c60d06e215d3, type: 3}
   pickUpSprite: {fileID: 1422176770003857282, guid: 26687e553a215ac4c981c60d06e215d3, type: 3}
