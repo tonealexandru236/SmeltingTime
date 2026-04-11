@@ -70,7 +70,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -84,7 +84,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -107,7 +107,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -149,9 +149,9 @@ TextureImporter:
       name: SwordRecipes_0
       rect:
         serializedVersion: 2
-        x: 17
+        x: 0
         y: 63
-        width: 61
+        width: 128
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -171,10 +171,10 @@ TextureImporter:
       name: SwordRecipes_1
       rect:
         serializedVersion: 2
-        x: 78
-        y: 70
-        width: 12
-        height: 8
+        x: 0
+        y: 42
+        width: 128
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,9 +193,9 @@ TextureImporter:
       name: SwordRecipes_2
       rect:
         serializedVersion: 2
-        x: 90
-        y: 63
-        width: 22
+        x: 0
+        y: 21
+        width: 128
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -215,9 +215,9 @@ TextureImporter:
       name: SwordRecipes_3
       rect:
         serializedVersion: 2
-        x: 17
-        y: 42
-        width: 61
+        x: 0
+        y: 0
+        width: 128
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -233,187 +233,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: SwordRecipes_4
-      rect:
-        serializedVersion: 2
-        x: 78
-        y: 49
-        width: 12
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 93c94577dce331820800000000000000
-      internalID: 2887720838265871417
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SwordRecipes_5
-      rect:
-        serializedVersion: 2
-        x: 90
-        y: 42
-        width: 22
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e5b3fcf2185375da0800000000000000
-      internalID: -5956233153205028002
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SwordRecipes_6
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 21
-        width: 61
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d050ade96114c14c0800000000000000
-      internalID: -4315502777517603571
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SwordRecipes_7
-      rect:
-        serializedVersion: 2
-        x: 78
-        y: 28
-        width: 12
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: f99e6f6f19fed68a0800000000000000
-      internalID: -6310124092683523681
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SwordRecipes_8
-      rect:
-        serializedVersion: 2
-        x: 90
-        y: 21
-        width: 22
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9f9ee140e8aa8eae0800000000000000
-      internalID: -1519777347306329607
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SwordRecipes_9
-      rect:
-        serializedVersion: 2
-        x: 17
-        y: 0
-        width: 61
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2e5edb3f12cfd1ad0800000000000000
-      internalID: -2729748576363223582
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SwordRecipes_10
-      rect:
-        serializedVersion: 2
-        x: 78
-        y: 7
-        width: 12
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 02a1235af3a6884c0800000000000000
-      internalID: -4285058223856018912
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SwordRecipes_11
-      rect:
-        serializedVersion: 2
-        x: 90
-        y: 0
-        width: 22
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2a15d81fcb1010010800000000000000
-      internalID: 1153204890601607586
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8320acc1b37b82e4788208654b032b07
     internalID: 0
     vertices: []
     indices: 

@@ -70,7 +70,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -84,7 +84,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 32
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -107,7 +107,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 4
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -149,9 +149,9 @@ TextureImporter:
       name: BootsRecipes_0
       rect:
         serializedVersion: 2
-        x: 24
+        x: 0
         y: 63
-        width: 45
+        width: 128
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -171,10 +171,10 @@ TextureImporter:
       name: BootsRecipes_1
       rect:
         serializedVersion: 2
-        x: 69
-        y: 70
-        width: 12
-        height: 8
+        x: 0
+        y: 42
+        width: 128
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,9 +193,9 @@ TextureImporter:
       name: BootsRecipes_2
       rect:
         serializedVersion: 2
-        x: 81
-        y: 63
-        width: 22
+        x: 0
+        y: 21
+        width: 128
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -215,9 +215,9 @@ TextureImporter:
       name: BootsRecipes_3
       rect:
         serializedVersion: 2
-        x: 24
-        y: 42
-        width: 45
+        x: 0
+        y: 0
+        width: 128
         height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -233,187 +233,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: BootsRecipes_4
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 49
-        width: 12
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 12a5ff53973c25690800000000000000
-      internalID: -7614809094565701087
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BootsRecipes_5
-      rect:
-        serializedVersion: 2
-        x: 81
-        y: 42
-        width: 22
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c7ef1bf6be9f01120800000000000000
-      internalID: 2382678992465559164
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BootsRecipes_6
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 21
-        width: 45
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3b0f00a4c29342ab0800000000000000
-      internalID: -5033835621110452045
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BootsRecipes_7
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 28
-        width: 12
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 125be976e40ea6810800000000000000
-      internalID: 1759465231792125217
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BootsRecipes_8
-      rect:
-        serializedVersion: 2
-        x: 81
-        y: 21
-        width: 22
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d3261a0ef0a8f4540800000000000000
-      internalID: 4994362312574984765
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BootsRecipes_9
-      rect:
-        serializedVersion: 2
-        x: 24
-        y: 0
-        width: 45
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bd1afd2e8b3705200800000000000000
-      internalID: 166760424130191835
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BootsRecipes_10
-      rect:
-        serializedVersion: 2
-        x: 69
-        y: 7
-        width: 12
-        height: 8
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 62e9c2437064899a0800000000000000
-      internalID: -6226149488085656026
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: BootsRecipes_11
-      rect:
-        serializedVersion: 2
-        x: 81
-        y: 0
-        width: 22
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: b177c6da17b442860800000000000000
-      internalID: 7504205830719043355
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: b010b6d16d2fce745aa9d471f89efcc6
     internalID: 0
     vertices: []
     indices: 

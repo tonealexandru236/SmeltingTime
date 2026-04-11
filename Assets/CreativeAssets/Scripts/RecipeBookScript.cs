@@ -13,6 +13,8 @@ public class RecipeBookScript : MonoBehaviour
     [SerializeField] Sprite[] swordSprites;
     [SerializeField] Sprite[] axeSprites;
     [SerializeField] Sprite[] chestplateSprites;
+    [SerializeField] Sprite[] bootsSprites;
+    [SerializeField] Sprite[] furnaceSprites;
 
     Sprite[] spritesForMainRecipe;
 
@@ -56,5 +58,7 @@ public class RecipeBookScript : MonoBehaviour
         if (n == "Sword") spritesForMainRecipe = swordSprites;
         if (n == "Axe") spritesForMainRecipe = axeSprites;
         if (n == "Chestplate") spritesForMainRecipe = chestplateSprites;
+        if (n == "Boots") spritesForMainRecipe = bootsSprites;
+        if (n == "Furnace") spritesForMainRecipe = furnaceSprites;
     }
 }
