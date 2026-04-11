@@ -22,6 +22,7 @@ public class TitleScreenUI : MonoBehaviour
     public Toggle weather;
     public Toggle particles;
     public Toggle buttons;
+    public Toggle color;
 
     void Awake()
     {
@@ -30,6 +31,12 @@ public class TitleScreenUI : MonoBehaviour
         weather.isOn = PlayerPrefs.GetInt("s_weather", 1) == 1;
         particles.isOn = PlayerPrefs.GetInt("s_particles", 1) == 1;
         buttons.isOn = PlayerPrefs.GetInt("s_buttons", 1) == 1;
+        color.isOn = PlayerPrefs.GetInt("s_color", 0) == 1;
+    }
+
+    public void change_color()
+    {
+        PlayerPrefs.SetInt("s_color", color.isOn ? 1 : 0);
     }
 
     public void change_fps()
