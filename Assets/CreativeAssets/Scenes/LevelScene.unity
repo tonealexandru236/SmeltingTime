@@ -18942,6 +18942,7 @@ MonoBehaviour:
   - {fileID: 7119628228846839293, guid: 98b5a49c9fc1be444880a5998ab5969c, type: 3}
   - {fileID: 7119628228846839293, guid: 830e2df97aa5c794491285fce733ae81, type: 3}
   - {fileID: 7119628228846839293, guid: a34b1c14eeebd8a4ea8b539095ce8273, type: 3}
+  - {fileID: 7119628228846839293, guid: 3ad8f63a8187b974eb07bc18fa58f4f8, type: 3}
 --- !u!4 &1392774622
 Transform:
   m_ObjectHideFlags: 0
@@ -19217,6 +19218,7 @@ MonoBehaviour:
   - goldchestplate-goldingot,goldingot,goldingot,goldingot
   - diamondchestplate-diamond,diamond,diamond,diamond
   - ironaxe-ironingot,ironingot,stick,stick
+  - woodaxe-log,log,stick,stick
   recipeItemsVisual:
   - {fileID: 369851568}
   - {fileID: 62126364}
