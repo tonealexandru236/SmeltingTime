@@ -24,11 +24,12 @@ public class RecipeBookScript : MonoBehaviour
     private void Start()
     {
         t = 0;
+        SelectTab("Pickaxe");
     }
     private void Update()
     {
         
-        if(currentTab != "") {
+        if(spritesForMainRecipe != null && spritesForMainRecipe.Length != 0) {
             t += Time.deltaTime;
             t %= spritesForMainRecipe.Length;
 

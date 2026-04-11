@@ -120,7 +120,7 @@ public class CustomersOrderLine : MonoBehaviour
 
         customer.GetComponent<SpriteRenderer>().sprite = downSprite;
 
-        Vector2 targetLateralPos = transform.position - new Vector3(0, spaceBetweenThem, 0);
+        Vector2 targetLateralPos = transform.position - new Vector3(0, 0.4f, 0);
         while((Vector2)customer.transform.position != targetLateralPos)
         {
             customer.transform.position = Vector2.MoveTowards(customer.transform.position, targetLateralPos, Time.deltaTime * 3f);
@@ -130,7 +130,7 @@ public class CustomersOrderLine : MonoBehaviour
         customer.GetComponent<SpriteRenderer>().sprite = rightSprite;
         customer.GetComponent<SpriteRenderer>().sortingOrder += 1;
 
-        Vector2 targetEndPos = transform.position - new Vector3(-spaceBetweenThem * numberOfCustomers, spaceBetweenThem, 0);
+        Vector2 targetEndPos = transform.position - new Vector3(-spaceBetweenThem * numberOfCustomers, 0.4f, 0);
         while ((Vector2)customer.transform.position != targetEndPos)
         {
             customer.transform.position = Vector2.MoveTowards(customer.transform.position, targetEndPos, Time.deltaTime * 3f);
