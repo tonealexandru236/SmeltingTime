@@ -37,9 +37,9 @@ public class ItemSplashes : MonoBehaviour
     void update_width(string name)
     {
         RectTransform rect_t = gameObject.GetComponent<RectTransform>();
-        rect_t.sizeDelta = new Vector2(Mathf.Max(100, 100 * name.Length / 15.2f), rect_t.sizeDelta.y);
+        rect_t.sizeDelta = new Vector2(Mathf.Max(100, 100 * name.Length / 18f), rect_t.sizeDelta.y);
 
-        transform.GetChild(0).GetComponent<TMP_Text>().fontSize = 20 - name.Length/1.67f;
+        transform.GetChild(0).GetComponent<TMP_Text>().fontSize = 20 - name.Length/1.55f;
 
         Debug.Log(name.Length);
     }
