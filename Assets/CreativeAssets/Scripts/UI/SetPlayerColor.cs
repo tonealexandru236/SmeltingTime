@@ -41,7 +41,7 @@ public class SetPlayerColor : MonoBehaviour
             cur_col = "#" + cur_col;
             if (ColorUtility.TryParseHtmlString(cur_col, out color))
             {
-                color.a = 0.32f;
+                color.a = 0.8f;
                 GetComponent<Image>().color = color;
             }
         }
