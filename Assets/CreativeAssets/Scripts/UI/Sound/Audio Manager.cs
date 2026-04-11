@@ -82,7 +82,8 @@ public class AudioManager : MonoBehaviour
         AudioSource source = null;
         AudioClip track = null;
 
-        
+        if (audioSources == null)
+            return;
 
         source = audioSources[11];
 
@@ -116,6 +117,9 @@ public class AudioManager : MonoBehaviour
     {
         AudioSource source = null;
         AudioClip track = null;
+
+        if (audioSources == null)
+            return;
 
         source = audioSources[10];
 
