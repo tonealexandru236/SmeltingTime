@@ -149,10 +149,10 @@ TextureImporter:
       name: FurnaceReicpes_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 42
-        width: 128
-        height: 22
+        x: 21
+        y: 0
+        width: 22
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,10 +171,10 @@ TextureImporter:
       name: FurnaceReicpes_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 21
-        width: 128
-        height: 22
+        x: 42
+        y: 0
+        width: 22
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,10 +193,10 @@ TextureImporter:
       name: FurnaceReicpes_3
       rect:
         serializedVersion: 2
-        x: 0
+        x: 63
         y: 0
-        width: 128
-        height: 22
+        width: 22
+        height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -207,6 +207,28 @@ TextureImporter:
       bones: []
       spriteID: 9bf1943595623cc20800000000000000
       internalID: 3225463923218653113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FurnaceReicpes_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 22
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c34f23850f687f41828519a78bcb902
+      internalID: -7152451336598274126
       vertices: []
       indices: 
       edges: []

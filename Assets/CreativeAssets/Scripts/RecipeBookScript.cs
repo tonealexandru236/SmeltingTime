@@ -9,6 +9,7 @@ public class RecipeBookScript : MonoBehaviour
     [SerializeField] GameObject[] allTabs;
 
     [Header("RecipeSprites")]
+    [SerializeField] Sprite[] basicSprites;
     [SerializeField] Sprite[] pickaxeSprites;
     [SerializeField] Sprite[] swordSprites;
     [SerializeField] Sprite[] axeSprites;
@@ -42,11 +43,11 @@ public class RecipeBookScript : MonoBehaviour
         foreach(GameObject obj in allTabs)
         {
             if(currentTab == obj.name) {
-                obj.transform.localPosition = Vector2.MoveTowards(obj.transform.localPosition, new Vector3(obj.transform.localPosition.x, 20, 0), Time.deltaTime * 200f);
+                obj.transform.localPosition = Vector2.MoveTowards(obj.transform.localPosition, new Vector3(20, obj.transform.localPosition.y, 0), Time.deltaTime * 200f);
             }
             else
             {
-                obj.transform.localPosition = Vector2.MoveTowards(obj.transform.localPosition, new Vector3(obj.transform.localPosition.x, 0, 0), Time.deltaTime * 200f);
+                obj.transform.localPosition = Vector2.MoveTowards(obj.transform.localPosition, new Vector3(0, obj.transform.localPosition.y, 0), Time.deltaTime * 200f);
             }
         }
     }
@@ -54,6 +55,7 @@ public class RecipeBookScript : MonoBehaviour
     {
         currentTab = n;
 
+        if (n == "Basic") spritesForMainRecipe = basicSprites;
         if (n == "Pickaxe") spritesForMainRecipe = pickaxeSprites;
         if (n == "Sword") spritesForMainRecipe = swordSprites;
         if (n == "Axe") spritesForMainRecipe = axeSprites;
