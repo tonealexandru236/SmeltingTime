@@ -13,6 +13,8 @@ public class DestroySetting : MonoBehaviour
             state = PlayerPrefs.GetInt("s_weather", 1);
         else if (setting_name == "particles")
             state = PlayerPrefs.GetInt("s_particles", 1);
+        else if (setting_name == "colorblind")
+            state = PlayerPrefs.GetInt("s_color", 0);
 
         if (state == 0)
             Destroy(gameObject);
