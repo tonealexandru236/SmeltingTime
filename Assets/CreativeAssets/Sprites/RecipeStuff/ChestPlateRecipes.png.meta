@@ -150,11 +150,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 63
-        width: 128
-        height: 22
+        y: 0
+        width: 22
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -171,12 +171,12 @@ TextureImporter:
       name: ChestPlateRecipes_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 42
-        width: 128
-        height: 22
+        x: 21
+        y: 0
+        width: 22
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -193,12 +193,12 @@ TextureImporter:
       name: ChestPlateRecipes_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 21
-        width: 128
-        height: 22
+        x: 42
+        y: 0
+        width: 22
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -215,12 +215,12 @@ TextureImporter:
       name: ChestPlateRecipes_3
       rect:
         serializedVersion: 2
-        x: 0
+        x: 63
         y: 0
-        width: 128
-        height: 22
+        width: 22
+        height: 128
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []

@@ -1,43 +1,10 @@
 fileFormatVersion: 2
-guid: 485d751e13a23ff41b284f46be19a954
+guid: 0a8f2166855c9b34da6b2e2051ca98d9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7688414328320032736
-    second: SwordRecipes_0
-  - first:
-      213: 821615338585470394
-    second: SwordRecipes_1
-  - first:
-      213: -9005971900721169132
-    second: SwordRecipes_2
-  - first:
-      213: -8089614632381646370
-    second: SwordRecipes_3
-  - first:
-      213: 2887720838265871417
-    second: SwordRecipes_4
-  - first:
-      213: -5956233153205028002
-    second: SwordRecipes_5
-  - first:
-      213: -4315502777517603571
-    second: SwordRecipes_6
-  - first:
-      213: -6310124092683523681
-    second: SwordRecipes_7
-  - first:
-      213: -1519777347306329607
-    second: SwordRecipes_8
-  - first:
-      213: -2729748576363223582
-    second: SwordRecipes_9
-  - first:
-      213: -4285058223856018912
-    second: SwordRecipes_10
-  - first:
-      213: 1153204890601607586
-    second: SwordRecipes_11
+      213: 1490097416832036017
+    second: InteractiveRecipeBook-Vertical_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -84,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -146,12 +113,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SwordRecipes_0
+      name: InteractiveRecipeBook-Vertical_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 22
+        width: 32
         height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -161,74 +128,162 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0eff98db81cb2ba60800000000000000
-      internalID: 7688414328320032736
+      spriteID: 1bc200ba4b3eda410800000000000000
+      internalID: 1490097416832036017
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SwordRecipes_1
+      name: InteractiveRecipeBook-Vertical_1
       rect:
         serializedVersion: 2
-        x: 21
-        y: 0
-        width: 22
-        height: 128
+        x: 32
+        y: 112
+        width: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ab5366e1cc6f66b00800000000000000
-      internalID: 821615338585470394
+      spriteID: 326e175af1785c149a91c62851c13540
+      internalID: 1169063432
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SwordRecipes_2
+      name: InteractiveRecipeBook-Vertical_2
       rect:
         serializedVersion: 2
-        x: 42
-        y: 0
-        width: 22
-        height: 128
+        x: 32
+        y: 96
+        width: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 41d7d50a54c540380800000000000000
-      internalID: -9005971900721169132
+      spriteID: abc595193301d6a418266248c10ffd73
+      internalID: -1879289920
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SwordRecipes_3
+      name: InteractiveRecipeBook-Vertical_3
       rect:
         serializedVersion: 2
-        x: 63
-        y: 0
-        width: 22
-        height: 128
+        x: 32
+        y: 80
+        width: 32
+        height: 16
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: ed9f61b3a5aebbf80800000000000000
-      internalID: -8089614632381646370
+      spriteID: 04940750d174be14e88d25e7ad429ef3
+      internalID: 1768963601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InteractiveRecipeBook-Vertical_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d35800854261fc4e9c75002b3674eea
+      internalID: -153447297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InteractiveRecipeBook-Vertical_5
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 48
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5e3d5ec98cdf834b878aa57f9ab578e
+      internalID: -1855689766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InteractiveRecipeBook-Vertical_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ee68c28b0ff45d4fb5337cd704ff62a
+      internalID: 1793771323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: InteractiveRecipeBook-Vertical_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 32
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc9da33735ab47842967b3bf3da90ef4
+      internalID: 1784938190
       vertices: []
       indices: 
       edges: []
@@ -237,7 +292,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 8320acc1b37b82e4788208654b032b07
+    spriteID: 4d6dcc537d2122543980ccaaaa37d705
     internalID: 0
     vertices: []
     indices: 
@@ -247,18 +302,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SwordRecipes_0: 7688414328320032736
-      SwordRecipes_1: 821615338585470394
-      SwordRecipes_10: -4285058223856018912
-      SwordRecipes_11: 1153204890601607586
-      SwordRecipes_2: -9005971900721169132
-      SwordRecipes_3: -8089614632381646370
-      SwordRecipes_4: 2887720838265871417
-      SwordRecipes_5: -5956233153205028002
-      SwordRecipes_6: -4315502777517603571
-      SwordRecipes_7: -6310124092683523681
-      SwordRecipes_8: -1519777347306329607
-      SwordRecipes_9: -2729748576363223582
+      InteractiveRecipeBook-Vertical_0: 1490097416832036017
+      InteractiveRecipeBook-Vertical_1: 1169063432
+      InteractiveRecipeBook-Vertical_2: -1879289920
+      InteractiveRecipeBook-Vertical_3: 1768963601
+      InteractiveRecipeBook-Vertical_4: -153447297
+      InteractiveRecipeBook-Vertical_5: -1855689766
+      InteractiveRecipeBook-Vertical_6: 1793771323
+      InteractiveRecipeBook-Vertical_7: 1784938190
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
