@@ -37,6 +37,7 @@ public class CustomersOrderLine : MonoBehaviour
         s += Time.deltaTime;
         if(s > secondsBeforeMad && s < 1000)
         {
+            AudioManager.instance.PlaySound("IncorrectClient");
             checkMark.GetComponent<SpriteRenderer>().sprite = xSprite;
             StartCoroutine(MakeCustomerLeave());
         }
@@ -153,6 +154,8 @@ public class CustomersOrderLine : MonoBehaviour
     {
         if (itemOrder == null || itm == null || itm != itemOrder)
             return;
+
+        AudioManager.instance.PlaySound("CorrectClient");
 
         #region Score Stuff
         add = 1;

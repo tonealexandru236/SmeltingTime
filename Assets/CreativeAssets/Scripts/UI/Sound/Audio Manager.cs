@@ -69,7 +69,7 @@ public class AudioManager : MonoBehaviour
 
         source.clip = clip;
         source.volume = PlayerPrefs.GetFloat("masterVolume", 1);
-        source.pitch = Random.Range(0.92f, 1.08f);
+        source.pitch = Random.Range(0.9f, 1.1f);
         source.Play();
     }
 
