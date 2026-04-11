@@ -6662,9 +6662,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
   audioClips:
-  - {fileID: 8300000, guid: 3bc326360436efc47b45d68fc0f18568, type: 3}
-  - {fileID: 8300000, guid: 0a172fd25111f8a47b87098551403140, type: 3}
   - {fileID: 8300000, guid: 2ac23090e9a0e2d4eb9ed5af5d98f82c, type: 3}
+  - {fileID: 8300000, guid: 0a172fd25111f8a47b87098551403140, type: 3}
   audioTemplate: {fileID: 2012389699}
 --- !u!4 &1799406647
 Transform:
