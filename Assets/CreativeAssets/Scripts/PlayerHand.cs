@@ -19,6 +19,8 @@ public class PlayerHand : MonoBehaviour
     }
     public void ManualUpdate()
     {
+        GetComponent<SpriteRenderer>().sortingOrder = transform.parent.GetComponent<PlayerMovement>().playerSr.sortingOrder + (transform.position.y <= transform.parent.position.y ? 1 : -1);
+
         if (itemInHandID == "") {
             //Doesn't have item
             RaycastHit2D itemHit = Physics2D.BoxCast(pm.transform.position, new Vector2(.5f, .5f), 0, (transform.position - pm.transform.position), 1.3f, LayerMask.GetMask("Item"));
