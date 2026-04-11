@@ -10,11 +10,13 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] KeyCode leftButton;
 
     [Header("Visual")]
-    [SerializeField] SpriteRenderer playerSr;
+    public SpriteRenderer playerSr;
     [SerializeField] Sprite[] dirSprites;
 
     [Header("Animation")]
+    [SerializeField] SpriteRenderer eyeSprite;
     [SerializeField] Sprite[] walkAnims;
+    [SerializeField] Sprite[] walkAnimsEyes;
 
     [Header("Object")] 
     [SerializeField] Transform playerHand;
@@ -31,8 +33,11 @@ public class PlayerMovement : MonoBehaviour
     }
     private void Update()
     {
+        eyeSprite.sortingOrder = playerSr.sortingOrder + 1;
+
         if (!canPlayerMove) spriteIndex = 0;
 
+        eyeSprite.sprite = walkAnimsEyes[spriteSheetToUse * 4 + (int)spriteIndex];
         playerSr.sprite = walkAnims[spriteSheetToUse * 4 + (int)spriteIndex];
 
         if (!canPlayerMove) return;

@@ -13,8 +13,8 @@ public class PlayersManager : MonoBehaviour
         foreach (StationScript station in FindObjectsByType<StationScript>(FindObjectsSortMode.None))
             dynamicSprites.Add(station.GetComponent<SpriteRenderer>());
 
-        dynamicSprites.AddRange(player_hand_1.transform.parent.GetComponentsInChildren<SpriteRenderer>());
-        dynamicSprites.AddRange(player_hand_2.transform.parent.GetComponentsInChildren<SpriteRenderer>());
+        dynamicSprites.Add(player_hand_1.transform.parent.GetComponent<PlayerMovement>().playerSr);
+        dynamicSprites.Add(player_hand_2.transform.parent.GetComponent<PlayerMovement>().playerSr);
     }
     private void Update()
     {
