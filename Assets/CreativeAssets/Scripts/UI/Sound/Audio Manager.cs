@@ -78,7 +78,12 @@ public class AudioManager : MonoBehaviour
         AudioSource source = null;
         AudioClip track = null;
 
+        
+
         source = audioSources[11];
+
+        if (source.isPlaying)
+            return;
 
         foreach (AudioClip clp in audioClips)
         {
