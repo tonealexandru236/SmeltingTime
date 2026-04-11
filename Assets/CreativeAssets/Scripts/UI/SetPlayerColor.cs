@@ -33,7 +33,7 @@ public class SetPlayerColor : MonoBehaviour
         if(player == 1)
             cur_col = PlayerPrefs.GetString("p1", "FF0000");
         else if(player == 2)
-            cur_col = PlayerPrefs.GetString("p2", "0500FF");
+            cur_col = PlayerPrefs.GetString("p2", "00CDFF");
 
         Color color;
         if (GetComponent<Image>() != null)
@@ -41,7 +41,7 @@ public class SetPlayerColor : MonoBehaviour
             cur_col = "#" + cur_col;
             if (ColorUtility.TryParseHtmlString(cur_col, out color))
             {
-                color.a = 0.32f;
+                color.a = 0.8f;
                 GetComponent<Image>().color = color;
             }
         }
