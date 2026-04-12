@@ -91,7 +91,7 @@ public class CustomersOrderLine : MonoBehaviour
         {
             Vector2 targetPos = transform.position + new Vector3(i * spaceBetweenThem, 0, 0);
 
-            if(targetPos != (Vector2)customerLine[i].transform.position)
+            if(targetPos != (Vector2)customerLine[i].transform.position && customerLine[i].GetComponent<SpriteRenderer>())
                 customerLine[i].GetComponent<SpriteRenderer>().sprite = leftSprite[(int)t];
             else
                 customerLine[i].GetComponent<SpriteRenderer>().sprite = leftSprite[0];
