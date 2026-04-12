@@ -12631,7 +12631,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f5b210fd99b76458ba7d2bfbeebf49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OpenScene
-  scene_name: Level2
+  scene_name: Level3
 --- !u!114 &1031098118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22502,7 +22502,8 @@ MonoBehaviour:
   conveyorVisual: {fileID: 1483632664}
   itemsToSpawn:
   - {fileID: 8899958639640477454, guid: 9334f1693492349bc927fbb411d32787, type: 3}
-  itemsChance: 64000000
+  - {fileID: 1676569562148675751, guid: fbbf2c6e9a9fb6047a2c2e7d606e12e7, type: 3}
+  itemsChance: 3c00000028000000
   spawnPoint: {fileID: 1283177817}
   itemsParent: {fileID: 1056728023}
   spawnRate: 2
