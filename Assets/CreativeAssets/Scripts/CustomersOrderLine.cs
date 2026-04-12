@@ -182,7 +182,7 @@ public class CustomersOrderLine : MonoBehaviour
         score += add;
         PlayerPrefs.SetFloat("Score", score);
 
-        score_text.SetText("score " + score.ToString());
+        if(score_text != null) score_text.SetText("score " + score.ToString());
 
         #endregion
 
