@@ -3,6 +3,9 @@
 ### Game Title: "Smelting Time"
 ### Team: "Echipa Team"
 ### Made for the Fiicode 2026 Qualifier Game Jam
+### Game Traielr: `https://youtu.be/lnJNCoZv2OQ`
+### Build Download: `github.com/tonealexandru236/SmeltingTime-Build`
+### Project Download: `github.com/tonealexandru236/SmeltingTime`
 
 ### Logo:
 ![Logo](Assets/CreativeAssets/Sprites/KindaLogo.png)
@@ -15,9 +18,9 @@
 
 ### Developers
 
-1. Tudose Dragos - Game Progammer, Designer and Artist
-2. Tone Alexandru - Game Progammer, Designer, Artist and Sound Engineer
-3. Morariu Tudor - Sound Designer, Composer and Tester
+1. Tudose Dragos - Game Progammer, Designer and Artist `dragoss_`
+2. Tone Alexandru - Game Progammer, Designer, Artist and Sound Engineer `theman360`
+3. Morariu Tudor - Sound Designer, Composer and Tester `morariut`
 
 ### Other resources
 
@@ -31,7 +34,7 @@
 
 # The game itself
 
-The game was developed in `Unity 6.3 (6000.3.10f1)`. The Repo contains the Unity project itself. A Windows build is located in the `!WINDOWS_BUILD` folder. An old outdated and buggy Linux build is located in the `!LINUX_BUILD` folder (WAS  AND DOESN'T WORK). For the cleanest experience, you can just download the `.exe` file from this repo: `github.com/tonealexandru236/SmeltingTime-Build`.
+The game was developed in `Unity 6.3 (6000.3.10f1)`. The Repo contains the Unity project itself. A Windows build is located in the `!WINDOWS_BUILD` folder. For the cleanest experience, you can just download the `.exe` file from this repo: `github.com/tonealexandru236/SmeltingTime-Build`.
 
 ### Sprites
 
