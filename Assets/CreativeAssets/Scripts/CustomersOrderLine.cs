@@ -33,6 +33,12 @@ public class CustomersOrderLine : MonoBehaviour
     ItemScript itemOrder;
 
     float delayBetween, yState, targetSpriteAlpha, s = 0, t = 0;
+
+    private void Start()
+    {
+        delayBetween = 1.2f;
+    }
+
     private void Update()
     {
         t += Time.deltaTime * 12f;
