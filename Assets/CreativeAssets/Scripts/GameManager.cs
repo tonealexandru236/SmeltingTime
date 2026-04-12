@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
             GameOverScreen.SetActive(true);
             Retry.SetActive(true);
             GameOverText.SetText("You Lost!");
-            GameOverScreen.GetComponent<Animator>().Play("end-game", 0, 0);
+            GameOverScreen.GetComponent<Animator>().Play("end-game");
 
             Time.timeScale = 0;
             return;
@@ -68,7 +68,7 @@ public class GameManager : MonoBehaviour
             GameOverScreen.SetActive(true);
             Next.SetActive(true);
             GameOverText.SetText("You Won!");
-            GameOverScreen.GetComponent<Animator>().Play("end-game", 0, 0);
+            GameOverScreen.GetComponent<Animator>().Play("end-game");
 
             Time.timeScale = 0;
         }
