@@ -1,6 +1,8 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
+using static System.Net.Mime.MediaTypeNames;
+using static UnityEngine.EventSystems.EventTrigger;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,6 +10,12 @@ public class GameManager : MonoBehaviour
     [SerializeField] int numOfCustomersToServe;
     [SerializeField] TMP_Text timerTxt;
     [SerializeField] TMP_Text customerServedText;
+
+    public GameObject GameOverScreen;
+    public TMP_Text GameOverText;
+
+    public GameObject Retry;
+    public GameObject Next;
 
     float t;
     int numOfCustomersServed;
@@ -20,6 +28,11 @@ public class GameManager : MonoBehaviour
     {
         if(t <= 0)
         {
+            GameOverScreen.SetActive(true);
+            Retry.SetActive(true);
+            GameOverText.SetText("You Lost!");
+            GameOverScreen.GetComponent<Animator>().Play("end-game", 0, 0);
+
             Time.timeScale = 0;
             return;
         }
@@ -52,6 +65,11 @@ public class GameManager : MonoBehaviour
 
         if (numOfCustomersServed == numOfCustomersToServe)
         {
+            GameOverScreen.SetActive(true);
+            Next.SetActive(true);
+            GameOverText.SetText("You Won!");
+            GameOverScreen.GetComponent<Animator>().Play("end-game", 0, 0);
+
             Time.timeScale = 0;
         }
     }
