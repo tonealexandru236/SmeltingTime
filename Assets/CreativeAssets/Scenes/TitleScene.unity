@@ -656,7 +656,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3b237f7810dd94429d974dc36c3edfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehaviour
-  multiplier: 1.05
+  multiplier: 1.08
   Time: 0.2
 --- !u!114 &147799537
 MonoBehaviour:
@@ -1231,7 +1231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3b237f7810dd94429d974dc36c3edfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehaviour
-  multiplier: 1.05
+  multiplier: 1.08
   Time: 0.2
 --- !u!114 &304553835
 MonoBehaviour:
@@ -3492,7 +3492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3b237f7810dd94429d974dc36c3edfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehaviour
-  multiplier: 1.05
+  multiplier: 1.08
   Time: 0.2
 --- !u!114 &782685600
 MonoBehaviour:
@@ -3832,7 +3832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3b237f7810dd94429d974dc36c3edfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehaviour
-  multiplier: 1.05
+  multiplier: 1.08
   Time: 0.2
 --- !u!114 &882014879
 MonoBehaviour:
@@ -7457,7 +7457,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3b237f7810dd94429d974dc36c3edfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehaviour
-  multiplier: 1.05
+  multiplier: 1.08
   Time: 0.2
 --- !u!114 &1813162856
 MonoBehaviour:
@@ -7498,7 +7498,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1813162857}
   m_OnClick:
     m_PersistentCalls:
@@ -13834,7 +13834,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3b237f7810dd94429d974dc36c3edfb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonBehaviour
-  multiplier: 1.05
+  multiplier: 1.08
   Time: 0.2
 --- !u!114 &1976700961
 MonoBehaviour:
