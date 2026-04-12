@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     int numOfCustomersServed;
     private void Start()
     {
+        Time.timeScale = 1;
         t = timerInMinutes * 60f;
         numOfCustomersServed = 0;
     }
