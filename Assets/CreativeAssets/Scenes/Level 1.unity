@@ -12101,7 +12101,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f5b210fd99b76458ba7d2bfbeebf49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OpenScene
-  scene_name: Level2
+  scene_name: Level 2
 --- !u!114 &1031098118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12721,7 +12721,7 @@ RectTransform:
   - {fileID: 1355899209}
   - {fileID: 2068354520}
   - {fileID: 1276965614}
-  - {fileID: 2114342870}
+  - {fileID: 1954365176}
   - {fileID: 308420896}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -26095,7 +26095,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26f5b210fd99b76458ba7d2bfbeebf49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OpenScene
-  scene_name: Level1
+  scene_name: Level 1
 --- !u!1 &1729116238
 GameObject:
   m_ObjectHideFlags: 0
@@ -31690,6 +31690,42 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1954365175
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1954365176}
+  m_Layer: 5
+  m_Name: Rain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1954365176
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1954365175}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 90}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2074957841}
+  m_Father: {fileID: 1090422644}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -1170, y: -770}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1961278263 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2779984909128012041, guid: dbdf1fefae653444591f60e24709f3b1, type: 3}
@@ -37348,7 +37384,7 @@ GameObject:
   - component: {fileID: 2074957843}
   - component: {fileID: 2074957842}
   - component: {fileID: 2074957844}
-  m_Layer: 5
+  m_Layer: 10
   m_Name: WeatherEvent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37363,15 +37399,15 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2074957840}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -90}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2114342870}
+  m_Father: {fileID: 1954365176}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 1170, y: 770}
   m_SizeDelta: {x: 2460, y: 1500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2074957842
@@ -37387,7 +37423,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.8467736, b: 1, a: 0.4862745}
+  m_Color: {r: 0, g: 0.8467736, b: 1, a: 0}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -37700,56 +37736,6 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!1 &2114342869
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2114342870}
-  - component: {fileID: 2114342871}
-  m_Layer: 5
-  m_Name: Rain
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2114342870
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114342869}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 2074957841}
-  m_Father: {fileID: 1090422644}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2114342871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2114342869}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 378fd8fd4a5a9b3499afc2cf88d4acc6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DestroySetting
-  setting_name: weather
 --- !u!1 &2115496832
 GameObject:
   m_ObjectHideFlags: 0

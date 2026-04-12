@@ -14,16 +14,20 @@ public class Weather : MonoBehaviour
             StartCoroutine(wait_for_weather());
     }
 
+    private Animator rainAnimator;
+
     IEnumerator wait_for_weather()
     {
         float start_time = Random.Range(1f, 2f);
         yield return new WaitForSeconds(start_time);
 
+        rainAnimator = rain_overlay.GetComponent<Animator>();
+
         while (true)
         {
             int rain_chance = Random.Range(1, 13);
 
-            if(rain_chance <= 12)
+            if(rain_chance == 1)
             {
                 float rain_time = Random.Range(14f, 36f);
                 float intensity = Random.Range(80f, 100f);
@@ -37,18 +41,18 @@ public class Weather : MonoBehaviour
                 emgg.constantMax = intensity / 50 + 1;*/
 
                 rain.Play();
-                rain_overlay.GetComponent<Animator>().SetFloat("Speed", 1);
-                rain_overlay.GetComponent<Animator>().Play("weather", 0, 0);
+                rainAnimator.SetFloat("Speed", 1);
+                rainAnimator.Play("weather", 0, 0);
 
-                AudioManager.instance.PlayWeather("Rain", 1);
+                if(AudioManager.instance != null) AudioManager.instance.PlayWeather("Rain", 1);
 
                 yield return new WaitForSeconds(rain_time);
 
                 rain.Stop();
-                rain_overlay.GetComponent<Animator>().SetFloat("Speed", -1);
-                rain_overlay.GetComponent<Animator>().Play("weather", 0, 1);
+                rainAnimator.SetFloat("Speed", -1);
+                rainAnimator.Play("weather", 0, 1);
 
-                AudioManager.instance.PlayWeather("Rain", 0);
+                if (AudioManager.instance != null) AudioManager.instance.PlayWeather("Rain", 0);
 
                 yield return new WaitForSeconds(rain_time/4);
             }
