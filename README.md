@@ -31,6 +31,8 @@
 
 # The game itself
 
+The game was developed in `Unity 6.3 (6000.3.10f1)`. The Repo contains the Unity project itself. A Windows build is located in the `!WINDOWS_BUILD` folder. An old outdated and buggy Linux build is located in the `!LINUX_BUILD` folder (WAS  AND DOESN'T WORK). For the cleanest experience, you can just download the `.exe` file from this repo: `github.com/tonealexandru236/SmeltingTime-Build`.
+
 ### Sprites
 
 We Used Aseprite to hand draw all sprites. We've had our fair share of inspirations and a lot of trial and error. Most if not all items have multiple sprites depending on the direction the player is holding them. They are located in ` Assets\CreativeAssets\Sprites `.
