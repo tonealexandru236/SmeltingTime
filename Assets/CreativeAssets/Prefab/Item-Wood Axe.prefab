@@ -55,8 +55,8 @@ MonoBehaviour:
   itemId: woodaxe
   recipeForThisItem: log,log,stick,stick
   sr: {fileID: 3609851717696260702}
-  normalSprite: {fileID: -260940314914793466, guid: 98fef2278461f254e8db8923bf3317cc, type: 3}
-  pickUpSprite: {fileID: -2452330451675995509, guid: 2841542e4dae55d44a28aa633eadfe70, type: 3}
+  normalSprite: {fileID: -2658406626719641014, guid: 98fef2278461f254e8db8923bf3317cc, type: 3}
+  pickUpSprite: {fileID: -260940314914793466, guid: 98fef2278461f254e8db8923bf3317cc, type: 3}
   is8dir: 1
 --- !u!212 &3609851717696260702
 SpriteRenderer:
