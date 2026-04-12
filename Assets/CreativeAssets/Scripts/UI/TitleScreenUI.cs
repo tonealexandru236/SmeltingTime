@@ -63,7 +63,7 @@ public class TitleScreenUI : MonoBehaviour
     {
         float value = PlayerPrefs.GetFloat("masterVolume", 1);
         masterSlider.value = value;
-        sliderPercentage.text = (Mathf.Round(value * 100)).ToString() + "%";
+        if (sliderPercentage != null)  sliderPercentage.text = (Mathf.Round(value * 100)).ToString() + "%";
 
         if (fps != null) fps.isOn = PlayerPrefs.GetInt("s_fps", 0) == 1;
         if (weather != null) weather.isOn = PlayerPrefs.GetInt("s_weather", 1) == 1;
@@ -73,11 +73,7 @@ public class TitleScreenUI : MonoBehaviour
 
         StartCoroutine(BandaidFix());
 
-        masterSlider.value = PlayerPrefs.GetFloat("masterVolume", 1f);
-
         masterSlider.onValueChanged.AddListener(OnMasterVolumeChanged);
-
-        if(sliderPercentage != null) sliderPercentage.text = Mathf.Round(masterSlider.value * 100) + "%";
     }
 
     IEnumerator BandaidFix()
