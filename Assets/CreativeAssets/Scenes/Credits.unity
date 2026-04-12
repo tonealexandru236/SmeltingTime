@@ -2420,7 +2420,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Github + Itch.io
+  m_text: Github
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a4fd06ef7b4118145838557b1909e876, type: 2}
   m_sharedMaterial: {fileID: 3089897263903450699, guid: a4fd06ef7b4118145838557b1909e876, type: 2}
@@ -3160,7 +3160,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1156863242}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.21950376
+  m_Size: 0.21950375
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
