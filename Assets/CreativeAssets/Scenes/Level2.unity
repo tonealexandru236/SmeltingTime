@@ -12925,6 +12925,7 @@ RectTransform:
   - {fileID: 555525676}
   - {fileID: 14139019}
   - {fileID: 1919843555}
+  - {fileID: 1083871574}
   - {fileID: 884451127}
   - {fileID: 858377920}
   - {fileID: 137573859}
@@ -12933,7 +12934,6 @@ RectTransform:
   - {fileID: 1355899209}
   - {fileID: 2068354520}
   - {fileID: 1276965614}
-  - {fileID: 1083871574}
   - {fileID: 2114342870}
   - {fileID: 308420896}
   m_Father: {fileID: 0}
