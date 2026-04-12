@@ -26,12 +26,12 @@ public class AudioManager : MonoBehaviour
         if (instance == null)
         {
             instance = this;
-            DontDestroyOnLoad(instance);
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
-            Destroy(gameObject);
             Debug.Log("more than 1 audio manager!! wtf>?");
+            Destroy(gameObject);
         }
 
         for (int i = 0; i < audioSources.Length; i++)
@@ -67,7 +67,7 @@ public class AudioManager : MonoBehaviour
         }
 
         foreach (AudioClip clp in audioClips)
-            if (clp.name == clipName)
+            if (clp.name.ToLower() == clipName.ToLower())
             {
                 clip = clp;
                 break;
@@ -136,7 +136,7 @@ public class AudioManager : MonoBehaviour
         {
             Debug.Log(clp.name);
             Debug.Log(trackname);
-            if (clp.name == trackname)
+            if (clp.name.ToLower() == trackname.ToLower())
             {
                 track = clp;
                 break;

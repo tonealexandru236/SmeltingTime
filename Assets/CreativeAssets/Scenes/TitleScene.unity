@@ -7388,6 +7388,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 73bad6299a2c9ce4ea1141ee8e2b2cd9, type: 3}
   - {fileID: 8300000, guid: d1c36221621d58441bdf3de03a33d540, type: 3}
   audioTemplate: {fileID: 2012389699}
+  MainTrack: {fileID: 8300000, guid: 0a172fd25111f8a47b87098551403140, type: 3}
 --- !u!4 &1799406647
 Transform:
   m_ObjectHideFlags: 0
