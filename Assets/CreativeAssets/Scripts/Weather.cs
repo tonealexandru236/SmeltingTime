@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Weather : MonoBehaviour
 {
@@ -8,7 +9,9 @@ public class Weather : MonoBehaviour
     void Start()
     {
         rain.Stop();
-        StartCoroutine(wait_for_weather());
+        
+        if(SceneManager.GetActiveScene().name.ToLower() != "tutorial")
+            StartCoroutine(wait_for_weather());
     }
 
     IEnumerator wait_for_weather()
