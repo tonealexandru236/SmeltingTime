@@ -6966,7 +6966,7 @@ PrefabInstance:
       objectReference: {fileID: 1355899210}
     - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
       propertyPath: itemsItCanOrder.Array.size
-      value: 22
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
       propertyPath: 'itemsItCanOrder.Array.data[0]'
@@ -7056,6 +7056,22 @@ PrefabInstance:
       propertyPath: 'itemsItCanOrder.Array.data[21]'
       value: 
       objectReference: {fileID: 6757882594673250028, guid: f94edf90bcf70ed4b9c48c04036e7016, type: 3}
+    - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
+      propertyPath: 'itemsItCanOrder.Array.data[22]'
+      value: 
+      objectReference: {fileID: 7119628228846839293, guid: b8133f6eca9214e4b9ce1bddc8367ae2, type: 3}
+    - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
+      propertyPath: 'itemsItCanOrder.Array.data[23]'
+      value: 
+      objectReference: {fileID: 7119628228846839293, guid: 830e2df97aa5c794491285fce733ae81, type: 3}
+    - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
+      propertyPath: 'itemsItCanOrder.Array.data[24]'
+      value: 
+      objectReference: {fileID: 7119628228846839293, guid: 98b5a49c9fc1be444880a5998ab5969c, type: 3}
+    - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
+      propertyPath: 'itemsItCanOrder.Array.data[25]'
+      value: 
+      objectReference: {fileID: 7119628228846839293, guid: 2d3220a588bff8c4fa7db7850f4a37f0, type: 3}
     - target: {fileID: 3775490461605459851, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
       propertyPath: m_Name
       value: CustomerLine1 (1)
@@ -7119,7 +7135,7 @@ PrefabInstance:
       objectReference: {fileID: 1355899210}
     - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
       propertyPath: itemsItCanOrder.Array.size
-      value: 22
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
       propertyPath: 'itemsItCanOrder.Array.data[0]'
@@ -7209,6 +7225,22 @@ PrefabInstance:
       propertyPath: 'itemsItCanOrder.Array.data[21]'
       value: 
       objectReference: {fileID: 6757882594673250028, guid: f94edf90bcf70ed4b9c48c04036e7016, type: 3}
+    - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
+      propertyPath: 'itemsItCanOrder.Array.data[22]'
+      value: 
+      objectReference: {fileID: 7119628228846839293, guid: b8133f6eca9214e4b9ce1bddc8367ae2, type: 3}
+    - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
+      propertyPath: 'itemsItCanOrder.Array.data[23]'
+      value: 
+      objectReference: {fileID: 7119628228846839293, guid: 830e2df97aa5c794491285fce733ae81, type: 3}
+    - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
+      propertyPath: 'itemsItCanOrder.Array.data[24]'
+      value: 
+      objectReference: {fileID: 7119628228846839293, guid: 98b5a49c9fc1be444880a5998ab5969c, type: 3}
+    - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
+      propertyPath: 'itemsItCanOrder.Array.data[25]'
+      value: 
+      objectReference: {fileID: 7119628228846839293, guid: 2d3220a588bff8c4fa7db7850f4a37f0, type: 3}
     - target: {fileID: 3775490461605459851, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
       propertyPath: m_Name
       value: CustomerLine1 (2)
@@ -12175,7 +12207,7 @@ PrefabInstance:
       objectReference: {fileID: 1355899210}
     - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
       propertyPath: itemsItCanOrder.Array.size
-      value: 22
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
       propertyPath: 'itemsItCanOrder.Array.data[0]'
@@ -12265,6 +12297,22 @@ PrefabInstance:
       propertyPath: 'itemsItCanOrder.Array.data[21]'
       value: 
       objectReference: {fileID: 6757882594673250028, guid: f94edf90bcf70ed4b9c48c04036e7016, type: 3}
+    - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
+      propertyPath: 'itemsItCanOrder.Array.data[22]'
+      value: 
+      objectReference: {fileID: 7119628228846839293, guid: b8133f6eca9214e4b9ce1bddc8367ae2, type: 3}
+    - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
+      propertyPath: 'itemsItCanOrder.Array.data[23]'
+      value: 
+      objectReference: {fileID: 7119628228846839293, guid: 830e2df97aa5c794491285fce733ae81, type: 3}
+    - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
+      propertyPath: 'itemsItCanOrder.Array.data[24]'
+      value: 
+      objectReference: {fileID: 7119628228846839293, guid: 98b5a49c9fc1be444880a5998ab5969c, type: 3}
+    - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
+      propertyPath: 'itemsItCanOrder.Array.data[25]'
+      value: 
+      objectReference: {fileID: 7119628228846839293, guid: 2d3220a588bff8c4fa7db7850f4a37f0, type: 3}
     - target: {fileID: 3775490461605459851, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
       propertyPath: m_Name
       value: CustomerLine1
