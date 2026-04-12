@@ -14,7 +14,7 @@ public class TitleScreenUI : MonoBehaviour
 
     private GameObject menu_active;
 
-    public Slider masterSlider;
+    [SerializeField]  public Slider masterSlider;
 
     public TMP_Text sliderPercentage;
 
@@ -27,11 +27,6 @@ public class TitleScreenUI : MonoBehaviour
     void Awake()
     {
         Time.timeScale = 1;
-        fps.isOn = PlayerPrefs.GetInt("s_fps", 0) == 1;
-        weather.isOn = PlayerPrefs.GetInt("s_weather", 1) == 1;
-        particles.isOn = PlayerPrefs.GetInt("s_particles", 1) == 1;
-        buttons.isOn = PlayerPrefs.GetInt("s_buttons", 1) == 1;
-        color.isOn = PlayerPrefs.GetInt("s_color", 0) == 1;
     }
 
     public void change_color()
@@ -66,26 +61,45 @@ public class TitleScreenUI : MonoBehaviour
 
     private void Start()
     {
-        StartCoroutine(BandaidFix());
-        
-
         float value = PlayerPrefs.GetFloat("masterVolume", 1);
-
         masterSlider.value = value;
         sliderPercentage.text = (Mathf.Round(value * 100)).ToString() + "%";
+
+        if (fps != null) fps.isOn = PlayerPrefs.GetInt("s_fps", 0) == 1;
+        if (weather != null) weather.isOn = PlayerPrefs.GetInt("s_weather", 1) == 1;
+        if (particles != null) particles.isOn = PlayerPrefs.GetInt("s_particles", 1) == 1;
+        if (buttons != null) buttons.isOn = PlayerPrefs.GetInt("s_buttons", 1) == 1;
+        if (color != null) color.isOn = PlayerPrefs.GetInt("s_color", 0) == 1;
+
+        StartCoroutine(BandaidFix());
+
+        masterSlider.value = PlayerPrefs.GetFloat("masterVolume", 1f);
+
+        masterSlider.onValueChanged.AddListener(OnMasterVolumeChanged);
+
+        if(sliderPercentage != null) sliderPercentage.text = Mathf.Round(masterSlider.value * 100) + "%";
     }
 
     IEnumerator BandaidFix()
     {
         yield return new WaitForSeconds(0.1f);
-        AudioManager.instance.PlayTrack("MainBass");
-        AudioManager.instance.PlayWeather("Rain", 0);
+        //AudioManager.instance.PlayTrack("MainBass");
+        if(AudioManager.instance != null) AudioManager.instance.PlayWeather("Rain", 0);
+    }
+
+    void OnMasterVolumeChanged(float value)
+    {
+        PlayerPrefs.SetFloat("masterVolume", value);
+        PlayerPrefs.Save();
+
+        if (sliderPercentage != null) sliderPercentage.text = Mathf.Round(value * 100) + "%";
     }
 
     void Update()
     {
-        PlayerPrefs.SetFloat("masterVolume", masterSlider.value);
-        sliderPercentage.text = (Mathf.Round(masterSlider.value * 100)).ToString() + "%";
+        /*PlayerPrefs.SetFloat("masterVolume", masterSlider.value);
+        PlayerPrefs.Save();
+        if (sliderPercentage != null) sliderPercentage.text = (Mathf.Round(masterSlider.value * 100)).ToString() + "%";*/
     }
 
     public void click_levels()
