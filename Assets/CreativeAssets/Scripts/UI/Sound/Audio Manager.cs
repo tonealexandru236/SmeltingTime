@@ -11,8 +11,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip[] audioClips;
 
     public AudioSource audioTemplate;
-    private AudioSource[] audioSources = new AudioSource[12]; /// 0 -> 10 = SFX     ;    11/12 = Music Tracks
+    private AudioSource[] audioSources = new AudioSource[15]; /// 0 -> 9 / 12 -> 15 = SFX     ;    11 = Music Track      10 = Weather
 
+    public AudioClip MainTrack;
 
     public void Update()
     {
@@ -35,6 +36,13 @@ public class AudioManager : MonoBehaviour
 
         for (int i = 0; i < audioSources.Length; i++)
             audioSources[i] = Instantiate(audioTemplate, transform);
+
+
+        if(!audioSources[11].isPlaying)
+        {
+            audioSources[11].clip = MainTrack;
+            audioSources[11].Play();
+        }
     }
 
     public void PlaySound(string clipName)
@@ -73,12 +81,15 @@ public class AudioManager : MonoBehaviour
 
         source.clip = clip;
         source.volume = PlayerPrefs.GetFloat("masterVolume", 1);
-        source.pitch = Random.Range(0.9f, 1.1f);
+        source.pitch = Random.Range(0.91f, 1.09f);
         source.Play();
     }
 
     public void PlayTrack(string trackname)
     {
+        return;
+        // E broken restu, am rezolvat
+
         AudioSource source = null;
         AudioClip track = null;
 
@@ -92,8 +103,6 @@ public class AudioManager : MonoBehaviour
 
         foreach (AudioClip clp in audioClips)
         {
-            Debug.Log(clp.name);
-            Debug.Log(trackname);
             if (clp.name == trackname)
             {
                 track = clp;
