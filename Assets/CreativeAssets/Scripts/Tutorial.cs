@@ -33,7 +33,7 @@ public class Tutorial : MonoBehaviour
 
     IEnumerator speech()
     {
-        Time.timeScale = 1f;
+        Time.timeScale = 3.5f;
 
         yield return new WaitForSeconds(1f);
         for (int i=0; i<tutorialSpeech.Length; i++)

@@ -14945,6 +14945,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
+      propertyPath: itemsItCanOrder.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
+      propertyPath: 'itemsItCanOrder.Array.data[0]'
+      value: 
+      objectReference: {fileID: 7119628228846839293, guid: 9c5528acc8838ad459e83c8f2ae33a87, type: 3}
+    - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
+      propertyPath: 'itemsItCanOrder.Array.data[1]'
+      value: 
+      objectReference: {fileID: 920541454321307148, guid: 6e75d3b6bef3941a1880b1bfb7ad9a62, type: 3}
+    - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
+      propertyPath: 'itemsItCanOrder.Array.data[2]'
+      value: 
+      objectReference: {fileID: 7119628228846839293, guid: 3ad8f63a8187b974eb07bc18fa58f4f8, type: 3}
+    - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
+      propertyPath: 'itemsItCanOrder.Array.data[3]'
+      value: 
+      objectReference: {fileID: 7119628228846839293, guid: b467614ebfa58ab4884325e97a43d415, type: 3}
     - target: {fileID: 3775490461605459851, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
       propertyPath: m_Name
       value: CustomerLine1
