@@ -1,8 +1,11 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Pause : MonoBehaviour
 {
     public GameObject pause_menu;
+    public TMP_Text level;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape) && pause_menu.activeSelf == true)
@@ -15,5 +18,10 @@ public class Pause : MonoBehaviour
             Time.timeScale = 0.0f;
             pause_menu.SetActive(true);
         }
+    }
+
+    private void Start()
+    {
+        level.SetText(SceneManager.GetActiveScene().name);
     }
 }
