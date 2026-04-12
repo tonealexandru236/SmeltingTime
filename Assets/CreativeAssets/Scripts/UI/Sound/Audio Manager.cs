@@ -41,6 +41,7 @@ public class AudioManager : MonoBehaviour
         if(!audioSources[11].isPlaying)
         {
             audioSources[11].clip = MainTrack;
+            audioSources[11].loop = true;
             audioSources[11].Play();
         }
     }
