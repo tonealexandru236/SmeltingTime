@@ -33,9 +33,9 @@ public class Tutorial : MonoBehaviour
 
     IEnumerator speech()
     {
-        Time.timeScale = 3.5f;
+        Time.timeScale = 1f;
 
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(3.5f);
         for (int i=0; i<tutorialSpeech.Length; i++)
         {
             tutorialSpeech[i].SetActive(true);
