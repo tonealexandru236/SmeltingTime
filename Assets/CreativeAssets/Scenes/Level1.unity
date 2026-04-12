@@ -6040,7 +6040,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 4227858431
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -6450,7 +6450,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4291809231
+    rgba: 2815414223
   m_fontColor: {r: 0.8117647, g: 0.8117647, b: 0.8117647, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -26750,7 +26750,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86aa99c6e3f5094f9ebf5469ab627e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  timerInMinutes: 0.5
+  timerInMinutes: 0.1
   numOfCustomersToServe: 3
   timerTxt: {fileID: 467190807}
   customerServedText: {fileID: 646928032}
