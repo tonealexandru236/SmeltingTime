@@ -32,10 +32,11 @@ public class CustomersOrderLine : MonoBehaviour
 
     ItemScript itemOrder;
 
-    float delayBetween, yState, targetSpriteAlpha, s = 0, t = 0;
+    float delayBetween, yState, targetSpriteAlpha, s = 0, t = 0, trueMadness;
 
     private void Start()
     {
+        trueMadness = 1.5f;
         delayBetween = 1.2f;
     }
 
@@ -60,7 +61,7 @@ public class CustomersOrderLine : MonoBehaviour
         if (customerLine.Count > 0 && itemOrder == null && customerLine[0].transform.position == transform.position && !checkMark.activeSelf)
         {
             itemOrder = itemsItCanOrder[Random.Range(0, itemsItCanOrder.Length)];
-            secondsBeforeMad = Mathf.Max(itemOrder.getMadTime, 20f);
+            secondsBeforeMad = Mathf.Max(itemOrder.getMadTime, 20f) * trueMadness;
             itemVisual.sprite = itemOrder.itemSprites[0];
             targetSpriteAlpha = 1;
             yState = 1;
