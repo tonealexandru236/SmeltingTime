@@ -21655,7 +21655,7 @@ MonoBehaviour:
   itemsChance: 64000000
   spawnPoint: {fileID: 1283177817}
   itemsParent: {fileID: 1056728023}
-  spawnRate: 2
+  spawnRate: 2.4
 --- !u!4 &1661670194
 Transform:
   m_ObjectHideFlags: 0

@@ -6907,7 +6907,7 @@ Transform:
   m_GameObject: {fileID: 303369041}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.5, y: -2.5, z: 1}
+  m_LocalPosition: {x: 4, y: -2.75, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22354,10 +22354,10 @@ MonoBehaviour:
   - {fileID: 8899958639640477454, guid: 9334f1693492349bc927fbb411d32787, type: 3}
   - {fileID: 1676569562148675751, guid: fbbf2c6e9a9fb6047a2c2e7d606e12e7, type: 3}
   - {fileID: 1676569562148675751, guid: 1bb5ec3dd5e960e41b6004186562a83b, type: 3}
-  itemsChance: 320000001400000014000000
+  itemsChance: 3c0000001400000014000000
   spawnPoint: {fileID: 1283177817}
   itemsParent: {fileID: 1056728023}
-  spawnRate: 2
+  spawnRate: 1.8
 --- !u!4 &1661670194
 Transform:
   m_ObjectHideFlags: 0
