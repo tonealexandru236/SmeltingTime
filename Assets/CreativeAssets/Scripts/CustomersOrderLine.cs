@@ -24,16 +24,20 @@ public class CustomersOrderLine : MonoBehaviour
     [SerializeField] Sprite[] emojiSprites;
 
     [Header("Customer Visual")]
-    [SerializeField] Sprite rightSprite;
-    [SerializeField] Sprite downSprite;
+    [SerializeField] Sprite[] leftSprite;
+    [SerializeField] Sprite[] rightSprite;
+    [SerializeField] Sprite[] downSprite;
 
     List<GameObject> customerLine = new List<GameObject>();
 
     ItemScript itemOrder;
 
-    float delayBetween, yState, targetSpriteAlpha, s = 0;
+    float delayBetween, yState, targetSpriteAlpha, s = 0, t = 0;
     private void Update()
     {
+        t += Time.deltaTime * 12f;
+        t %= 3;
+
         s += Time.deltaTime;
         if(s > secondsBeforeMad && s < 1000)
         {
@@ -86,6 +90,11 @@ public class CustomersOrderLine : MonoBehaviour
         for (int i = 0; i < customerLine.Count; i++)
         {
             Vector2 targetPos = transform.position + new Vector3(i * spaceBetweenThem, 0, 0);
+
+            if(targetPos != (Vector2)customerLine[i].transform.position)
+                customerLine[i].GetComponent<SpriteRenderer>().sprite = leftSprite[(int)t];
+            else
+                customerLine[i].GetComponent<SpriteRenderer>().sprite = leftSprite[0];
             customerLine[i].transform.position = Vector2.MoveTowards(customerLine[i].transform.position, targetPos, Time.deltaTime * 3f);
             //customerLine[i].GetComponent<SpriteRenderer>().sortingOrder = i + 10;
         }
@@ -118,22 +127,26 @@ public class CustomersOrderLine : MonoBehaviour
         GameObject customer = customerLine[0];
         customerLine.RemoveAt(0);
 
-        customer.GetComponent<SpriteRenderer>().sprite = downSprite;
 
         Vector2 targetLateralPos = transform.position - new Vector3(0, 0.4f, 0);
         while((Vector2)customer.transform.position != targetLateralPos)
         {
             customer.transform.position = Vector2.MoveTowards(customer.transform.position, targetLateralPos, Time.deltaTime * 3f);
+
+            customer.GetComponent<SpriteRenderer>().sprite = downSprite[(int)t];
+
             yield return new WaitForEndOfFrame();
         }
 
-        customer.GetComponent<SpriteRenderer>().sprite = rightSprite;
         customer.GetComponent<SpriteRenderer>().sortingOrder += 1;
 
         Vector2 targetEndPos = transform.position - new Vector3(-spaceBetweenThem * numberOfCustomers, 0.4f, 0);
         while ((Vector2)customer.transform.position != targetEndPos)
         {
             customer.transform.position = Vector2.MoveTowards(customer.transform.position, targetEndPos, Time.deltaTime * 3f);
+
+            customer.GetComponent<SpriteRenderer>().sprite = rightSprite[(int)t];
+
             yield return new WaitForEndOfFrame();
         }
     }
