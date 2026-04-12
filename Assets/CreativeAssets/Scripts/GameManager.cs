@@ -67,7 +67,7 @@ public class GameManager : MonoBehaviour
         if (numOfCustomersServed == numOfCustomersToServe)
         {
             GameOverScreen.SetActive(true);
-            Next.SetActive(true);
+            if(Next != null) Next.SetActive(true);
             GameOverText.SetText("You Won!");
             GameOverScreen.GetComponent<Animator>().Play("end-game");
 
