@@ -33036,6 +33036,7 @@ MonoBehaviour:
   GameOverText: {fileID: 128868075}
   Retry: {fileID: 1724808229}
   Next: {fileID: 0}
+  IsEndless: 1
 --- !u!114 &1712271011
 MonoBehaviour:
   m_ObjectHideFlags: 0

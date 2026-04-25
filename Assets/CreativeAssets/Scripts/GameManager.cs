@@ -19,11 +19,18 @@ public class GameManager : MonoBehaviour
 
     float t;
     int numOfCustomersServed;
+    public bool IsEndless;
+
+    float total_time;
+
+
     private void Start()
     {
         Time.timeScale = 1;
         t = timerInMinutes * 60f;
         numOfCustomersServed = 0;
+
+        total_time = 0;
     }
     private void Update()
     {
@@ -40,8 +47,23 @@ public class GameManager : MonoBehaviour
 
         t -= Time.deltaTime;
 
-        timerTxt.text = FloatToTime(t);
-        customerServedText.text = numOfCustomersServed.ToString() + "/" + numOfCustomersToServe.ToString();
+        if (IsEndless)
+        {
+            total_time += Time.deltaTime;
+            timerTxt.text = FloatToTime(total_time);
+        }
+        else
+        {
+            t -= Time.deltaTime;
+            timerTxt.text = FloatToTime(t);
+        }
+
+
+
+        if (IsEndless)
+            customerServedText.text = numOfCustomersServed.ToString();
+        else
+            customerServedText.text = numOfCustomersServed.ToString() + "/" + numOfCustomersToServe.ToString();
     }
     private string FloatToTime(float a)
     {
@@ -64,7 +86,7 @@ public class GameManager : MonoBehaviour
     {
         numOfCustomersServed += 1;
 
-        if (numOfCustomersServed == numOfCustomersToServe)
+        if (numOfCustomersServed == numOfCustomersToServe && IsEndless == false)
         {
             GameOverScreen.SetActive(true);
             if(Next != null) Next.SetActive(true);
