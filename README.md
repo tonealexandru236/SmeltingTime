@@ -34,6 +34,8 @@
 
 # The game itself
 
+Disclaimer: The following are refering to the first official build, V1.0.0, and its sub-versions, V1.0.1 and V1.0.2. Any further major updates might break or change any of the patterns, info and facts mentioned.
+
 The game was developed in `Unity 6.3 (6000.3.10f1)`. The Repo contains the Unity project itself. A Windows build is located in the `!WINDOWS_BUILD` folder. For the cleanest experience, you can just download the `.exe` file from this repo: `github.com/tonealexandru236/SmeltingTime-Build`.
 
 ### Sprites
