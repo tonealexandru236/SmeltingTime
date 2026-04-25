@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] int numOfCustomersToServe;
     [SerializeField] TMP_Text timerTxt;
     [SerializeField] TMP_Text customerServedText;
+    static public float trueMadness;
 
     public GameObject GameOverScreen;
     public TMP_Text GameOverText;
@@ -27,14 +28,21 @@ public class GameManager : MonoBehaviour
     private void Start()
     {
         Time.timeScale = 1;
-        t = timerInMinutes * 60f;
-        numOfCustomersServed = 0;
 
+        if (IsEndless)
+            customerServedText.fontSize = 42.5f;
+
+        trueMadness = 1.5f;
+
+        t = timerInMinutes * 60f;
         total_time = 0;
+
+        numOfCustomersServed = 0;
     }
     private void Update()
     {
-        if(t <= 0)
+        Debug.Log(trueMadness);
+        if (t <= 0)
         {
             GameOverScreen.SetActive(true);
             Retry.SetActive(true);
@@ -85,6 +93,9 @@ public class GameManager : MonoBehaviour
     public void ServedOneCustomer()
     {
         numOfCustomersServed += 1;
+
+        if (IsEndless)
+            trueMadness = Mathf.Max(1.1f, 1 + (50 - (float)numOfCustomersServed)/100);
 
         if (numOfCustomersServed == numOfCustomersToServe && IsEndless == false)
         {
