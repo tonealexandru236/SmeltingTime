@@ -52,7 +52,7 @@ MonoBehaviour:
   - {fileID: 3492378820541938706, guid: ef65253178a305242a5bc3f7e2ea6404, type: 3}
   - {fileID: 4941023176241608926, guid: ef65253178a305242a5bc3f7e2ea6404, type: 3}
   - {fileID: -5238338363829856208, guid: ef65253178a305242a5bc3f7e2ea6404, type: 3}
-  itemId: ironboots
+  itemId: diamondboots
   recipeForThisItem: diamond,diamond
   sr: {fileID: 3609851717696260702}
   normalSprite: {fileID: -1006211245625815939, guid: ef65253178a305242a5bc3f7e2ea6404, type: 3}

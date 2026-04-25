@@ -52,7 +52,7 @@ MonoBehaviour:
   - {fileID: 3921318407487865757, guid: 6df334768a0521d48a122f7865afec08, type: 3}
   - {fileID: 1583319193170640068, guid: 6df334768a0521d48a122f7865afec08, type: 3}
   - {fileID: 2362582636869735902, guid: 6df334768a0521d48a122f7865afec08, type: 3}
-  itemId: ironboots
+  itemId: copperboots
   recipeForThisItem: copperingot,copperingot
   sr: {fileID: 3609851717696260702}
   normalSprite: {fileID: 2851719567209071134, guid: 6df334768a0521d48a122f7865afec08, type: 3}
