@@ -6,11 +6,16 @@ public class Weather : MonoBehaviour
 {
     public ParticleSystem rain;
     public GameObject rain_overlay;
+
+    static public float weather_debuff;
     void Start()
     {
         rain.Stop();
-        
-        if(SceneManager.GetActiveScene().name.ToLower() != "tutorial")
+
+        weather_debuff = 1;
+
+
+        if (SceneManager.GetActiveScene().name.ToLower() != "tutorial")
             StartCoroutine(wait_for_weather());
     }
 
@@ -27,10 +32,12 @@ public class Weather : MonoBehaviour
         {
             int rain_chance = Random.Range(1, 13);
 
-            if(rain_chance == 1)
+            if(rain_chance == 1) // Rain starts
             {
                 float rain_time = Random.Range(14f, 36f);
                 float intensity = Random.Range(80f, 100f);
+
+                weather_debuff = 1.1f;
 
                 var em = rain.emission;
                 em.rateOverTime = intensity;
@@ -51,6 +58,10 @@ public class Weather : MonoBehaviour
                 rain.Stop();
                 rainAnimator.SetFloat("Speed", -1);
                 rainAnimator.Play("weather", 0, 1);
+
+                // Rain stops
+
+                weather_debuff = 1f;
 
                 if (AudioManager.instance != null) AudioManager.instance.PlayWeather("Rain", 0);
 

@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-        Debug.Log(trueMadness);
+        //Debug.Log(trueMadness);
         if (t <= 0)
         {
             GameOverScreen.SetActive(true);
