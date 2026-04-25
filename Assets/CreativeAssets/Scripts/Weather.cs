@@ -1,10 +1,13 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Weather : MonoBehaviour
 {
     public ParticleSystem rain;
+    public ParticleSystem snow;
+
     public GameObject rain_overlay;
 
     static public float weather_debuff;
@@ -30,12 +33,48 @@ public class Weather : MonoBehaviour
 
         while (true)
         {
-            int rain_chance = Random.Range(1, 13);
+            int weather_chance = Random.Range(1, 100);
 
-            if(rain_chance == 1) // Rain starts
+            if (weather_chance == 1) // Snow starts
+            {
+                float snow_time = Random.Range(14f, 28f);
+                float intensity = Random.Range(50f, 120f);
+
+                rain_overlay.GetComponent<Image>().color = new Color32(255, 255, 255, 0);
+
+                weather_debuff = 1.2f;
+
+                var em = snow.emission;
+                em.rateOverTime = intensity;
+
+                snow.Play();
+
+                yield return new WaitForSeconds(2f);
+
+                rainAnimator.SetFloat("Speed", 1);
+                rainAnimator.Play("weather", 0, 0);
+
+                yield return new WaitForSeconds(snow_time);
+
+                snow.Stop();
+
+                yield return new WaitForSeconds(2.5f);
+
+                rainAnimator.SetFloat("Speed", -1);
+                rainAnimator.Play("weather", 0, 1);
+
+                // Snowops
+
+                weather_debuff = 1f;
+
+                yield return new WaitForSeconds(snow_time / 4);
+            }
+            else if (weather_chance <= 8) // Rain starts
             {
                 float rain_time = Random.Range(14f, 36f);
                 float intensity = Random.Range(80f, 100f);
+
+                rain_overlay.GetComponent<Image>().color = new Color32(0, 97, 255, 0);
 
                 weather_debuff = 1.1f;
 
@@ -48,6 +87,9 @@ public class Weather : MonoBehaviour
                 emgg.constantMax = intensity / 50 + 1;*/
 
                 rain.Play();
+
+                yield return new WaitForSeconds(0.0f);
+
                 rainAnimator.SetFloat("Speed", 1);
                 rainAnimator.Play("weather", 0, 0);
 
@@ -56,6 +98,9 @@ public class Weather : MonoBehaviour
                 yield return new WaitForSeconds(rain_time);
 
                 rain.Stop();
+
+                yield return new WaitForSeconds(0.5f);
+
                 rainAnimator.SetFloat("Speed", -1);
                 rainAnimator.Play("weather", 0, 1);
 

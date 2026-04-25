@@ -45,7 +45,7 @@ public class CustomersOrderLine : MonoBehaviour
         t %= 3;
 
         s += Time.deltaTime * Weather.weather_debuff;
-        Debug.Log(s);
+        //Debug.Log(s);
         if(s > secondsBeforeMad && s < 1000)
         {
             AudioManager.instance.PlaySound("IncorrectClient");
