@@ -32,6 +32,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/CreativeAssets/Scenes/Endless.unity
     guid: f9d108315c5840147a52a5e2ed6ebc2c
+  - enabled: 1
+    path: Assets/CreativeAssets/Scenes/Patch Notes.unity
+    guid: 1ff7e367f71c4d14eb5b311da663bd9f
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
