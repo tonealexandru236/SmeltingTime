@@ -29,13 +29,15 @@ public class Weather : MonoBehaviour
         float start_time = Random.Range(1f, 2f);
         yield return new WaitForSeconds(start_time);
 
-        rainAnimator = rain_overlay.GetComponent<Animator>();
+
+        if(rain_overlay.GetComponent<Animator>() != null )
+            rainAnimator = rain_overlay.GetComponent<Animator>();
 
         while (true)
         {
             int weather_chance = Random.Range(1, 100);
 
-            if (weather_chance == 1) // Snow starts
+            if (weather_chance <100) // Snow starts
             {
                 float snow_time = Random.Range(14f, 28f);
                 float intensity = Random.Range(50f, 120f);
@@ -44,10 +46,13 @@ public class Weather : MonoBehaviour
 
                 weather_debuff = 1.2f;
 
-                var em = snow.emission;
-                em.rateOverTime = intensity;
+                if (snow != null)
+                {
+                    var em = snow.emission;
+                    em.rateOverTime = intensity;
 
-                snow.Play();
+                    snow.Play();
+                }
 
                 yield return new WaitForSeconds(2f);
 
@@ -56,7 +61,8 @@ public class Weather : MonoBehaviour
 
                 yield return new WaitForSeconds(snow_time);
 
-                snow.Stop();
+                if (snow != null)
+                    snow.Stop();
 
                 yield return new WaitForSeconds(2.5f);
 
@@ -78,15 +84,18 @@ public class Weather : MonoBehaviour
 
                 weather_debuff = 1.1f;
 
-                var em = rain.emission;
-                em.rateOverTime = intensity;
+                if (rain != null)
+                {
+                    var em = rain.emission;
+                    em.rateOverTime = intensity;
+
+                    rain.Play();
+                }
 
                 /*var emg = rain.main;
                 var emgg = emg.gravityModifier;
 
                 emgg.constantMax = intensity / 50 + 1;*/
-
-                rain.Play();
 
                 yield return new WaitForSeconds(0.0f);
 
@@ -97,7 +106,8 @@ public class Weather : MonoBehaviour
 
                 yield return new WaitForSeconds(rain_time);
 
-                rain.Stop();
+                if (rain != null)
+                    rain.Stop();
 
                 yield return new WaitForSeconds(0.5f);
 

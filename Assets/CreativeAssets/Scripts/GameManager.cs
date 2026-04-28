@@ -53,7 +53,6 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        t -= Time.deltaTime;
 
         if (IsEndless)
         {
