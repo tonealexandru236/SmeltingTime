@@ -6,9 +6,13 @@ public class PlayerHand : MonoBehaviour
     public KeyCode playerActionKey;
     public Sprite[] itemInHandSprites = new Sprite[0];
     public string itemInHandID;
+    public int itemInHandEnchantmentLevel;
     public GameObject player;
     public int playerPriority;
     public PlayerMovement pm;
+
+    [SerializeField] Sprite[] fireAnim;
+    GameObject enchantFire;
 
     [SerializeField] bool showIn8Dir;
     ItemDatabase itemDb;
@@ -39,6 +43,16 @@ public class PlayerHand : MonoBehaviour
                     itemInHandID = itm.PickUpItem(player);
                     showIn8Dir = itm.is8dir;
                     //Debug.Log(itemInHandID);
+
+                    itemInHandEnchantmentLevel = itm.enchantLevel;
+
+                    if (itemInHandEnchantmentLevel != 0)
+                    {
+                        GameObject fire = Instantiate(FindFirstObjectByType<ItemDatabase>().firePref, transform);
+                        fire.GetComponent<EnchantFire>().SetUpFire(itemInHandEnchantmentLevel);
+
+                        enchantFire = fire;
+                    }
                 }
 
                 return;
@@ -103,10 +117,14 @@ public class PlayerHand : MonoBehaviour
             splash.pick_down_animation(player.name, itemInHandID, GetComponent<SpriteRenderer>().sprite);
 
         itemInHandID = "";
+        itemInHandEnchantmentLevel = 0;
         GetComponent<SpriteRenderer>().sprite = null;
+
+        if(enchantFire)
+            Destroy(enchantFire.gameObject);
     }
 
-    public void PickUpItemInHand(Sprite[] spr, string itemId) {
+    public void PickUpItemInHand(Sprite[] spr, string itemId, int enchantLvl) {
         if (AudioManager.instance)
             AudioManager.instance.PlaySound("itemPick");
         foreach (ItemSplashes splash in FindObjectsByType<ItemSplashes>(FindObjectsSortMode.None))
@@ -114,7 +132,16 @@ public class PlayerHand : MonoBehaviour
 
         itemInHandID = itemId;
         itemInHandSprites = spr;
+        itemInHandEnchantmentLevel = enchantLvl;
 
         showIn8Dir = itemDb.GetObjById(itemId).is8dir;
+
+        if(itemInHandEnchantmentLevel != 0)
+        {
+            GameObject fire = Instantiate(FindFirstObjectByType<ItemDatabase>().firePref, transform);
+            fire.GetComponent<EnchantFire>().SetUpFire(itemInHandEnchantmentLevel);
+
+            enchantFire = fire;
+        }
     }
 }

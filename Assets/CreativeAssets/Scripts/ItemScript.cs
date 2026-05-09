@@ -9,6 +9,8 @@ public class ItemScript : MonoBehaviour
     public string itemId;
     public string recipeForThisItem;
 
+    public int enchantLevel;
+
     [Header("Visual")]
     [SerializeField] SpriteRenderer sr;
     [SerializeField] Sprite normalSprite;
@@ -16,7 +18,21 @@ public class ItemScript : MonoBehaviour
 
     public bool is8dir;
 
+    SpriteRenderer enchantFire;
+
+    private void Start()
+    {
+        if (enchantLevel != 0)
+        {
+            GameObject fire =  Instantiate(FindFirstObjectByType<ItemDatabase>().firePref, transform);
+            fire.GetComponent<EnchantFire>().SetUpFire(enchantLevel);
+
+            fire.GetComponent<SpriteRenderer>().sortingOrder = GetComponent<SpriteRenderer>().sortingOrder - 1;
+        }
+            
+    }
     void Update() {
+
         if(transform.position.y < -16) ///Despawn
             Destroy(gameObject);
     }

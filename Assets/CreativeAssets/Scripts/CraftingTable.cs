@@ -50,7 +50,7 @@ public class CraftingTable : MonoBehaviour
                     particles.Play();
                 }
 
-                lastPh.PickUpItemInHand(craftedItem.itemSprites, craftedString);
+                lastPh.PickUpItemInHand(craftedItem.itemSprites, craftedString, 0);
                 itemsInCraft.Clear();
                 RefreshRecipePart();
             }
@@ -64,7 +64,7 @@ public class CraftingTable : MonoBehaviour
 
                     isForLast = itemDb.GetObjById(n);
 
-                    lastPh.PickUpItemInHand(isForLast.itemSprites, n);
+                    lastPh.PickUpItemInHand(isForLast.itemSprites, n, 0);
                     itemsInCraft.RemoveAt(itemsInCraft.Count - 1);
                     RefreshRecipePart();
                 }

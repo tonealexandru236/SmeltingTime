@@ -59,7 +59,7 @@ public class FurnaceScript : MonoBehaviour
         {
             if (result != "")
             {
-                ph.PickUpItemInHand(itemDb.GetObjById(result).itemSprites, result);
+                ph.PickUpItemInHand(itemDb.GetObjById(result).itemSprites, result, 0);
                 result = "";
                 resultImg.sprite = null;
             }
@@ -67,13 +67,13 @@ public class FurnaceScript : MonoBehaviour
             {
                 if(whatToBurn != "")
                 {
-                    ph.PickUpItemInHand(itemDb.GetObjById(whatToBurn).itemSprites, whatToBurn);
+                    ph.PickUpItemInHand(itemDb.GetObjById(whatToBurn).itemSprites, whatToBurn, 0);
                     whatToBurn = "";
                     toBurnImg.sprite = null;
                 }
                 else if(fuelUsed != "")
                 {
-                    ph.PickUpItemInHand(itemDb.GetObjById(fuelUsed).itemSprites, fuelUsed);
+                    ph.PickUpItemInHand(itemDb.GetObjById(fuelUsed).itemSprites, fuelUsed, 0);
                     fuelUsed = "";
                     fuelImg.sprite = normalBg;
                 }

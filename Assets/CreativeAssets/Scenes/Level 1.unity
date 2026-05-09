@@ -290,7 +290,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   bookEnchant: {fileID: 191758807}
+  circleAnchor: {fileID: 1427041636}
   outerCircle: {fileID: 1849105328}
+  innerText: {fileID: 805161807}
+  colorGradientOuterCircle:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 0.35396668, g: 0.9528302, b: 0.112362035, a: 1}
+    key2: {r: 0.9716981, g: 0.16958882, b: 0.16958882, a: 0}
+    key3: {r: 0.8628774, g: 0.085395135, b: 0.9528302, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 21823
+    ctime2: 43712
+    ctime3: 65535
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 4
+    m_NumAlphaKeys: 2
   toEnchant: {fileID: 585764587}
 --- !u!1 &3341568
 GameObject:
@@ -10693,6 +10725,71 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1001 &793064120
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 10549288213542943, guid: e07ca8279f2056348a33d19bf287335e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.4779394
+      objectReference: {fileID: 0}
+    - target: {fileID: 10549288213542943, guid: e07ca8279f2056348a33d19bf287335e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.9087867
+      objectReference: {fileID: 0}
+    - target: {fileID: 10549288213542943, guid: e07ca8279f2056348a33d19bf287335e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 10549288213542943, guid: e07ca8279f2056348a33d19bf287335e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 10549288213542943, guid: e07ca8279f2056348a33d19bf287335e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 10549288213542943, guid: e07ca8279f2056348a33d19bf287335e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 10549288213542943, guid: e07ca8279f2056348a33d19bf287335e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 10549288213542943, guid: e07ca8279f2056348a33d19bf287335e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 10549288213542943, guid: e07ca8279f2056348a33d19bf287335e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 10549288213542943, guid: e07ca8279f2056348a33d19bf287335e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2691727493601388173, guid: e07ca8279f2056348a33d19bf287335e, type: 3}
+      propertyPath: m_Name
+      value: Item-Copper Axe
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119628228846839293, guid: e07ca8279f2056348a33d19bf287335e, type: 3}
+      propertyPath: enchantLevel
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119628228846839293, guid: e07ca8279f2056348a33d19bf287335e, type: 3}
+      propertyPath: fireColors.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e07ca8279f2056348a33d19bf287335e, type: 3}
 --- !u!1 &805161805
 GameObject:
   m_ObjectHideFlags: 0
@@ -20647,6 +20744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ceef2f227b3dae46b6f73219220bee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  firePref: {fileID: 8526808791004865689, guid: a0022cbdfa751fd498f061fa8ecc80ff, type: 3}
   itemAsObj:
   - {fileID: 138871636675381304, guid: 9334f1693492349bc927fbb411d32787, type: 3}
   - {fileID: 920541454321307148, guid: 6e75d3b6bef3941a1880b1bfb7ad9a62, type: 3}
@@ -49663,6 +49761,63 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
+--- !u!1001 &1871299855768110094
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5129543339028417698, guid: a0022cbdfa751fd498f061fa8ecc80ff, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5129543339028417698, guid: a0022cbdfa751fd498f061fa8ecc80ff, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5129543339028417698, guid: a0022cbdfa751fd498f061fa8ecc80ff, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5129543339028417698, guid: a0022cbdfa751fd498f061fa8ecc80ff, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5129543339028417698, guid: a0022cbdfa751fd498f061fa8ecc80ff, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5129543339028417698, guid: a0022cbdfa751fd498f061fa8ecc80ff, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5129543339028417698, guid: a0022cbdfa751fd498f061fa8ecc80ff, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5129543339028417698, guid: a0022cbdfa751fd498f061fa8ecc80ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5129543339028417698, guid: a0022cbdfa751fd498f061fa8ecc80ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5129543339028417698, guid: a0022cbdfa751fd498f061fa8ecc80ff, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8526808791004865689, guid: a0022cbdfa751fd498f061fa8ecc80ff, type: 3}
+      propertyPath: m_Name
+      value: EnchantFire
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a0022cbdfa751fd498f061fa8ecc80ff, type: 3}
 --- !u!1001 &2585451719803299791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49846,3 +50001,5 @@ SceneRoots:
   - {fileID: 768818798}
   - {fileID: 570042928}
   - {fileID: 2496355}
+  - {fileID: 793064120}
+  - {fileID: 1871299855768110094}

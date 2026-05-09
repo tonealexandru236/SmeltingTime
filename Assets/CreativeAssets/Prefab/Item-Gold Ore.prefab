@@ -46,12 +46,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f5dc6211e09af541bef0de81d83f298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
-  itemId: goldore
+  getMadTime: 0
   itemSprites:
   - {fileID: -3925343385548529487, guid: e3ef1d220a8c4dd43b73600a93ac9123, type: 3}
   - {fileID: -20376245244261404, guid: e3ef1d220a8c4dd43b73600a93ac9123, type: 3}
   - {fileID: -856349351943307759, guid: e3ef1d220a8c4dd43b73600a93ac9123, type: 3}
   - {fileID: 2887414914964521634, guid: e3ef1d220a8c4dd43b73600a93ac9123, type: 3}
+  itemId: goldore
+  recipeForThisItem: 
+  enchantLevel: 0
+  fireAnim:
+  - {fileID: 3948555754266263867, guid: 5f3669a668ba0fa4fb36d13b2dbedf79, type: 3}
+  - {fileID: 8034467442950170365, guid: 5f3669a668ba0fa4fb36d13b2dbedf79, type: 3}
+  - {fileID: -4267835006876986325, guid: 5f3669a668ba0fa4fb36d13b2dbedf79, type: 3}
+  - {fileID: 5316702011641491532, guid: 5f3669a668ba0fa4fb36d13b2dbedf79, type: 3}
+  - {fileID: 290280592014427193, guid: 5f3669a668ba0fa4fb36d13b2dbedf79, type: 3}
+  - {fileID: -6115791099821113395, guid: 5f3669a668ba0fa4fb36d13b2dbedf79, type: 3}
+  - {fileID: 2708360844183522319, guid: 5f3669a668ba0fa4fb36d13b2dbedf79, type: 3}
+  fireColors:
+  - {r: 0.11748052, g: 1, b: 0, a: 1}
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 1, g: 0.07075471, b: 0.96269596, a: 1}
   sr: {fileID: 5173173589944019147}
   normalSprite: {fileID: -3925343385548529487, guid: e3ef1d220a8c4dd43b73600a93ac9123, type: 3}
   pickUpSprite: {fileID: 882475635566144544, guid: e3ef1d220a8c4dd43b73600a93ac9123, type: 3}
@@ -153,7 +168,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.13, y: 0.13}
+    oldSize: {x: 0.40625, y: 0.40625}
     newSize: {x: 0.5625, y: 0.5625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0

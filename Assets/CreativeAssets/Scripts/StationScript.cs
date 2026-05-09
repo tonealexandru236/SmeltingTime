@@ -35,7 +35,7 @@ public class StationScript : MonoBehaviour
         else if (stationTag == "enchant")
             GetComponent<EnchantmentTable>().UseEnchantmentTable(ph.itemInHandID, ph, ph.playerActionKey);
         else if (stationTag == "table")
-            GetComponent<TableScript>().UseTable(ph.itemInHandID, ph);
+            GetComponent<TableScript>().UseTable(ph.itemInHandID, ph, ph.itemInHandEnchantmentLevel);
 
     }
     public void ActivateStation(bool actv, PlayerHand ph) {

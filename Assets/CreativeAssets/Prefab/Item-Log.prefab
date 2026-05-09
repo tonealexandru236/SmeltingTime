@@ -46,15 +46,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f5dc6211e09af541bef0de81d83f298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  itemId: log
+  getMadTime: 0
   itemSprites:
   - {fileID: 8859483476749582028, guid: 900ea27788c6bb2418c29617942e2fc2, type: 3}
   - {fileID: 6760663931795608056, guid: 900ea27788c6bb2418c29617942e2fc2, type: 3}
   - {fileID: 3239853432960320528, guid: 900ea27788c6bb2418c29617942e2fc2, type: 3}
   - {fileID: 7163897794459651169, guid: 900ea27788c6bb2418c29617942e2fc2, type: 3}
+  itemId: log
+  recipeForThisItem: 
+  enchantLevel: 0
+  fireAnim:
+  - {fileID: 3948555754266263867, guid: 5f3669a668ba0fa4fb36d13b2dbedf79, type: 3}
+  - {fileID: 8034467442950170365, guid: 5f3669a668ba0fa4fb36d13b2dbedf79, type: 3}
+  - {fileID: -4267835006876986325, guid: 5f3669a668ba0fa4fb36d13b2dbedf79, type: 3}
+  - {fileID: 5316702011641491532, guid: 5f3669a668ba0fa4fb36d13b2dbedf79, type: 3}
+  - {fileID: 290280592014427193, guid: 5f3669a668ba0fa4fb36d13b2dbedf79, type: 3}
+  - {fileID: -6115791099821113395, guid: 5f3669a668ba0fa4fb36d13b2dbedf79, type: 3}
+  - {fileID: 2708360844183522319, guid: 5f3669a668ba0fa4fb36d13b2dbedf79, type: 3}
+  fireColors:
+  - {r: 0.11748052, g: 1, b: 0, a: 1}
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 1, g: 0.07075471, b: 0.96269596, a: 1}
   sr: {fileID: 779723061507199467}
   normalSprite: {fileID: 8859483476749582028, guid: 900ea27788c6bb2418c29617942e2fc2, type: 3}
   pickUpSprite: {fileID: 5779456988251767756, guid: 900ea27788c6bb2418c29617942e2fc2, type: 3}
+  is8dir: 0
 --- !u!212 &779723061507199467
 SpriteRenderer:
   serializedVersion: 2

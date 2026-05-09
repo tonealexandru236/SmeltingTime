@@ -54,6 +54,19 @@ MonoBehaviour:
   - {fileID: 3166902555279573811, guid: 9aa6f68f3e67e904683733f3c0f44736, type: 3}
   itemId: stick
   recipeForThisItem: log
+  enchantLevel: 0
+  fireAnim:
+  - {fileID: 3948555754266263867, guid: 5f3669a668ba0fa4fb36d13b2dbedf79, type: 3}
+  - {fileID: 8034467442950170365, guid: 5f3669a668ba0fa4fb36d13b2dbedf79, type: 3}
+  - {fileID: -4267835006876986325, guid: 5f3669a668ba0fa4fb36d13b2dbedf79, type: 3}
+  - {fileID: 5316702011641491532, guid: 5f3669a668ba0fa4fb36d13b2dbedf79, type: 3}
+  - {fileID: 290280592014427193, guid: 5f3669a668ba0fa4fb36d13b2dbedf79, type: 3}
+  - {fileID: -6115791099821113395, guid: 5f3669a668ba0fa4fb36d13b2dbedf79, type: 3}
+  - {fileID: 2708360844183522319, guid: 5f3669a668ba0fa4fb36d13b2dbedf79, type: 3}
+  fireColors:
+  - {r: 0.11748052, g: 1, b: 0, a: 1}
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 1, g: 0.07075471, b: 0.96269596, a: 1}
   sr: {fileID: 12395795574226783}
   normalSprite: {fileID: -4561015766075171351, guid: 9aa6f68f3e67e904683733f3c0f44736, type: 3}
   pickUpSprite: {fileID: 9107382018973493097, guid: 9aa6f68f3e67e904683733f3c0f44736, type: 3}

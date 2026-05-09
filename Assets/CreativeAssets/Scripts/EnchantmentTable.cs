@@ -24,6 +24,7 @@ public class EnchantmentTable : MonoBehaviour
         t = 0;
         spasmingRot = 0;
         pU = -1;
+        toEnchantId = ""; 
     }
     private void Update()
     {
@@ -43,6 +44,13 @@ public class EnchantmentTable : MonoBehaviour
 
             if(pU > 0.1f)
             {
+                if (toEnchantId == "")
+                {
+                    pU = -1;
+                    return;
+                }
+                    
+
                 outerCircle.fillAmount = (pU % 1);
                 if(pU == 3)
                     outerCircle.fillAmount = 1;
@@ -55,36 +63,33 @@ public class EnchantmentTable : MonoBehaviour
                 circleAnchor.transform.localEulerAngles = new Vector3(0, 0, -5f + Mathf.Abs(spasmingRot - 0.5f) * 10f);
 
                 outerCircle.color = colorGradientOuterCircle.Evaluate(pU / 3);
-            }
 
-
-            if(Input.GetKeyUp(currentPlayerKey)) {
-                if(pU <= 0.1f)
+                if (!Input.GetKey(currentPlayerKey))
                 {
-                    currentPlayerHand.PickUpItemInHand(FindFirstObjectByType<ItemDatabase>().GetObjById(toEnchantId).itemSprites, toEnchantId);
-                    toEnchant.sprite = null;
-                    toEnchantId = "";
-                }
-                else
-                {
-                    
-                }
+                    if (pU <= 0.1f)
+                    {
+                        currentPlayerHand.PickUpItemInHand(FindFirstObjectByType<ItemDatabase>().GetObjById(toEnchantId).itemSprites, toEnchantId, 0);
+                        toEnchant.sprite = null;
+                        toEnchantId = "";
+                    }
+                    else
+                    {
 
-                pU = -1;
+                    }
 
-                outerCircle.fillAmount = 0;
-                innerText.text = "";
-                circleAnchor.transform.localScale = new Vector2(0.5f, 0.5f);
-                currentPlayerHand.transform.parent.GetComponent<PlayerMovement>().canPlayerMove = false;
+                    pU = -1;
+
+                    outerCircle.fillAmount = 0;
+                    innerText.text = "";
+                    circleAnchor.transform.localScale = new Vector2(0.5f, 0.5f);
+                    currentPlayerHand.transform.parent.GetComponent<PlayerMovement>().canPlayerMove = true;
+                }
             }
         }
     }
 
-    private GameObject player;
-
     public void UseEnchantmentTable(string itemId, PlayerHand ph, KeyCode k)
     {
-        player = ph.player;
         if (itemId != "") {
             toEnchantId = itemId;
             toEnchant.sprite = FindFirstObjectByType<ItemDatabase>().GetObjById(itemId).itemSprites[0];

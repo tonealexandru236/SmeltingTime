@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class ItemDatabase : MonoBehaviour
 {
+    public GameObject firePref;
+
     List<string> itemID = new List<string>();
     public ItemScript[] itemAsObj;
 

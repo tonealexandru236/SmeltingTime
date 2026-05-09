@@ -54,6 +54,19 @@ MonoBehaviour:
   - {fileID: 4461436408205090986, guid: f1a6bcd538351e74faee02cfa0c13830, type: 3}
   itemId: apple
   recipeForThisItem: 
+  enchantLevel: 0
+  fireAnim:
+  - {fileID: 3948555754266263867, guid: 5f3669a668ba0fa4fb36d13b2dbedf79, type: 3}
+  - {fileID: 8034467442950170365, guid: 5f3669a668ba0fa4fb36d13b2dbedf79, type: 3}
+  - {fileID: -4267835006876986325, guid: 5f3669a668ba0fa4fb36d13b2dbedf79, type: 3}
+  - {fileID: 5316702011641491532, guid: 5f3669a668ba0fa4fb36d13b2dbedf79, type: 3}
+  - {fileID: 290280592014427193, guid: 5f3669a668ba0fa4fb36d13b2dbedf79, type: 3}
+  - {fileID: -6115791099821113395, guid: 5f3669a668ba0fa4fb36d13b2dbedf79, type: 3}
+  - {fileID: 2708360844183522319, guid: 5f3669a668ba0fa4fb36d13b2dbedf79, type: 3}
+  fireColors:
+  - {r: 0.11748052, g: 1, b: 0, a: 1}
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 1, g: 0.07075471, b: 0.96269596, a: 1}
   sr: {fileID: 5173173589944019147}
   normalSprite: {fileID: -7832214784768987486, guid: f1a6bcd538351e74faee02cfa0c13830, type: 3}
   pickUpSprite: {fileID: 4461436408205090986, guid: f1a6bcd538351e74faee02cfa0c13830, type: 3}
