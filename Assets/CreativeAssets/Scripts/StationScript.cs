@@ -34,6 +34,8 @@ public class StationScript : MonoBehaviour
             GetComponent<FurnaceScript>().UseFurnace(ph.itemInHandID, ph);
         else if (stationTag == "enchant")
             GetComponent<EnchantmentTable>().UseEnchantmentTable(ph.itemInHandID, ph, ph.playerActionKey);
+        else if (stationTag == "smithing")
+            GetComponent<SmithingTable>().UseSmithingTable(ph.itemInHandID, ph, ph.playerActionKey);
         else if (stationTag == "table")
             GetComponent<TableScript>().UseTable(ph.itemInHandID, ph, ph.itemInHandEnchantmentLevel);
 

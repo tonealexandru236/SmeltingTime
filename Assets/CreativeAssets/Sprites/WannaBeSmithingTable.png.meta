@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: 3290220dea43ff840a598889dfce24f7
+guid: 499c6cebbf36a31478ad125b963dcd7c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2108817306257686781
-    second: netherite_chestplate_0
-  - first:
-      213: -7400064496928266179
-    second: netherite_chestplate_1
-  - first:
-      213: 2190952641838487059
-    second: netherite_chestplate_2
-  - first:
-      213: -8582813919007763495
-    second: netherite_chestplate_3
-  - first:
-      213: -1095092345980665750
-    second: netherite_chestplate_4
+      213: -6360883634694188348
+    second: WannaBeSmithingTable_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -58,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -125,101 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: netherite_chestplate_0
+      name: WannaBeSmithingTable_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1
-        width: 15
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 30f705c35d9fbb2e0800000000000000
-      internalID: -2108817306257686781
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: netherite_chestplate_1
-      rect:
-        serializedVersion: 2
-        x: 19
-        y: 2
-        width: 16
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: d386c991c80bd4990800000000000000
-      internalID: -7400064496928266179
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: netherite_chestplate_2
-      rect:
-        serializedVersion: 2
-        x: 37
-        y: 1
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3169c70d1d3d76e10800000000000000
-      internalID: 2190952641838487059
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: netherite_chestplate_3
-      rect:
-        serializedVersion: 2
-        x: 55
-        y: 1
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 9d39340e638b3e880800000000000000
-      internalID: -8582813919007763495
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: netherite_chestplate_4
-      rect:
-        serializedVersion: 2
-        x: 73
+        x: 0
         y: 0
-        width: 17
-        height: 18
+        width: 32
+        height: 32
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a60c29930537dc0f0800000000000000
-      internalID: -1095092345980665750
+      spriteID: 4c21570290a99b7a0800000000000000
+      internalID: -6360883634694188348
       vertices: []
       indices: 
       edges: []
@@ -238,7 +138,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -248,11 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      netherite_chestplate_0: -2108817306257686781
-      netherite_chestplate_1: -7400064496928266179
-      netherite_chestplate_2: 2190952641838487059
-      netherite_chestplate_3: -8582813919007763495
-      netherite_chestplate_4: -1095092345980665750
+      WannaBeSmithingTable_0: -6360883634694188348
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
