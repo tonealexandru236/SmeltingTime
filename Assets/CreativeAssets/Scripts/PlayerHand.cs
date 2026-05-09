@@ -29,6 +29,9 @@ public class PlayerHand : MonoBehaviour
     public void ManualUpdate()
     {
         GetComponent<SpriteRenderer>().sortingOrder = transform.parent.GetComponent<PlayerMovement>().playerSr.sortingOrder + (transform.position.y <= transform.parent.position.y ? 1 : -1);
+        if (enchantFire)
+            enchantFire.GetComponent<SpriteRenderer>().sortingOrder = GetComponent<SpriteRenderer>().sortingOrder - 1;
+
 
         if (itemInHandID == "") {
             //Doesn't have item
@@ -85,6 +88,10 @@ public class PlayerHand : MonoBehaviour
         {
             if (!ps.canCraft && hit.collider.GetComponent<StationScript>().stationTag == "crafting" ||
                 !ps.canSmelt && hit.collider.GetComponent<StationScript>().stationTag == "furnace")
+                return;
+
+            if (itemInHandEnchantmentLevel != 0 && (
+                hit.collider.GetComponent<StationScript>().stationTag == "crafting" || hit.collider.GetComponent<StationScript>().stationTag == "furnace" || hit.collider.GetComponent<StationScript>().stationTag == "enchant"))
                 return;
 
 
