@@ -32,8 +32,11 @@ public class StationScript : MonoBehaviour
             GetComponent<CraftingTable>().UseCrafting(ph.itemInHandID, ph, ph.playerActionKey);
         else if (stationTag == "furnace")
             GetComponent<FurnaceScript>().UseFurnace(ph.itemInHandID, ph);
+        else if (stationTag == "enchant")
+            GetComponent<EnchantmentTable>().UseEnchantmentTable(ph.itemInHandID, ph, ph.playerActionKey);
         else if (stationTag == "table")
             GetComponent<TableScript>().UseTable(ph.itemInHandID, ph);
+
     }
     public void ActivateStation(bool actv, PlayerHand ph) {
         if(ph.playerPriority == 0 && actv == false)

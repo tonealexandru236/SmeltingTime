@@ -17,7 +17,7 @@ public class PlayerHand : MonoBehaviour
 
     void Start() {
         itemDb = FindFirstObjectByType<ItemDatabase>();
-        ps = FindFirstObjectByType<PlayerScript>();
+        ps = transform.parent.GetComponent<PlayerScript>();
         
         player = transform.parent.gameObject;
         itemInHandID = "";
