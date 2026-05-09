@@ -320,6 +320,7 @@ GameObject:
   - component: {fileID: 6398439972558335049}
   - component: {fileID: 1466369153440372891}
   - component: {fileID: 2786890457157938535}
+  - component: {fileID: 1073444362837314477}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -485,3 +486,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.6, y: 0.75}
   m_EdgeRadius: 0
+--- !u!114 &1073444362837314477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7544344432684544233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 784c6e1c1273df34d88a7dc417f1a69f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerScript
+  canCraft: 1
+  canSmelt: 1

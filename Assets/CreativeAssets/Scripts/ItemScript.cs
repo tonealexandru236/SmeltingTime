@@ -26,7 +26,8 @@ public class ItemScript : MonoBehaviour
     }
     public string PickUpItem(GameObject player)
     {
-        AudioManager.instance.PlaySound("itemPick");
+        if(AudioManager.instance)
+            AudioManager.instance.PlaySound("itemPick");
         foreach (ItemSplashes splash in FindObjectsByType<ItemSplashes>(FindObjectsSortMode.None))
                 splash.pick_up_animation(player.name, FindFirstObjectByType<ItemDatabase>().GetObjById(itemId).name.Substring(5), pickUpSprite);
 
