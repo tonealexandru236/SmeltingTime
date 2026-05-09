@@ -30,10 +30,13 @@ public class CustomersOrderLine : MonoBehaviour
 
     List<GameObject> customerLine = new List<GameObject>();
 
+    GameObject flameForEnchant;
+
     ItemScript itemOrder;
 
     float delayBetween, yState, targetSpriteAlpha, s = 0, t = 0;
 
+    int enchLvlWanted;
     private void Start()
     {
         delayBetween = 1.2f;
@@ -51,6 +54,8 @@ public class CustomersOrderLine : MonoBehaviour
             if (AudioManager.instance)
                 AudioManager.instance.PlaySound("IncorrectClient");
             checkMark.GetComponent<SpriteRenderer>().sprite = xSprite;
+
+            Destroy(flameForEnchant);
             StartCoroutine(MakeCustomerLeave());
         }
         else if (s < 1000)
@@ -61,8 +66,24 @@ public class CustomersOrderLine : MonoBehaviour
 
         if (customerLine.Count > 0 && itemOrder == null && customerLine[0].transform.position == transform.position && !checkMark.activeSelf)
         {
+            //Get Random Item
+
+            enchLvlWanted = 0;
             itemOrder = itemsItCanOrder[Random.Range(0, itemsItCanOrder.Length)];
-            secondsBeforeMad = Mathf.Max(itemOrder.getMadTime, 20f) * GameManager.trueMadness;
+            if (itemOrder.canBeEnchanted)
+                enchLvlWanted = Random.Range(0, 4);
+            if(enchLvlWanted != 0)
+            {
+                GameObject fire = Instantiate(FindFirstObjectByType<ItemDatabase>().firePref, itemVisual.transform);
+                fire.GetComponent<EnchantFire>().SetUpFire(enchLvlWanted);
+                fire.transform.localPosition = new Vector2(0, 0);
+                fire.GetComponent<SpriteRenderer>().sortingOrder = 102;
+
+                flameForEnchant = fire;
+            }
+
+
+            secondsBeforeMad = Mathf.Max(itemOrder.getMadTime, 20f) * GameManager.trueMadness + (enchLvlWanted * 3f);
             itemVisual.sprite = itemOrder.itemSprites[0];
             targetSpriteAlpha = 1;
             yState = 1;
@@ -173,7 +194,7 @@ public class CustomersOrderLine : MonoBehaviour
 
     public void GiveItemtoCustomer(ItemScript itm, PlayerHand ph)
     {
-        if (itemOrder == null || itm == null || itm != itemOrder)
+        if (itemOrder == null || itm == null || itm != itemOrder || ph.itemInHandEnchantmentLevel != enchLvlWanted)
             return;
 
         if (AudioManager.instance)
@@ -192,6 +213,8 @@ public class CustomersOrderLine : MonoBehaviour
         FindFirstObjectByType<GameManager>().ServedOneCustomer();
         
         ph.RemoveItemInHand();
+
+        Destroy(flameForEnchant);
 
         checkMark.GetComponent<SpriteRenderer>().sprite = checkSprite;
         StartCoroutine(MakeCustomerLeave());

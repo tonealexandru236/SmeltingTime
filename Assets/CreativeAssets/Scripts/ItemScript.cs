@@ -9,6 +9,8 @@ public class ItemScript : MonoBehaviour
     public string itemId;
     public string recipeForThisItem;
 
+    public bool canBeEnchanted;
+
     public int enchantLevel;
 
     [Header("Visual")]
