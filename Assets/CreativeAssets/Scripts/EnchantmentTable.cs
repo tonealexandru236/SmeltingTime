@@ -43,7 +43,7 @@ public class EnchantmentTable : MonoBehaviour
 
         if(pU >= 0)
         {
-            pU += Time.deltaTime;
+            pU += Time.deltaTime * (pU <= 1f ? 1 : (pU < 2f ? 0.7f : 0.4f));
             spasmingRot = (spasmingRot + Time.deltaTime * 4f) % 1;
             pU = Mathf.Min(pU, 3);
 
@@ -71,9 +71,9 @@ public class EnchantmentTable : MonoBehaviour
 
                 if (!Input.GetKey(currentPlayerKey))
                 {
-                    if (pU <= 0.1f)
+                    if (pU <= 0.5f)
                     {
-                        if(finalEnchantedId != "")
+                        if (finalEnchantedId != "")
                         {
                             currentPlayerHand.PickUpItemInHand(FindFirstObjectByType<ItemDatabase>().GetObjById(finalEnchantedId).itemSprites, finalEnchantedId, finalEnchantmentLevel);
                             finalEnchanted.sprite = null;
@@ -119,11 +119,14 @@ public class EnchantmentTable : MonoBehaviour
     public void UseEnchantmentTable(string itemId, PlayerHand ph, KeyCode k)
     {
         if (itemId != "" && toEnchantId == "") {
+            if (!FindFirstObjectByType<ItemDatabase>().GetObjById(itemId).canBeEnchanted)
+                return;
+
             toEnchantId = itemId;
             toEnchant.sprite = FindFirstObjectByType<ItemDatabase>().GetObjById(itemId).itemSprites[0];
             ph.RemoveItemInHand();
         }
-        else if(itemId == "" && toEnchantId != "" || finalEnchantedId != "")
+        else if(itemId == "" && (toEnchantId != "" || finalEnchantedId != ""))
         {
             if(finalEnchantedId != "")
             {
@@ -137,6 +140,8 @@ public class EnchantmentTable : MonoBehaviour
             }
 
             ph.transform.parent.GetComponent<PlayerMovement>().canPlayerMove = false;
+
+            
 
             pU = 0;
             currentPlayerKey = k;

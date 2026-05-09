@@ -12160,6 +12160,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CustomerLine1
       objectReference: {fileID: 0}
+    - target: {fileID: 4716969809752733918, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
+      propertyPath: m_SortingOrder
+      value: 105
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
