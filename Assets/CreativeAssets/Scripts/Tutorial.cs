@@ -17,7 +17,7 @@ public class Tutorial : MonoBehaviour
     {
         if (check == 1)
         {
-            text.SetText("Welcome to Smelting Time. \n\n You and your friend are operating a factory (a surprisingly small one) and your job is to manufacture items and sell them to people! \n\n Your boss is watching you, so don't slack off or you'll both lose! Finish the player goal to win the game.");
+            text.SetText("Welcome to                   ! \n\n You and your friend are operating a factory (a surprisingly small one) and your job is to manufacture items and sell them to people! \n\n Your boss is watching you, so don't slack off or you'll both lose! Finish the player goal to win the game. \n\n Each Player has a different job! You can switch between these jobs on the Title Screen. More jobs get unlocked the further you advance. \n\n Cooperate to win!");
             Time.timeScale = 0f;
         }
     }
