@@ -5,6 +5,12 @@ public class BackgroundAnim : MonoBehaviour
     [SerializeField] Transform bg1;
     [SerializeField] Transform bg2;
 
+    private void Start()
+    {
+        if(Fade.instance)
+            Fade.instance.FadeOut(1);
+    }
+
     private void Update()
     {
         bg1.transform.localPosition = new Vector2(bg1.transform.localPosition.x, (bg1.transform.localPosition.y + Time.deltaTime * .3f) % 2.96f);

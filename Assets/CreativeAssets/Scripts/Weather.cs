@@ -37,7 +37,7 @@ public class Weather : MonoBehaviour
         {
             int weather_chance = Random.Range(1, 100);
 
-            if (weather_chance <100) // Snow starts
+            if (weather_chance <= 2) // Snow starts
             {
                 float snow_time = Random.Range(14f, 28f);
                 float intensity = Random.Range(50f, 120f);
