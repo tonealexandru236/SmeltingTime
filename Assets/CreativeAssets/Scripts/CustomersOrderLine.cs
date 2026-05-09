@@ -67,7 +67,6 @@ public class CustomersOrderLine : MonoBehaviour
         if (customerLine.Count > 0 && itemOrder == null && customerLine[0].transform.position == transform.position && !checkMark.activeSelf)
         {
             //Get Random Item
-
             enchLvlWanted = 0;
             itemOrder = itemsItCanOrder[Random.Range(0, itemsItCanOrder.Length)];
             if (itemOrder.canBeEnchanted)

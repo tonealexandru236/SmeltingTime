@@ -9,7 +9,7 @@ public class SmithingTable : MonoBehaviour
     [SerializeField] GameObject netheriteSprite;
     [SerializeField] Image circleImg;
 
-    string itemToSmith, result, finalizedResult;
+    string itemToSmith, result;
     bool hasNetherite;
 
     PlayerHand currentPlayerHand;
@@ -20,7 +20,6 @@ public class SmithingTable : MonoBehaviour
     {
         itemToSmith = "";
         result = "";
-        finalizedResult = "";
         t = -1;
     }
     private void Update()
@@ -45,22 +44,17 @@ public class SmithingTable : MonoBehaviour
                 itemToSmith = "";
                 toSmithSr.sprite = null;
                 netheriteSprite.SetActive(false);
+                resultSr.sprite = null;
+                circleImg.fillAmount = 0;
 
-                finalizedResult = result;
-
-                resultSr.sprite = FindFirstObjectByType<ItemDatabase>().GetObjById(result).itemSprites[0];
+                currentPlayerHand.PickUpItemInHand(FindFirstObjectByType<ItemDatabase>().GetObjById(result).itemSprites, result, 0);
+                result = "";
             }
 
             if (Input.GetKeyUp(currentPlayerActionKey))
             {
                 if(t <= 0.5f) {
-                    if (finalizedResult != "")
-                    {
-                        currentPlayerHand.PickUpItemInHand(FindFirstObjectByType<ItemDatabase>().GetObjById(finalizedResult).itemSprites, finalizedResult, 0);
-                        finalizedResult = "";
-                        resultSr.sprite = null;
-                    }
-                    else if (itemToSmith != "")
+                    if (itemToSmith != "")
                     {
                         currentPlayerHand.PickUpItemInHand(FindFirstObjectByType<ItemDatabase>().GetObjById(itemToSmith).itemSprites, itemToSmith, 0);
                         itemToSmith = "";
@@ -71,6 +65,14 @@ public class SmithingTable : MonoBehaviour
                         currentPlayerHand.PickUpItemInHand(FindFirstObjectByType<ItemDatabase>().GetObjById("netheriteingot").itemSprites, "netheriteingot", 0);
                         hasNetherite = false;
                         netheriteSprite.SetActive(false);
+                    }
+
+                    result = "";
+                    resultSr.sprite = null;
+                    if (hasNetherite && itemToSmith != "" && FindFirstObjectByType<ItemDatabase>().GetObjById("netherite" + itemToSmith.Substring(7)))
+                    {
+                        result = "netherite" + itemToSmith.Substring(7);
+                        resultSr.sprite = FindFirstObjectByType<ItemDatabase>().GetObjById(result).itemSprites[0];
                     }
                 }
 
@@ -100,6 +102,8 @@ public class SmithingTable : MonoBehaviour
             if (hasNetherite && itemToSmith != "" && FindFirstObjectByType<ItemDatabase>().GetObjById("netherite" + itemToSmith.Substring(7)))
             {
                 result = "netherite" + itemToSmith.Substring(7);
+
+                resultSr.sprite = FindFirstObjectByType<ItemDatabase>().GetObjById(result).itemSprites[0];
             }
         }
         else
