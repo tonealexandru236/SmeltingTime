@@ -6890,6 +6890,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1355899210}
     - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
+      propertyPath: can_be_enchanted
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
       propertyPath: itemsItCanOrder.Array.size
       value: 22
       objectReference: {fileID: 0}
@@ -7042,6 +7046,10 @@ PrefabInstance:
       propertyPath: score_text
       value: 
       objectReference: {fileID: 1355899210}
+    - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
+      propertyPath: can_be_enchanted
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
       propertyPath: itemsItCanOrder.Array.size
       value: 22
@@ -16742,6 +16750,10 @@ PrefabInstance:
       propertyPath: score_text
       value: 
       objectReference: {fileID: 1355899210}
+    - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
+      propertyPath: can_be_enchanted
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
       propertyPath: itemsItCanOrder.Array.size
       value: 22

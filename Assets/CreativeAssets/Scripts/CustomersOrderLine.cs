@@ -42,6 +42,8 @@ public class CustomersOrderLine : MonoBehaviour
         delayBetween = 1.2f;
     }
 
+    public bool can_be_enchanted;
+
     private void Update()
     {
         t += Time.deltaTime * 12f;
@@ -70,8 +72,17 @@ public class CustomersOrderLine : MonoBehaviour
 
             enchLvlWanted = 0;
             itemOrder = itemsItCanOrder[Random.Range(0, itemsItCanOrder.Length)];
-            if (itemOrder.canBeEnchanted)
-                enchLvlWanted = Random.Range(0, 4);
+            if (itemOrder.canBeEnchanted && can_be_enchanted)
+            {
+                int chance = Random.Range(0, 101);
+
+                if (chance >= 40)
+                    enchLvlWanted = 1;
+                else if (chance >= 70)
+                    enchLvlWanted = 2;
+                else if (chance >= 90)
+                    enchLvlWanted = 3;
+            }
             if(enchLvlWanted != 0)
             {
                 GameObject fire = Instantiate(FindFirstObjectByType<ItemDatabase>().firePref, itemVisual.transform);
