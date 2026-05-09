@@ -13,8 +13,12 @@ public class PlayerHand : MonoBehaviour
     [SerializeField] bool showIn8Dir;
     ItemDatabase itemDb;
 
+    PlayerScript ps;
+
     void Start() {
         itemDb = FindFirstObjectByType<ItemDatabase>();
+        ps = FindFirstObjectByType<PlayerScript>();
+        
         player = transform.parent.gameObject;
         itemInHandID = "";
     }
@@ -65,6 +69,11 @@ public class PlayerHand : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(pm.transform.position, (transform.position - pm.transform.position), 1.3f, LayerMask.GetMask("Station"));
         if (hit.collider != null) /// DACA ESTE O STATIE IN RANGE
         {
+            if (!ps.canCraft && hit.collider.GetComponent<StationScript>().stationTag == "crafting" ||
+                !ps.canSmelt && hit.collider.GetComponent<StationScript>().stationTag == "furnace")
+                return;
+
+
             if (Input.GetKeyDown(playerActionKey))
                 hit.collider.GetComponent<StationScript>().UseStation(this);
 
@@ -88,7 +97,8 @@ public class PlayerHand : MonoBehaviour
     }
 
     public void RemoveItemInHand() {
-        AudioManager.instance.PlaySound("itemPlace");
+        if (AudioManager.instance)
+            AudioManager.instance.PlaySound("itemPlace");
         foreach (ItemSplashes splash in FindObjectsByType<ItemSplashes>(FindObjectsSortMode.None))
             splash.pick_down_animation(player.name, itemInHandID, GetComponent<SpriteRenderer>().sprite);
 
@@ -97,7 +107,8 @@ public class PlayerHand : MonoBehaviour
     }
 
     public void PickUpItemInHand(Sprite[] spr, string itemId) {
-        AudioManager.instance.PlaySound("itemPick");
+        if (AudioManager.instance)
+            AudioManager.instance.PlaySound("itemPick");
         foreach (ItemSplashes splash in FindObjectsByType<ItemSplashes>(FindObjectsSortMode.None))
             splash.pick_up_animation(player.name, FindFirstObjectByType<ItemDatabase>().GetObjById(itemId).name.Substring(4), spr[1]); /// TO DO
 
