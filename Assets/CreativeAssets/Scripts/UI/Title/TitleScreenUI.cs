@@ -24,6 +24,8 @@ public class TitleScreenUI : MonoBehaviour
     public Toggle buttons;
     public Toggle color;
 
+    public Toggle fastmenus;
+
     void Awake()
     {
         Time.timeScale = 1;
@@ -59,6 +61,12 @@ public class TitleScreenUI : MonoBehaviour
         PlayerPrefs.SetInt("s_buttons", buttons.isOn ? 1 : 0);
     }
 
+    public void change_transitions()
+    {
+        AudioManager.instance.PlaySound("buttonSelect");
+        PlayerPrefs.SetInt("s_transition", fastmenus.isOn ? 3 : 1); ///Dace e on e de 2 ori mai rapid
+    }
+
     private void Start()
     {
         float value = PlayerPrefs.GetFloat("masterVolume", 1);
@@ -70,6 +78,14 @@ public class TitleScreenUI : MonoBehaviour
         if (particles != null) particles.isOn = PlayerPrefs.GetInt("s_particles", 1) == 1;
         if (buttons != null) buttons.isOn = PlayerPrefs.GetInt("s_buttons", 1) == 1;
         if (color != null) color.isOn = PlayerPrefs.GetInt("s_color", 0) == 1;
+
+        if (fastmenus != null)
+        {
+            if (PlayerPrefs.GetInt("s_transition", 1) == 3) fastmenus.isOn = true;
+            else fastmenus.isOn = false;
+        }
+            
+            
 
         StartCoroutine(BandaidFix());
 
@@ -107,13 +123,13 @@ public class TitleScreenUI : MonoBehaviour
 
         if (menu_active == null)
         {
-            anim.SetFloat("Speed", 1);
+            anim.SetFloat("Speed", PlayerPrefs.GetInt("s_transition", 1));
             anim.Play("levels", 0, 0);
             menu_active = level_selector;
         }
         else
         {
-            anim.SetFloat("Speed", -1);
+            anim.SetFloat("Speed", -PlayerPrefs.GetInt("s_transition", 1));
             anim.Play("levels", 0, 1);
             menu_active = null;
         }
@@ -128,13 +144,13 @@ public class TitleScreenUI : MonoBehaviour
 
         if (menu_active == null)
         {
-            anim.SetFloat("Speed", 1);
+            anim.SetFloat("Speed", PlayerPrefs.GetInt("s_transition", 1));
             anim.Play("settings", 0, 0);
             menu_active = settings;
         }
         else
         {
-            anim.SetFloat("Speed", -1);
+            anim.SetFloat("Speed", -PlayerPrefs.GetInt("s_transition", 1));
             anim.Play("settings", 0, 1);
             menu_active = null;
         }
@@ -151,13 +167,13 @@ public class TitleScreenUI : MonoBehaviour
 
         if (custom1.GetComponent<Image>().color.a <= 0.99)
         {
-            anim.SetFloat("Speed", 1);
+            anim.SetFloat("Speed", PlayerPrefs.GetInt("s_transition", 1));
             anim.Play("customize", 0, 0);
         }
         else
         {
             Debug.Log("!");
-            anim.SetFloat("Speed", -1);
+            anim.SetFloat("Speed", -PlayerPrefs.GetInt("s_transition", 1));
             anim.Play("customize", 0, 1);
         }
     }
@@ -171,12 +187,12 @@ public class TitleScreenUI : MonoBehaviour
 
         if (custom2.GetComponent<Image>().color.a <= 0.99)
         {
-            anim.SetFloat("Speed", 1);
+            anim.SetFloat("Speed", PlayerPrefs.GetInt("s_transition", 1));
             anim.Play("customize", 0, 0);
         }
         else
         {
-            anim.SetFloat("Speed", -1);
+            anim.SetFloat("Speed", -PlayerPrefs.GetInt("s_transition", 1));
             anim.Play("customize", 0, 1);
         }
     }
@@ -193,7 +209,7 @@ public class TitleScreenUI : MonoBehaviour
             }
         }
 
-        yield return new WaitForSeconds(wait);
+        yield return new WaitForSeconds(wait/ PlayerPrefs.GetInt("s_transition", 1));
 
         foreach (Button but in save)
             but.interactable = true;

@@ -25,7 +25,7 @@ public class Fade : MonoBehaviour
     {
         Animator bg = fade_bg.GetComponent<Animator>();
 
-        bg.SetFloat("Speed", speed);
+        bg.SetFloat("Speed", speed * PlayerPrefs.GetInt("s_transition", 1));
         bg.Play("fade", 0, 0);
     }
 
@@ -33,7 +33,7 @@ public class Fade : MonoBehaviour
     {
         Animator bg = fade_bg.GetComponent<Animator>();
 
-        bg.SetFloat("Speed", -speed);
+        bg.SetFloat("Speed", -speed * PlayerPrefs.GetInt("s_transition", 1));
         bg.Play("fade", 0, 1);
     }
 }
