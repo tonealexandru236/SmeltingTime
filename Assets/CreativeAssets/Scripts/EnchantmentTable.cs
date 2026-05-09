@@ -109,12 +109,12 @@ public class EnchantmentTable : MonoBehaviour
 
     public void UseEnchantmentTable(string itemId, PlayerHand ph, KeyCode k)
     {
-        if (itemId != "") {
+        if (itemId != "" && toEnchantId == "") {
             toEnchantId = itemId;
             toEnchant.sprite = FindFirstObjectByType<ItemDatabase>().GetObjById(itemId).itemSprites[0];
             ph.RemoveItemInHand();
         }
-        else if(toEnchantId != "" || finalEnchantedId != "")
+        else if(itemId == "" && toEnchantId != "" || finalEnchantedId != "")
         {
             if(finalEnchantedId != "")
             {

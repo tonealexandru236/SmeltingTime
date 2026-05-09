@@ -87,6 +87,10 @@ public class PlayerHand : MonoBehaviour
                 !ps.canSmelt && hit.collider.GetComponent<StationScript>().stationTag == "furnace")
                 return;
 
+            if (itemInHandEnchantmentLevel != 0 && (
+                hit.collider.GetComponent<StationScript>().stationTag == "crafting") || hit.collider.GetComponent<StationScript>().stationTag == "furnace")
+                return;
+
 
             if (Input.GetKeyDown(playerActionKey))
                 hit.collider.GetComponent<StationScript>().UseStation(this);
