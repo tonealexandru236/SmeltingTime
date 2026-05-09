@@ -28011,6 +28011,7 @@ MonoBehaviour:
   GameOverText: {fileID: 128868075}
   Retry: {fileID: 1724808229}
   Next: {fileID: 1031098115}
+  IsEndless: 0
 --- !u!114 &1712271011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28024,6 +28025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Weather
   rain: {fileID: 69096069}
+  snow: {fileID: 0}
   rain_overlay: {fileID: 2074957840}
 --- !u!1001 &1715907800
 PrefabInstance:
@@ -40498,7 +40500,7 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
+  m_RenderPostProcessing: 1
   m_Antialiasing: 0
   m_AntialiasingQuality: 2
   m_StopNaN: 0
