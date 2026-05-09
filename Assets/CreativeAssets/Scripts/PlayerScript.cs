@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -33,5 +34,8 @@ public class PlayerScript : MonoBehaviour
                 canSmelt = true;
             }
         }
+
+        if(SceneManager.GetActiveScene().name == "Tutorial")
+            canCraft = true;
     }
 }
