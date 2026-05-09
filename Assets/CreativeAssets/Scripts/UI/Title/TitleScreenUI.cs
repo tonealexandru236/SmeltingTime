@@ -32,7 +32,7 @@ public class TitleScreenUI : MonoBehaviour
     {
         Time.timeScale = 1;
 
-        if (AudioManager.instance.audioSources[11] != TitleTrack)
+        if (AudioManager.instance && AudioManager.instance.audioSources[11] != TitleTrack)
         {
             AudioManager.instance.audioSources[11].clip = TitleTrack;
             AudioManager.instance.audioSources[11].loop = true;

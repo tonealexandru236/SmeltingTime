@@ -35,7 +35,7 @@ public class CraftingTable : MonoBehaviour
         if(t >= 0) {
             lastPh.pm.canPlayerMove = false;
             
-            if(t >= 0.1f) {
+            if(t >= 0.14f) {
                 holdToCraftImage.fillAmount = t;
                 t += Time.deltaTime / (itemsInCraft.Count / 2f);
             }
@@ -57,7 +57,7 @@ public class CraftingTable : MonoBehaviour
 
             if (Input.GetKeyUp(useKey)) {
                 lastPh.pm.canPlayerMove = true;
-                if (t <= 0.1f) {
+                if (t <= 0.14f) {
                     //Remove Last Item
                     string n = itemsInCraft[itemsInCraft.Count - 1];
                     ItemScript isForLast = null;
