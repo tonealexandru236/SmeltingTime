@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 using static System.Net.Mime.MediaTypeNames;
@@ -24,8 +25,17 @@ public class GameManager : MonoBehaviour
 
     float total_time;
 
+    public AudioClip GameTrack;
+
     private void Awake()
     {
+        if(AudioManager.instance && AudioManager.instance.audioSources[11] != GameTrack)
+        {
+            AudioManager.instance.audioSources[11].clip = GameTrack;
+            AudioManager.instance.audioSources[11].loop = true;
+            AudioManager.instance.audioSources[11].Play();
+        }
+
         if(Fade.instance)
             Fade.instance.FadeOut(1);
     }
@@ -43,9 +53,29 @@ public class GameManager : MonoBehaviour
 
         numOfCustomersServed = 0;
     }
+
+    int animation_level = 0;
+
     private void Update()
     {
         //Debug.Log(trueMadness);
+
+        if(animation_level == 0 && t<=61)
+        {
+            animation_level = 1;
+            timerTxt.GetComponent<Animator>().Play("1minute-left");
+        }
+        else if (animation_level == 1 && t <= 21)
+        {
+            animation_level = 2;
+            timerTxt.fontSize = 37;
+            timerTxt.GetComponent<Animator>().Play("15sec-left");
+        }
+        else if (animation_level == 2 && t <= 10)
+        {
+            timerTxt.fontSize = 37 + (11 - t)/1.4f;
+        }
+
         if (t <= 0)
         {
             GameOverScreen.SetActive(true);
