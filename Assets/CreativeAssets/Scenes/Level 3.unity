@@ -24880,6 +24880,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ceef2f227b3dae46b6f73219220bee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  firePref: {fileID: 0}
   itemAsObj:
   - {fileID: 138871636675381304, guid: 9334f1693492349bc927fbb411d32787, type: 3}
   - {fileID: 920541454321307148, guid: 6e75d3b6bef3941a1880b1bfb7ad9a62, type: 3}
@@ -31458,8 +31459,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86aa99c6e3f5094f9ebf5469ab627e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  timerInMinutes: 8
-  numOfCustomersToServe: 16
+  timerInMinutes: 7.5
+  numOfCustomersToServe: 14
   timerTxt: {fileID: 467190807}
   customerServedText: {fileID: 646928032}
   GameOverScreen: {fileID: 884451126}
