@@ -30,7 +30,7 @@ public class Weather : MonoBehaviour
         yield return new WaitForSeconds(start_time);
 
 
-        if(rain_overlay.GetComponent<Animator>() != null )
+        if(rain_overlay != null && rain_overlay.GetComponent<Animator>() != null )
             rainAnimator = rain_overlay.GetComponent<Animator>();
 
         while (true)
@@ -42,7 +42,8 @@ public class Weather : MonoBehaviour
                 float snow_time = Random.Range(14f, 28f);
                 float intensity = Random.Range(50f, 120f);
 
-                rain_overlay.GetComponent<Image>().color = new Color32(255, 255, 255, 0);
+                if (rain_overlay != null && rain_overlay.GetComponent<Animator>() != null)
+                    rain_overlay.GetComponent<Image>().color = new Color32(255, 255, 255, 0);
 
                 weather_debuff = 1.2f;
 
@@ -80,7 +81,9 @@ public class Weather : MonoBehaviour
                 float rain_time = Random.Range(14f, 36f);
                 float intensity = Random.Range(80f, 100f);
 
-                rain_overlay.GetComponent<Image>().color = new Color32(0, 97, 255, 0);
+
+                if (rain_overlay != null && rain_overlay.GetComponent<Animator>() != null)
+                    rain_overlay.GetComponent<Image>().color = new Color32(0, 97, 255, 0);
 
                 weather_debuff = 1.1f;
 
