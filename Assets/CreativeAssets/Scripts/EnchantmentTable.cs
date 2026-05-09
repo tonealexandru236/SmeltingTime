@@ -19,6 +19,8 @@ public class EnchantmentTable : MonoBehaviour
     KeyCode currentPlayerKey;
     PlayerHand currentPlayerHand;
 
+    GameObject fireBehind;
+
     float t, pU, spasmingRot;
     int finalEnchantmentLevel;
     private void Start()
@@ -94,6 +96,13 @@ public class EnchantmentTable : MonoBehaviour
 
                         toEnchant.sprite = null;
                         toEnchantId = "";
+
+                        GameObject fire = Instantiate(FindFirstObjectByType<ItemDatabase>().firePref, finalEnchanted.transform);
+                        fire.GetComponent<EnchantFire>().SetUpFire(finalEnchantmentLevel);
+                        fire.GetComponent<SpriteRenderer>().sortingOrder = 201;
+                        fire.transform.localPosition = new Vector2(0, 0);
+
+                        fireBehind = fire;
                     }
 
                     pU = -1;
@@ -121,6 +130,9 @@ public class EnchantmentTable : MonoBehaviour
                 currentPlayerHand.PickUpItemInHand(FindFirstObjectByType<ItemDatabase>().GetObjById(finalEnchantedId).itemSprites, finalEnchantedId, finalEnchantmentLevel);
                 finalEnchanted.sprite = null;
                 finalEnchantedId = "";
+
+                Destroy(fireBehind);
+
                 return;
             }
 
