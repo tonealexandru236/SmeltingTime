@@ -26,7 +26,8 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        Fade.instance.FadeOut(1);
+        if(Fade.instance)
+            Fade.instance.FadeOut(1);
     }
     private void Start()
     {
