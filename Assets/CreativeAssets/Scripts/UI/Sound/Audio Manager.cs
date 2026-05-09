@@ -11,9 +11,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip[] audioClips;
 
     public AudioSource audioTemplate;
-    private AudioSource[] audioSources = new AudioSource[15]; /// 0 -> 9 / 12 -> 15 = SFX     ;    11 = Music Track      10 = Weather
+    public AudioSource[] audioSources = new AudioSource[15]; /// 0 -> 9 / 12 -> 15 = SFX     ;    11 = Music Track      10 = Weather
 
-    public AudioClip MainTrack;
+    public AudioClip TitleTrack;
 
     public void Update()
     {
@@ -40,7 +40,7 @@ public class AudioManager : MonoBehaviour
 
         if(!audioSources[11].isPlaying)
         {
-            audioSources[11].clip = MainTrack;
+            audioSources[11].clip = TitleTrack;
             audioSources[11].loop = true;
             audioSources[11].Play();
         }

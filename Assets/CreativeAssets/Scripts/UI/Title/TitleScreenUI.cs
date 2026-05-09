@@ -26,9 +26,18 @@ public class TitleScreenUI : MonoBehaviour
 
     public Toggle fastmenus;
 
+    public AudioClip TitleTrack;
+
     void Awake()
     {
         Time.timeScale = 1;
+
+        if (AudioManager.instance.audioSources[11] != TitleTrack)
+        {
+            AudioManager.instance.audioSources[11].clip = TitleTrack;
+            AudioManager.instance.audioSources[11].loop = true;
+            AudioManager.instance.audioSources[11].Play();
+        }
     }
 
     public void change_color()

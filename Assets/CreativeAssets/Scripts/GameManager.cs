@@ -24,8 +24,17 @@ public class GameManager : MonoBehaviour
 
     float total_time;
 
+    public AudioClip GameTrack;
+
     private void Awake()
     {
+        if(AudioManager.instance.audioSources[11] != GameTrack)
+        {
+            AudioManager.instance.audioSources[11].clip = GameTrack;
+            AudioManager.instance.audioSources[11].loop = true;
+            AudioManager.instance.audioSources[11].Play();
+        }
+
         if(Fade.instance)
             Fade.instance.FadeOut(1);
     }
