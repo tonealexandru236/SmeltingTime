@@ -30504,7 +30504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ceef2f227b3dae46b6f73219220bee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  firePref: {fileID: 0}
+  firePref: {fileID: 8526808791004865689, guid: a0022cbdfa751fd498f061fa8ecc80ff, type: 3}
   itemAsObj:
   - {fileID: 138871636675381304, guid: 9334f1693492349bc927fbb411d32787, type: 3}
   - {fileID: 920541454321307148, guid: 6e75d3b6bef3941a1880b1bfb7ad9a62, type: 3}
