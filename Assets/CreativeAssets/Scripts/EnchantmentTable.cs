@@ -13,18 +13,21 @@ public class EnchantmentTable : MonoBehaviour
 
     [Header("Visual")]
     [SerializeField] SpriteRenderer toEnchant;
+    [SerializeField] SpriteRenderer finalEnchanted;
 
-    string toEnchantId;
+    string toEnchantId, finalEnchantedId;
     KeyCode currentPlayerKey;
     PlayerHand currentPlayerHand;
 
     float t, pU, spasmingRot;
+    int finalEnchantmentLevel;
     private void Start()
     {
         t = 0;
         spasmingRot = 0;
         pU = -1;
-        toEnchantId = ""; 
+        toEnchantId = "";
+        finalEnchantedId = "";
     }
     private void Update()
     {
@@ -68,13 +71,29 @@ public class EnchantmentTable : MonoBehaviour
                 {
                     if (pU <= 0.1f)
                     {
-                        currentPlayerHand.PickUpItemInHand(FindFirstObjectByType<ItemDatabase>().GetObjById(toEnchantId).itemSprites, toEnchantId, 0);
+                        if(finalEnchantedId != "")
+                        {
+                            currentPlayerHand.PickUpItemInHand(FindFirstObjectByType<ItemDatabase>().GetObjById(finalEnchantedId).itemSprites, finalEnchantedId, finalEnchantmentLevel);
+                            finalEnchanted.sprite = null;
+                            finalEnchantedId = "";
+                        }
+                        else
+                        {
+                            currentPlayerHand.PickUpItemInHand(FindFirstObjectByType<ItemDatabase>().GetObjById(toEnchantId).itemSprites, toEnchantId, 0);
+                            toEnchant.sprite = null;
+                            toEnchantId = "";
+                        }
+                        finalEnchantmentLevel = 0;
+
+                    }
+                    else if(pU > 1)
+                    {
+                        finalEnchantmentLevel = (int)pU;
+                        finalEnchanted.sprite = toEnchant.sprite;
+                        finalEnchantedId = toEnchantId;
+
                         toEnchant.sprite = null;
                         toEnchantId = "";
-                    }
-                    else
-                    {
-
                     }
 
                     pU = -1;
@@ -95,8 +114,16 @@ public class EnchantmentTable : MonoBehaviour
             toEnchant.sprite = FindFirstObjectByType<ItemDatabase>().GetObjById(itemId).itemSprites[0];
             ph.RemoveItemInHand();
         }
-        else if(toEnchantId != "")
+        else if(toEnchantId != "" || finalEnchantedId != "")
         {
+            if(finalEnchantedId != "")
+            {
+                currentPlayerHand.PickUpItemInHand(FindFirstObjectByType<ItemDatabase>().GetObjById(finalEnchantedId).itemSprites, finalEnchantedId, finalEnchantmentLevel);
+                finalEnchanted.sprite = null;
+                finalEnchantedId = "";
+                return;
+            }
+
             ph.transform.parent.GetComponent<PlayerMovement>().canPlayerMove = false;
 
             pU = 0;

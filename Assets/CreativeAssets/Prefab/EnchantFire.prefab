@@ -46,6 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   enchantColors:
+  - {r: 1, g: 1, b: 1, a: 1}
   - {r: 0, g: 1, b: 0.00427413, a: 1}
   - {r: 1, g: 0.02308198, b: 0.0047169924, a: 1}
   - {r: 1, g: 0, b: 0.8465462, a: 1}
