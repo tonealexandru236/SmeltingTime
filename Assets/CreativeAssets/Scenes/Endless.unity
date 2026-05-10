@@ -17163,6 +17163,7 @@ MonoBehaviour:
   - ironore-ironingot
   - copperore-copperingot
   - goldore-goldingot
+  - netheritescrap-netheriteingot
   smokeParticles: {fileID: 1173336543}
   fuelImg: {fileID: 1066909656}
   toBurnImg: {fileID: 122593432}
@@ -37901,6 +37902,10 @@ MonoBehaviour:
   - {fileID: 7119628228846839293, guid: 48c31ff64c51194478aefa60b68c0f0e, type: 3}
   - {fileID: 7119628228846839293, guid: 56ff977751b84644a922af6b00398ff0, type: 3}
   - {fileID: 7119628228846839293, guid: 1077974f715a09b4992827abbeece460, type: 3}
+  - {fileID: 7119628228846839293, guid: 2a56712caf47c604ab84cd15c2bbd315, type: 3}
+  - {fileID: 7119628228846839293, guid: 534789fffd0071c42a12c483159f28a7, type: 3}
+  - {fileID: 7119628228846839293, guid: 1486deee064a7cb44b3fefe6be723970, type: 3}
+  - {fileID: 7119628228846839293, guid: ac89ae2dbd034d84485aa07681342d02, type: 3}
 --- !u!4 &1392774622
 Transform:
   m_ObjectHideFlags: 0
@@ -44501,10 +44506,11 @@ MonoBehaviour:
   - {fileID: 1676569562148675751, guid: b10088d82c0e47f43bb196f15b75d924, type: 3}
   - {fileID: 1676569562148675751, guid: f94edf90bcf70ed4b9c48c04036e7016, type: 3}
   - {fileID: 2691727493601388173, guid: 98b5a49c9fc1be444880a5998ab5969c, type: 3}
-  itemsChance: 340000000c0000000c0000000c0000000600000006000000
+  - {fileID: 2691727493601388173, guid: ac89ae2dbd034d84485aa07681342d02, type: 3}
+  itemsChance: 320000000b0000000b0000000b000000050000000800000004000000
   spawnPoint: {fileID: 1283177817}
   itemsParent: {fileID: 1056728023}
-  spawnRate: 1.4
+  spawnRate: 1.2
 --- !u!4 &1661670194
 Transform:
   m_ObjectHideFlags: 0
@@ -60776,6 +60782,7 @@ MonoBehaviour:
   - ironore-ironingot
   - copperore-copperingot
   - goldore-goldingot
+  - netheritescrap-netheriteingot
   smokeParticles: {fileID: 1923350271}
   fuelImg: {fileID: 704813344}
   toBurnImg: {fileID: 1012348864}

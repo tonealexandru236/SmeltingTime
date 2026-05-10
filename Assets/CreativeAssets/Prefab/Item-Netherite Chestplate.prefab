@@ -46,14 +46,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f5dc6211e09af541bef0de81d83f298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ItemScript
-  getMadTime: 120
+  getMadTime: 150
   itemSprites:
   - {fileID: -2108817306257686781, guid: 3290220dea43ff840a598889dfce24f7, type: 3}
   - {fileID: -7400064496928266179, guid: 3290220dea43ff840a598889dfce24f7, type: 3}
   - {fileID: 2190952641838487059, guid: 3290220dea43ff840a598889dfce24f7, type: 3}
   - {fileID: -8582813919007763495, guid: 3290220dea43ff840a598889dfce24f7, type: 3}
   itemId: netheritechestplate
-  recipeForThisItem: diamond,diamond,diamond,diamond
+  recipeForThisItem: 
   canBeEnchanted: 1
   enchantLevel: 0
   sr: {fileID: 3609851717696260702}
