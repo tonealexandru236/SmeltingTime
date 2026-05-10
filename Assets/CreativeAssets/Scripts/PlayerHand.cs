@@ -86,8 +86,10 @@ public class PlayerHand : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(pm.transform.position, (transform.position - pm.transform.position), 1.3f, LayerMask.GetMask("Station"));
         if (hit.collider != null) /// DACA ESTE O STATIE IN RANGE
         {
-            if (!ps.canCraft && hit.collider.GetComponent<StationScript>().stationTag == "crafting" ||
-                !ps.canSmelt && hit.collider.GetComponent<StationScript>().stationTag == "furnace")
+            string stationT = hit.collider.GetComponent<StationScript>().stationTag;
+
+            if (!ps.canCraft && (stationT == "crafting" || stationT == "enchant") ||
+                !ps.canSmelt && (stationT == "furnace" || stationT == "smithing"))
                 return;
 
             if (itemInHandEnchantmentLevel != 0 && (
