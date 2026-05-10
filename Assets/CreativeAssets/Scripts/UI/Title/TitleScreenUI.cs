@@ -36,6 +36,7 @@ public class TitleScreenUI : MonoBehaviour
         {
             AudioManager.instance.audioSources[11].clip = TitleTrack;
             AudioManager.instance.audioSources[11].loop = true;
+            AudioManager.instance.audioSources[11].pitch = 1;
             AudioManager.instance.audioSources[11].Play();
         }
     }

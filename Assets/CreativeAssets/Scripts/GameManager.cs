@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour
         {
             AudioManager.instance.audioSources[11].clip = GameTrack;
             AudioManager.instance.audioSources[11].loop = true;
+            AudioManager.instance.audioSources[11].pitch = 1;
             AudioManager.instance.audioSources[11].Play();
         }
 
@@ -62,11 +63,13 @@ public class GameManager : MonoBehaviour
 
         if(animation_level == 0 && t<=61)
         {
+            AudioManager.instance.audioSources[11].pitch = 1.1f;
             animation_level = 1;
             timerTxt.GetComponent<Animator>().Play("1minute-left");
         }
         else if (animation_level == 1 && t <= 21)
         {
+            AudioManager.instance.audioSources[11].pitch = 1.2f;
             animation_level = 2;
             timerTxt.fontSize = 37;
             timerTxt.GetComponent<Animator>().Play("15sec-left");
