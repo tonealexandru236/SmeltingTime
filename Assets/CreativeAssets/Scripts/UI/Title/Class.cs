@@ -6,6 +6,9 @@ public class Class : MonoBehaviour
     public GameObject class1;
     public GameObject class2;
 
+    public GameObject outfit_smelt;
+    public GameObject outfit_craft;
+
     private void Awake()
     {
         if (PlayerPrefs.GetString("class-p1", "Craft") == "Smelt")
@@ -22,6 +25,8 @@ public class Class : MonoBehaviour
         img = class1.transform.GetChild(0).GetComponent<Image>().sprite;
         class1.transform.GetChild(0).GetComponent<Image>().sprite = class2.transform.GetChild(0).GetComponent<Image>().sprite;
         class2.transform.GetChild(0).GetComponent<Image>().sprite = img;
+
+        (outfit_smelt.GetComponent<Image>().sprite, outfit_craft.GetComponent<Image>().sprite) = (outfit_craft.GetComponent<Image>().sprite, outfit_smelt.GetComponent<Image>().sprite);
     }
 
     public void switch_class()

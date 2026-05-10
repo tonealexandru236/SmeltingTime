@@ -2433,7 +2433,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -386904373, guid: 5082ae1926ff212478f8f32a53250603, type: 3}
+  m_Sprite: {fileID: -5772283592703033249, guid: bef3738a562ed2547acbe260cce3f9e1, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7905,6 +7905,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Class
   class1: {fileID: 985687640}
   class2: {fileID: 2078126921}
+  outfit_smelt: {fileID: 1543395462}
+  outfit_craft: {fileID: 350524199}
 --- !u!1 &1235000467
 GameObject:
   m_ObjectHideFlags: 0
@@ -10450,7 +10452,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -386904373, guid: 5082ae1926ff212478f8f32a53250603, type: 3}
+  m_Sprite: {fileID: -845623542525009152, guid: 09350de32ca4a484f972f1dbb4a22974, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
