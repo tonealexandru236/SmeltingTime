@@ -4,30 +4,32 @@ using UnityEngine.UI;
 
 public class UiButtonFeedback : MonoBehaviour
 {
+    [SerializeField] CanvasGroup ButtonCg;
+
     [SerializeField] KeyCode keyToBePressed;
     [SerializeField] RectTransform buttonTop;
 
     [SerializeField] bool hasIncrAnim;
 
+    float t;
     private void Update()
     {
-        buttonTop.anchoredPosition = new Vector2(0, 20f);
         buttonTop.GetComponent<Image>().color = Color.white;
+        buttonTop.anchoredPosition = new Vector2(0, 20f);
         if (Input.GetKey(keyToBePressed))
         {
-            StartCoroutine(wait_for_key());
+            buttonTop.GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f);
+            buttonTop.anchoredPosition = new Vector2(0, 12f);
+
+            t = 1;
         }
-    }
 
-    IEnumerator wait_for_key()
-    {
-        if (gameObject.name == "F")
-            gameObject.GetComponent<Animator>().Play("tactile-feedback", 0, 0);
+        if(ButtonCg)
+        {
+            t -= Time.deltaTime * 2f;
+            t = Mathf.Max(t, 0);
 
-
-        yield return new WaitForSecondsRealtime(0.01f);
-
-        buttonTop.GetComponent<Image>().color = new Color(0.5f, 0.5f, 0.5f);
-        buttonTop.anchoredPosition = new Vector2(0, 12f);
+            ButtonCg.alpha = t;
+        }
     }
 }
