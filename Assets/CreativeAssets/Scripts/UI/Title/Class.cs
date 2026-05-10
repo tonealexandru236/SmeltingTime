@@ -22,10 +22,6 @@ public class Class : MonoBehaviour
         class1.GetComponent<Image>().sprite = class2.GetComponent<Image>().sprite;
         class2.GetComponent<Image>().sprite = img;
 
-        img = class1.transform.GetChild(0).GetComponent<Image>().sprite;
-        class1.transform.GetChild(0).GetComponent<Image>().sprite = class2.transform.GetChild(0).GetComponent<Image>().sprite;
-        class2.transform.GetChild(0).GetComponent<Image>().sprite = img;
-
         (outfit_smelt.GetComponent<Image>().sprite, outfit_craft.GetComponent<Image>().sprite) = (outfit_craft.GetComponent<Image>().sprite, outfit_smelt.GetComponent<Image>().sprite);
     }
 
