@@ -27,7 +27,7 @@ public class PlayerScript : MonoBehaviour
         }
         else
         {
-            if (PlayerPrefs.GetString("class-p2", "Craft") == "Craft")
+            if (PlayerPrefs.GetString("class-p2", "Smelt") == "Craft")
             {
                 canCraft = true;
                 canSmelt = false;

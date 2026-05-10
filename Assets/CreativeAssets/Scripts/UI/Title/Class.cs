@@ -6,6 +6,12 @@ public class Class : MonoBehaviour
     public GameObject class1;
     public GameObject class2;
 
+    private void Awake()
+    {
+        if (PlayerPrefs.GetString("class-p1", "Craft") == "Smelt")
+            switch_images();
+    }
+
     public void switch_images()
     {
         Sprite img = null;
