@@ -9,6 +9,8 @@ public class TitleScreenUI : MonoBehaviour
     public GameObject settings;
     public GameObject level_selector;
 
+    public GameObject exitBg;
+
     public GameObject custom1;
     public GameObject custom2;
 
@@ -134,11 +136,33 @@ public class TitleScreenUI : MonoBehaviour
                 click_settings();
             else if (menu_active == level_selector)
                 click_levels();
+            else if (menu_active == exitBg)
+                click_exit();
         }
 
         /*PlayerPrefs.SetFloat("masterVolume", masterSlider.value);
         PlayerPrefs.Save();
         if (sliderPercentage != null) sliderPercentage.text = (Mathf.Round(masterSlider.value * 100)).ToString() + "%";*/
+    }
+
+    IEnumerator animate_exit(int invers)
+    {
+        CanvasGroup cg = exitBg.GetComponent<CanvasGroup>();
+        float speed = PlayerPrefs.GetInt("s_transition", 1);
+        float duration = 0.09f / speed;
+        float elapsed_time = 0f;
+
+        float start_a = 1 - invers;
+        float end_a = invers;
+
+        while (elapsed_time < duration)
+        {
+            elapsed_time += Time.deltaTime;
+            cg.alpha = Mathf.Lerp(start_a, end_a, elapsed_time / duration);
+            yield return null;
+        }
+
+        cg.alpha = end_a;
     }
 
     public void click_levels()
@@ -171,14 +195,32 @@ public class TitleScreenUI : MonoBehaviour
 
         if (menu_active == null)
         {
+            menu_active = settings;
             anim.SetFloat("Speed", PlayerPrefs.GetInt("s_transition", 1));
             anim.Play("settings", 0, 0);
-            menu_active = settings;
         }
         else
         {
             anim.SetFloat("Speed", -PlayerPrefs.GetInt("s_transition", 1));
             anim.Play("settings", 0, 1);
+            menu_active = null;
+        }
+    }
+
+    public void click_exit()
+    {
+        AudioManager.instance.PlaySound("buttonClick");
+        StartCoroutine(deactivate_ui(0.1f));
+
+        if (menu_active == null)
+        {
+            StartCoroutine(animate_exit(1));
+            menu_active = exitBg;
+        }
+        else
+        {
+            StartCoroutine(animate_exit(0));
+            //anim.Play("exit-attempt", 0, 1);
             menu_active = null;
         }
     }
