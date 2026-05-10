@@ -2,8 +2,9 @@
 
 ### Game Title: "Smelting Time"
 ### Team: "Echipa Team"
-### Made for the Fiicode 2026 Qualifier Game Jam
-### Game Traielr: `https://youtu.be/lnJNCoZv2OQ`
+### Made for the FIICode 2026 Qualifier Game Jam and updated for the FIICode 2026 Game Dev Finals
+### Game Trailer: `https://youtu.be/lnJNCoZv2OQ`
+### V1.2.0 trailer: `https://youtu.be/vYz5v9kcMq4`
 ### Build Download: `github.com/tonealexandru236/SmeltingTime-Build`
 ### Project Download: `github.com/tonealexandru236/SmeltingTime`
 
@@ -18,23 +19,42 @@
 
 ### Developers
 
-1. Tudose Dragos - Game Progammer, Designer and Artist `dragoss_`
-2. Tone Alexandru - Game Progammer, Designer, Artist and Sound Engineer `theman360`
-3. Morariu Tudor - Sound Designer, Composer and Tester `morariut`
+1. Tudose Dragos - Game Progammer, Designer and Artist. Discord: `dragoss_`
+2. Tone Alexandru - Game Progammer, Designer, Artist and Sound Engineer. Discord: `theman360`
+3. Morariu Tudor - Sound Designer, Composer and Tester. Discord: `morariut`
 
 ### Other resources
 
 1. Hosting & Version Control: Github
-2. SFX: Freesound + Audacity
-3. Sprites: Aseprite
+2. Music: GarageBand + BandLab
+3. SFX: Freesound + Audacity
+4. Sprites: Aseprite
 
 <br>
 <br>
 <br>
+
+# V1.2.0 Update - FIICode 2026 Game Dev Finals
+
+The Final challenge was to implement a "a cooperative gameplay mechanic where the two players do not perceive or interact with the world in the same way.". Our idea was to gatekeep the previously universal workstation mechanics.
+
+Instead of the two players having access to all stations, now they are split into two classes (or Jobs). A "Crafter" and a "Blacksmith/Smelter". The Crafter can use the Crafting Table (unlocked in Tutorial) and the Enchanting Table (unlocked on Level 4). The Blacksmith can use the Furnace (unlocked on Level 1) and the Smithing Table (unlocked on Level 7).
+
+This encourages the two players to work together compared to the previously slightly flawed system. To compensate, all levels were made much easier. Other additions this update include:
+
+1. Completely reworked levels and 2 more levels.
+2. A new tier of armor, Netherite (very original), that is applied onto diamond gear with a smithing table by a blacksmith.
+3. Enchanting. The crafter can insert tools, weapons, armor and golden apples to "enchant" them by holding the action button up to 3 levels. Customers will require different levels of enchants.
+4. Night time. Every other levels is at night time, where the new fireflies and torches prosper.
+5. Updated visuals, updated tutorial, new transitions between scenes, new settings, UI updates (new buttons, timer animations, etc.) + QOL (such as navigation with 'esc' or confirm to exit).
+6. Brand new track, "It's Smelting Time!". Updated Title track.
+7. Endless mode, a rare chance to snow, Patch Notes tab, Weather makes customers leave earlier.
+
++ Bug fixes :)
 
 # The game itself
 
-Disclaimer: The following are refering to the first official build, V1.0.0, and its sub-versions, V1.0.1 and V1.0.2. Any further major updates might break or change any of the patterns, info and facts mentioned.
+Disclaimer: The following are refering to build up to V1.2.0. Any further major updates might break or change any of the patterns, info and facts mentioned.
 
 The game was developed in `Unity 6.3 (6000.3.10f1)`. The Repo contains the Unity project itself. A Windows build is located in the `!WINDOWS_BUILD` folder. For the cleanest experience, you can just download the `.exe` file from this repo: `github.com/tonealexandru236/SmeltingTime-Build`.
 
@@ -44,7 +64,7 @@ We Used Aseprite to hand draw all sprites. We've had our fair share of inspirati
 
 ### Animations
 
-Most animations were done with the built-in Unity Animation/Animator components (a notorious exception being the walking animation). They are located in ` Assets\CreativeAssets\Animations `.
+Some animations were done with the built-in Unity Animation/Animator components, while others were hardcoded. (a notorious example being the walking animation). They are located in ` Assets\CreativeAssets\Animations `.
 
 ### Font
 
@@ -52,11 +72,11 @@ For the font, we used the Jersey10 Regular font, provided by Google Fonts. It's 
 
 ### Scenes
 
-We have a total of 8 scenes: Title screen, Credits, Tutorial and one scene for each of the 5 levels. They are located in ` Assets\CreativeAssets\Scenes `.
+We have a total of 12 scenes: Title screen, Credits, Patch Notes, Tutorial, Endless and one scene for each of the 7 levels. They are located in ` Assets\CreativeAssets\Scenes `.
 
 ### Sounds
 
-As tracks, we have a Main Bass, recorded on-site by our Composer, Morariu Tudor, as well as a 1 minute long ` .mp3 ` of rain sounds. As sounds, we have a bunch of ` .wav ` files, some provided by the ` freesound.org ` platform under Creative Commons 0, others manually edited or recorded with Audacity. They are located in ` Assets\CreativeAssets\Sounds `.
+As tracks, we have 2 tracks, both made by Morariu Tudor. "Preheating" is the Title track, while "It's Smelting Time!" (v1.2.0) is the main looping track in-game. The project also contains a 1 minute long ` .mp3 ` of rain sounds. As for other sounds, we have a bunch of ` .wav ` files, some provided by the ` freesound.org ` platform under Creative Commons 0, others manually edited or recorded with Audacity. They are located in ` Assets\CreativeAssets\Sounds `.
 
 ### Scripts
 
