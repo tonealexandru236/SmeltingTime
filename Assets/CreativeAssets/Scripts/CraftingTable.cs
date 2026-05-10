@@ -150,6 +150,8 @@ public class CraftingTable : MonoBehaviour
                 //Craft Match
                 ItemScript itm = itemDb.GetObjById(craftName);
 
+                print(craftName);
+
                 itemToCraftSpriteRenderer.sprite = itm.itemSprites[0];
                 craftedItem = itm;
                 craftedString = craftName;

@@ -52,7 +52,7 @@ MonoBehaviour:
   - {fileID: 6752868714490256620, guid: 8ea35bfc4f4c66a449934a605f98bc32, type: 3}
   - {fileID: -5840949627991244385, guid: 8ea35bfc4f4c66a449934a605f98bc32, type: 3}
   - {fileID: -1479858134827805658, guid: 8ea35bfc4f4c66a449934a605f98bc32, type: 3}
-  itemId: woodenpickaxe
+  itemId: woodpickaxe
   recipeForThisItem: log,log,log,stick,stick
   canBeEnchanted: 1
   enchantLevel: 0

@@ -138,6 +138,8 @@ public class TitleScreenUI : MonoBehaviour
                 click_levels();
             else if (menu_active == exitBg)
                 click_exit();
+            else if(menu_active == null)
+                click_exit();
         }
 
         /*PlayerPrefs.SetFloat("masterVolume", masterSlider.value);
@@ -149,7 +151,7 @@ public class TitleScreenUI : MonoBehaviour
     {
         CanvasGroup cg = exitBg.GetComponent<CanvasGroup>();
         float speed = PlayerPrefs.GetInt("s_transition", 1);
-        float duration = 0.09f / speed;
+        float duration = 0.14f / speed;
         float elapsed_time = 0f;
 
         float start_a = 1 - invers;

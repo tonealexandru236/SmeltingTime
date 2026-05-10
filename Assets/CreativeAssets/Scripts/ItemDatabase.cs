@@ -8,7 +8,7 @@ public class ItemDatabase : MonoBehaviour
     List<string> itemID = new List<string>();
     public ItemScript[] itemAsObj;
 
-    private void Start()
+    private void Awake()
     {
         itemID.Clear();
         foreach (ItemScript iscr in itemAsObj)

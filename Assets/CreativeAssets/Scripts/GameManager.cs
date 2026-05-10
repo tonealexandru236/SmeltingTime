@@ -49,7 +49,7 @@ public class GameManager : MonoBehaviour
 
         trueMadness = 1.5f;
 
-        t = timerInMinutes * 60f;
+        t = timerInMinutes * 60f * trueMadness;
         total_time = 0;
 
         numOfCustomersServed = 0;

@@ -52,7 +52,7 @@ MonoBehaviour:
   - {fileID: 5201515819924971091, guid: 55660e6244235354ca0655e2a210fcfb, type: 3}
   - {fileID: 4113536418151049065, guid: 55660e6244235354ca0655e2a210fcfb, type: 3}
   - {fileID: -5460769567567874099, guid: 55660e6244235354ca0655e2a210fcfb, type: 3}
-  itemId: woodensword
+  itemId: woodsword
   recipeForThisItem: log,log,stick
   canBeEnchanted: 1
   enchantLevel: 0
