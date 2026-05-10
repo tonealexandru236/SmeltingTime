@@ -5966,6 +5966,11 @@ RectTransform:
   m_AnchoredPosition: {x: 0.4, y: 1.4}
   m_SizeDelta: {x: 0.2, y: 0.2}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &103046531 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7544344432684544233, guid: dbdf1fefae653444591f60e24709f3b1, type: 3}
+  m_PrefabInstance: {fileID: 781961704}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &126639617
 GameObject:
   m_ObjectHideFlags: 0
@@ -7813,6 +7818,7 @@ GameObject:
   - component: {fileID: 321782283}
   - component: {fileID: 321782282}
   - component: {fileID: 321782281}
+  - component: {fileID: 321782284}
   m_Layer: 5
   m_Name: text
   m_TagString: Untagged
@@ -7953,6 +7959,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 321782279}
   m_CullTransparentMesh: 1
+--- !u!114 &321782284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321782279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c426810e1d25d948ab76868641a3aa7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::dynamic_text
+  type: 1
+  p1: {fileID: 1168141648}
+  p2: {fileID: 103046531}
 --- !u!1 &367851829
 GameObject:
   m_ObjectHideFlags: 0
@@ -12197,7 +12218,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6398439972558335049, guid: dbdf1fefae653444591f60e24709f3b1, type: 3}
   m_PrefabInstance: {fileID: 781961704}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 103046531}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 838a37a71d5c9ae42826fddbe882bd16, type: 3}
@@ -14742,6 +14763,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1165342732}
   m_CullTransparentMesh: 1
+--- !u!1 &1168141648 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7544344432684544233, guid: dbdf1fefae653444591f60e24709f3b1, type: 3}
+  m_PrefabInstance: {fileID: 4076260186606194908}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1170223888
 GameObject:
   m_ObjectHideFlags: 0
@@ -34187,6 +34213,67 @@ MonoBehaviour:
   - {fileID: 589247971232943400, guid: 84583d11a433a9945852110092af4d75, type: 3}
   - {fileID: 2954482595471838263, guid: 84583d11a433a9945852110092af4d75, type: 3}
   - {fileID: 2304171161255356541, guid: 84583d11a433a9945852110092af4d75, type: 3}
+  cookLight: {fileID: 0}
+  lightColorGradient:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
+  lightColorGradientEasterEgg:
+    serializedVersion: 2
+    key0: {r: 1, g: 1, b: 1, a: 1}
+    key1: {r: 1, g: 1, b: 1, a: 1}
+    key2: {r: 0, g: 0, b: 0, a: 0}
+    key3: {r: 0, g: 0, b: 0, a: 0}
+    key4: {r: 0, g: 0, b: 0, a: 0}
+    key5: {r: 0, g: 0, b: 0, a: 0}
+    key6: {r: 0, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 65535
+    ctime2: 0
+    ctime3: 0
+    ctime4: 0
+    ctime5: 0
+    ctime6: 0
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 0
+    m_ColorSpace: -1
+    m_NumColorKeys: 2
+    m_NumAlphaKeys: 2
 --- !u!1 &1932700291
 GameObject:
   m_ObjectHideFlags: 0
