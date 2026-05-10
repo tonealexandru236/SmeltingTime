@@ -74,7 +74,7 @@ public class FurnaceScript : MonoBehaviour
         }
         else
         {
-            if (cookLight.intensity != 0)
+            if (cookLight && cookLight.intensity != 0)
                 cookLight.intensity = Mathf.MoveTowards(cookLight.intensity, 0, Time.deltaTime * 3f);
         }
     }
