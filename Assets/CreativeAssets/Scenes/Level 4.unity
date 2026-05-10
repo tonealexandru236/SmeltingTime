@@ -6855,7 +6855,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
       propertyPath: itemsItCanOrder.Array.size
-      value: 22
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
       propertyPath: 'itemsItCanOrder.Array.data[0]'
@@ -7012,7 +7012,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
       propertyPath: itemsItCanOrder.Array.size
-      value: 22
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
       propertyPath: 'itemsItCanOrder.Array.data[0]'
@@ -21479,7 +21479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
       propertyPath: itemsItCanOrder.Array.size
-      value: 22
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 2597342257591014432, guid: 026899af79c9b2b408a474b633c695ab, type: 3}
       propertyPath: 'itemsItCanOrder.Array.data[0]'
@@ -42234,17 +42234,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36924690102f6604583c1b2fbdf1c8e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ConveyorBelt
-  conveyorVisual: {fileID: 1483632664}
+  conveyorVisual: {fileID: 0}
   itemsToSpawn:
   - {fileID: 8899958639640477454, guid: 9334f1693492349bc927fbb411d32787, type: 3}
   - {fileID: 1676569562148675751, guid: fbbf2c6e9a9fb6047a2c2e7d606e12e7, type: 3}
   - {fileID: 1676569562148675751, guid: 1bb5ec3dd5e960e41b6004186562a83b, type: 3}
-  - {fileID: 1676569562148675751, guid: b10088d82c0e47f43bb196f15b75d924, type: 3}
-  - {fileID: 1676569562148675751, guid: f94edf90bcf70ed4b9c48c04036e7016, type: 3}
-  itemsChance: 3c0000000c0000000c0000000c00000004000000
-  spawnPoint: {fileID: 1283177817}
-  itemsParent: {fileID: 1056728023}
-  spawnRate: 1.6
+  itemsChance: 3c0000001400000014000000
+  spawnPoint: {fileID: 0}
+  itemsParent: {fileID: 0}
+  spawnRate: 1.8
 --- !u!4 &1661670194
 Transform:
   m_ObjectHideFlags: 0
