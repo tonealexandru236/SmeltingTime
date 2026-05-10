@@ -25,6 +25,7 @@ public class TitleScreenUI : MonoBehaviour
     public Toggle color;
 
     public Toggle fastmenus;
+    public Toggle showversion;
 
     public AudioClip TitleTrack;
 
@@ -77,6 +78,12 @@ public class TitleScreenUI : MonoBehaviour
         PlayerPrefs.SetInt("s_transition", fastmenus.isOn ? 3 : 1); ///Dace e on e de 2 ori mai rapid
     }
 
+    public void change_version()
+    {
+        AudioManager.instance.PlaySound("buttonSelect");
+        PlayerPrefs.SetInt("s_version", showversion.isOn ? 1 : 0); ///Dace e on e de 2 ori mai rapid
+    }
+
     private void Start()
     {
         float value = PlayerPrefs.GetFloat("masterVolume", 1);
@@ -88,6 +95,8 @@ public class TitleScreenUI : MonoBehaviour
         if (particles != null) particles.isOn = PlayerPrefs.GetInt("s_particles", 1) == 1;
         if (buttons != null) buttons.isOn = PlayerPrefs.GetInt("s_buttons", 1) == 1;
         if (color != null) color.isOn = PlayerPrefs.GetInt("s_color", 0) == 1;
+
+        if (showversion != null) showversion.isOn = PlayerPrefs.GetInt("s_version", 1) == 1;
 
         if (fastmenus != null)
         {
