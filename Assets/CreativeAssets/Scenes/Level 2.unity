@@ -37503,7 +37503,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   timerInMinutes: 5
-  numOfCustomersToServe: 10
+  numOfCustomersToServe: 6
   timerTxt: {fileID: 467190807}
   customerServedText: {fileID: 646928032}
   GameOverScreen: {fileID: 884451126}

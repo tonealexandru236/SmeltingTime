@@ -77,9 +77,9 @@ public class CustomersOrderLine : MonoBehaviour
 
                 if (chance >= 40)
                     enchLvlWanted = 1;
-                else if (chance >= 70)
+                if (chance >= 70)
                     enchLvlWanted = 2;
-                else if (chance >= 90)
+                if (chance >= 90)
                     enchLvlWanted = 3;
             }
             if(enchLvlWanted != 0)

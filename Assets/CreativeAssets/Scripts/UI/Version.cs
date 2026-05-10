@@ -5,6 +5,9 @@ public class Version : MonoBehaviour
 {
     void Start()
     {
-        gameObject.GetComponent<TMP_Text>().SetText("v" + Application.version);
+        if (PlayerPrefs.GetInt("s_version", 1) == 0)
+            gameObject.GetComponent<TMP_Text>().SetText("");
+        else
+            gameObject.GetComponent<TMP_Text>().SetText("v" + Application.version);
     }
 }
