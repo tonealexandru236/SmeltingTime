@@ -14,12 +14,12 @@ public class dynamic_text : MonoBehaviour
 
         string[] words = GetComponent<TMP_Text>().text.Split(' ');
 
-        if (p1.GetComponent<PlayerScript>().canCraft)
+        if (p1.GetComponent<PlayerScript>().canSmelt)
         {
             cur_color = PlayerPrefs.GetString("p1", "FF0000");
             words[0] = "P1";
         }
-        else if(p2.GetComponent<PlayerScript>().canCraft)
+        else if(p2.GetComponent<PlayerScript>().canSmelt)
         {
             cur_color = PlayerPrefs.GetString("p2", "00CDFF");
             words[0] = "P2";
