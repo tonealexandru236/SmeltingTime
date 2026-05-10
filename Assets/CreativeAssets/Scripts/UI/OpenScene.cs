@@ -8,7 +8,8 @@ public class OpenScene : MonoBehaviour
     public string scene_name;
     public void on_click()
     {
-        AudioManager.instance.PlaySound("buttonClick");
+        if(AudioManager.instance)
+            AudioManager.instance.PlaySound("buttonClick");
 
         StartCoroutine(do_anim());
     }

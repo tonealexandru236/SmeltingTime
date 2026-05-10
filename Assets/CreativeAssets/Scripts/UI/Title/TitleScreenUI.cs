@@ -128,6 +128,14 @@ public class TitleScreenUI : MonoBehaviour
 
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Escape) && is_on)
+        {
+            if (menu_active == settings)
+                click_settings();
+            else if (menu_active == level_selector)
+                click_levels();
+        }
+
         /*PlayerPrefs.SetFloat("masterVolume", masterSlider.value);
         PlayerPrefs.Save();
         if (sliderPercentage != null) sliderPercentage.text = (Mathf.Round(masterSlider.value * 100)).ToString() + "%";*/
@@ -217,8 +225,10 @@ public class TitleScreenUI : MonoBehaviour
     }
 
     List<Button> save = new List<Button>();
+    bool is_on = true;
     IEnumerator deactivate_ui(float wait)
     {
+        is_on = false;
         foreach (Button but in FindObjectsByType<Button>(FindObjectsSortMode.None))
         {
             if(but.interactable == true)
@@ -232,6 +242,8 @@ public class TitleScreenUI : MonoBehaviour
 
         foreach (Button but in save)
             but.interactable = true;
+
+        is_on = true;
     }
 
 }
