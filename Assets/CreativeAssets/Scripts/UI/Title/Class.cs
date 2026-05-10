@@ -18,6 +18,10 @@ public class Class : MonoBehaviour
         img = class1.GetComponent<Image>().sprite;
         class1.GetComponent<Image>().sprite = class2.GetComponent<Image>().sprite;
         class2.GetComponent<Image>().sprite = img;
+
+        img = class1.transform.GetChild(0).GetComponent<Image>().sprite;
+        class1.transform.GetChild(0).GetComponent<Image>().sprite = class2.transform.GetChild(0).GetComponent<Image>().sprite;
+        class2.transform.GetChild(0).GetComponent<Image>().sprite = img;
     }
 
     public void switch_class()
