@@ -11,6 +11,8 @@ public class PlayerHand : MonoBehaviour
     public int playerPriority;
     public PlayerMovement pm;
 
+    [SerializeField] GameObject cantUseStationSign;
+
     [SerializeField] Sprite[] fireAnim;
     GameObject enchantFire;
 
@@ -28,6 +30,8 @@ public class PlayerHand : MonoBehaviour
     }
     public void ManualUpdate()
     {
+        cantUseStationSign.SetActive(false);
+
         GetComponent<SpriteRenderer>().sortingOrder = transform.parent.GetComponent<PlayerMovement>().playerSr.sortingOrder + (transform.position.y <= transform.parent.position.y ? 1 : -1);
         if (enchantFire)
             enchantFire.GetComponent<SpriteRenderer>().sortingOrder = GetComponent<SpriteRenderer>().sortingOrder - 1;
@@ -90,7 +94,10 @@ public class PlayerHand : MonoBehaviour
 
             if (!ps.canCraft && (stationT == "crafting" || stationT == "enchant") ||
                 !ps.canSmelt && (stationT == "furnace" || stationT == "smithing"))
+            {
+                cantUseStationSign.SetActive(true);
                 return;
+            }
 
             if (itemInHandEnchantmentLevel != 0 && (
                 hit.collider.GetComponent<StationScript>().stationTag == "crafting" || hit.collider.GetComponent<StationScript>().stationTag == "furnace" || hit.collider.GetComponent<StationScript>().stationTag == "enchant"))
