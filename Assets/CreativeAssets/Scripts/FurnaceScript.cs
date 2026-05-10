@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class FurnaceScript : MonoBehaviour
 {
@@ -14,10 +15,15 @@ public class FurnaceScript : MonoBehaviour
     [SerializeField] Sprite[] woodBurningAnim;
     [SerializeField] Sprite[] charcoalBurningAnim;
 
+    [SerializeField] Light2D cookLight;
+    [SerializeField] Gradient lightColorGradient;
+    [SerializeField] Gradient lightColorGradientEasterEgg;
+
     PlayerHand lastPh;
     ItemDatabase itemDb;
     string fuelUsed, whatToBurn, result;
-    float t = 0;
+    float t = 0, cookAnim = 0, cookInt = 0;
+    bool isEsterEgg = false, goUpInt = false;
     private void Start()
     {
         itemDb = FindFirstObjectByType<ItemDatabase>();
@@ -47,7 +53,29 @@ public class FurnaceScript : MonoBehaviour
                     fuelImg.sprite = woodBurningAnim[Mathf.FloorToInt(((3 - t) / 3f) * woodBurningAnim.Length)];
                 else
                     fuelImg.sprite = charcoalBurningAnim[Mathf.FloorToInt(((3 - t) / 3f) * charcoalBurningAnim.Length)];
+
+                if (cookLight.intensity != 1)
+                    cookLight.intensity = Mathf.MoveTowards(cookLight.intensity, 1, Time.deltaTime * 3f);
+
+                cookAnim += Time.deltaTime;
+                cookAnim %= 1;
+
+                //Intesity Stuff
+                cookInt += Time.deltaTime;
+                if (cookInt >= 0.1f)
+                    goUpInt = Random.Range(0, 2) == 0;
+
+                cookLight.intensity = cookLight.intensity + (goUpInt ? Time.deltaTime : -Time.deltaTime) * 10f;
+
+                cookLight.color = lightColorGradient.Evaluate(cookAnim);
+                if (isEsterEgg)
+                    cookLight.color = lightColorGradientEasterEgg.Evaluate(cookAnim);
             }
+        }
+        else
+        {
+            if (cookLight.intensity != 0)
+                cookLight.intensity = Mathf.MoveTowards(cookLight.intensity, 0, Time.deltaTime * 3f);
         }
     }
     public void UseFurnace(string itemId, PlayerHand ph)
@@ -111,6 +139,8 @@ public class FurnaceScript : MonoBehaviour
                 fuelImg.sprite = fireBg;
 
                 t = 3;
+
+                isEsterEgg = Random.Range(0, 20) == 0;
             }
             if(fuelUsed == "charcoal" && whatToBurn != "")
             {
@@ -135,6 +165,8 @@ public class FurnaceScript : MonoBehaviour
                         fuelImg.sprite = fireBg;
 
                         t = 3;
+
+                        isEsterEgg = Random.Range(0, 20) == 0;
                     }
                 }
             }
