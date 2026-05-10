@@ -8,17 +8,21 @@ public class PlayerScript : MonoBehaviour
 
     private void Awake()
     {
-        if(gameObject.name == "Player1")
+        if (gameObject.name == "Player1")
         {
             if(PlayerPrefs.GetString("class-p1", "Craft") == "Craft")
             {
                 canCraft = true;
                 canSmelt = false;
+
+                GetComponent<PlayerMovement>().SetPlayerFit(true);
             }
             else
             {
                 canCraft = false;
                 canSmelt = true;
+
+                GetComponent<PlayerMovement>().SetPlayerFit(false);
             }
         }
         else
@@ -27,11 +31,15 @@ public class PlayerScript : MonoBehaviour
             {
                 canCraft = true;
                 canSmelt = false;
+
+                GetComponent<PlayerMovement>().SetPlayerFit(true);
             }
             else
             {
                 canCraft = false;
                 canSmelt = true;
+
+                GetComponent<PlayerMovement>().SetPlayerFit(false);
             }
         }
 

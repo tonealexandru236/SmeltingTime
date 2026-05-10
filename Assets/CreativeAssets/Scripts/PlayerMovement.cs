@@ -17,6 +17,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] SpriteRenderer eyeSprite;
     [SerializeField] Sprite[] walkAnims;
     [SerializeField] Sprite[] walkAnimsEyes;
+    [SerializeField] Sprite[] walkAnimsEyes_Crafter;
+    [SerializeField] Sprite[] walkAnimsEyes_Smelter;
 
     [Header("Object")] 
     [SerializeField] Transform playerHand;
@@ -30,6 +32,10 @@ public class PlayerMovement : MonoBehaviour
         canPlayerMove = true;
         spriteSheetToUse = 0;
         spriteIndex = 0;
+    }
+    public void SetPlayerFit(bool isCrafter)
+    {
+        walkAnimsEyes = (isCrafter ? walkAnimsEyes_Crafter : walkAnimsEyes_Smelter);
     }
     private void Update()
     {
